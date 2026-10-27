@@ -61,7 +61,7 @@ html {
   box-sizing: inherit;
 }
 
-body.aashraya-body {
+body {
   font-family: var(--font-body);
   background-color: var(--color-ivory);
   color: var(--color-charcoal);
@@ -103,13 +103,12 @@ img {
   display: block;
 }
 
-/* Accessibility focus ring */
 :focus-visible {
   outline: 3px solid var(--color-gold);
   outline-offset: 2px;
 }
 
-/* Utility Containers */
+/* Containers */
 .ash-container {
   width: 100%;
   max-width: 1240px;
@@ -135,16 +134,6 @@ img {
 .ash-section-forest {
   background-color: var(--color-primary);
   color: var(--color-white);
-}
-
-.ash-section-forest h1,
-.ash-section-forest h2,
-.ash-section-forest h3 {
-  color: var(--color-white);
-}
-
-.ash-section-forest p {
-  color: rgba(255, 255, 255, 0.85);
 }
 
 /* Section Header Typography */
@@ -188,9 +177,7 @@ img {
   line-height: 1.7;
 }
 
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
+/* Buttons */
 .ash-btn {
   display: inline-flex;
   align-items: center;
@@ -263,9 +250,7 @@ img {
   font-size: 0.85rem;
 }
 
-/* ==========================================================================
-   TOP BAR & NAVIGATION
-   ========================================================================== */
+/* Top Notice Bar */
 .top-notice-bar {
   background-color: var(--color-primary-dark);
   color: rgba(250, 248, 242, 0.85);
@@ -308,7 +293,7 @@ img {
   gap: 0.4rem;
 }
 
-/* Main Navbar */
+/* Navbar */
 .ash-navbar {
   position: sticky;
   top: 0;
@@ -502,9 +487,7 @@ img {
   color: var(--color-gold);
 }
 
-/* ==========================================================================
-   HERO SECTION
-   ========================================================================== */
+/* Hero Section */
 .hero-section {
   position: relative;
   min-height: 88vh;
@@ -516,7 +499,7 @@ img {
     rgba(23, 77, 58, 0.88) 0%,
     rgba(15, 53, 39, 0.82) 50%,
     rgba(23, 77, 58, 0.92) 100%
-  ), url('../image/hero_community_hope.jpg');
+  ), url('/images/hero_community_hope.jpg');
   background-size: cover;
   background-position: center;
   color: var(--color-white);
@@ -586,7 +569,6 @@ img {
   margin-bottom: 3.5rem;
 }
 
-/* Glass highlight strip */
 .hero-glass-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -634,9 +616,7 @@ img {
   color: var(--color-white);
 }
 
-/* ==========================================================================
-   ABOUT SECTION
-   ========================================================================== */
+/* About Section */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -775,7 +755,6 @@ img {
   margin-bottom: 0;
 }
 
-/* Core Values Pill List */
 .values-wrap {
   margin-bottom: 2.5rem;
 }
@@ -814,9 +793,7 @@ img {
   color: var(--color-gold);
 }
 
-/* ==========================================================================
-   KEY INITIATIVES SECTION (5 CARDS GRID)
-   ========================================================================== */
+/* Key Initiatives Grid */
 .initiatives-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -826,10 +803,6 @@ img {
 @media (min-width: 1100px) {
   .initiatives-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .initiatives-grid .initiative-card:nth-child(4),
-  .initiatives-grid .initiative-card:nth-child(5) {
-    grid-column: span 1;
   }
 }
 
@@ -930,9 +903,7 @@ img {
   gap: 0.75rem;
 }
 
-/* ==========================================================================
-   IMPACT / COMMITMENT & TARGETS SECTION
-   ========================================================================== */
+/* Impact Section */
 .impact-stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1020,9 +991,7 @@ img {
   color: var(--color-muted);
 }
 
-/* ==========================================================================
-   FEATURED INITIATIVES (EDITORIAL PROGRAM SHOWCASE)
-   ========================================================================== */
+/* Featured Initiatives */
 .featured-programs-list {
   display: flex;
   flex-direction: column;
@@ -1132,9 +1101,7 @@ img {
   font-size: 0.85rem;
 }
 
-/* ==========================================================================
-   GALLERY SECTION
-   ========================================================================== */
+/* Gallery Section */
 .gallery-filters {
   display: flex;
   justify-content: center;
@@ -1298,9 +1265,7 @@ img {
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* ==========================================================================
-   GET INVOLVED SECTION (3 PARTICIPATION CARDS)
-   ========================================================================== */
+/* Get Involved */
 .get-involved-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1380,9 +1345,7 @@ img {
   flex-grow: 1;
 }
 
-/* ==========================================================================
-   STORIES / TESTIMONIALS SECTION
-   ========================================================================== */
+/* Stories */
 .stories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1458,9 +1421,7 @@ img {
   margin: 0;
 }
 
-/* ==========================================================================
-   CONTACT SECTION
-   ========================================================================== */
+/* Contact */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -1545,14 +1506,6 @@ img {
   }
 }
 
-.form-error {
-  color: #c93b2b;
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
-  display: none;
-}
-
-/* Contact Info Details Column */
 .contact-info-col {
   display: flex;
   flex-direction: column;
@@ -1611,9 +1564,7 @@ img {
   color: var(--color-gold);
 }
 
-/* ==========================================================================
-   FOOTER SECTION
-   ========================================================================== */
+/* Footer */
 .ash-footer {
   background-color: var(--color-primary-dark);
   color: var(--color-ivory);
@@ -1698,14 +1649,21 @@ img {
   gap: 0.75rem;
 }
 
-.footer-links-list a {
+.footer-links-list a,
+.footer-links-list button {
   color: rgba(250, 248, 242, 0.78);
   font-size: 0.9rem;
   transition: color var(--transition-fast), padding-left var(--transition-fast);
   display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
 }
 
-.footer-links-list a:hover {
+.footer-links-list a:hover,
+.footer-links-list button:hover {
   color: var(--color-gold);
   padding-left: 4px;
 }
@@ -1742,7 +1700,6 @@ img {
   color: rgba(250, 248, 242, 0.5);
 }
 
-/* Footer Bottom Bar */
 .footer-bottom-bar {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
@@ -1766,18 +1723,20 @@ img {
   gap: 1.5rem;
 }
 
-.footer-bottom-links a {
+.footer-bottom-links button {
+  background: none;
+  border: none;
   color: rgba(250, 248, 242, 0.65);
   cursor: pointer;
+  padding: 0;
+  font-size: 0.85rem;
 }
 
-.footer-bottom-links a:hover {
+.footer-bottom-links button:hover {
   color: var(--color-gold);
 }
 
-/* ==========================================================================
-   INTERACTIVE MODALS
-   ========================================================================== */
+/* Modals */
 .ash-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1873,7 +1832,7 @@ img {
   margin-top: 2px;
 }
 
-/* Toast Notifications */
+/* Toast */
 .ash-toast-container {
   position: fixed;
   bottom: 24px;
@@ -1910,9 +1869,6 @@ img {
   font-size: 1.2rem;
 }
 
-/* ==========================================================================
-   ANIMATIONS & KEYFRAMES
-   ========================================================================== */
 @keyframes modalSlideUp {
   from {
     opacity: 0;
@@ -1946,7 +1902,6 @@ img {
   }
 }
 
-/* Scroll-triggered reveal helper */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(24px);
@@ -1958,7 +1913,6 @@ img {
   transform: translateY(0);
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
