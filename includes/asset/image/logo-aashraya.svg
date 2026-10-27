@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" fill="none">
+  <!-- Symbol: Sheltering banyan / tree of life forming protective hands and sun canopy -->
+  <g transform="translate(10, 8)">
+    <!-- Protective leaf arcs / canopy in gold and sage -->
+    <circle cx="27" cy="27" r="26" fill="#174D3A" />
+    <!-- Golden sun / inner seed -->
+    <circle cx="27" cy="20" r="5" fill="#C69B55" />
+    <!-- Emerging sprout and nurturing hands -->
+    <path d="M27 38 C27 31 22 25 17 22 C18 29 22 35 27 38 Z" fill="#8BAF96" />
+    <path d="M27 38 C27 31 32 25 37 22 C36 29 32 35 27 38 Z" fill="#C69B55" />
+    <path d="M27 42 C21 42 16 38 14 34 C16 41 21 44 27 44 C33 44 38 41 40 34 C38 38 33 42 27 42 Z" fill="#FAF8F2" />
+    <path d="M27 25 C25 21 27 16 27 16 C27 16 29 21 27 25 Z" fill="#FAF8F2" />
+  </g>
+  <!-- Text Brand -->
+  <g transform="translate(74, 14)">
+    <text x="0" y="26" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="700" fill="#FFFFFF" letter-spacing="1.5">AASHRAYA</text>
+    <text x="1" y="42" font-family="'Inter', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#C69B55" letter-spacing="3.5">FOUNDATION</text>
+  </g>
+</svg>

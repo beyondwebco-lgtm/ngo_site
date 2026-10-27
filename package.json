@@ -1,0 +1,21 @@
+{
+  "name": "aashraya-foundation",
+  "version": "1.0.0",
+  "description": "Aashraya Foundation — Empowering Lives. Building Hope.",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "keywords": [
+    "ngo",
+    "charitable-trust",
+    "aashraya-foundation",
+    "education",
+    "healthcare",
+    "empowerment"
+  ],
+  "author": "Aashraya Foundation",
+  "license": "ISC"
+}
