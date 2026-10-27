@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Initiative dynamic data for detail modal
 const INITIATIVES_DATA = {
@@ -89,7 +89,7 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
 
   // Modals state
-  const [activeModal, setActiveModal] = useState(null); // 'donation' | 'volunteer' | 'partner' | 'story' | 'privacy' | 'terms' | 'initiative'
+  const [activeModal, setActiveModal] = useState(null);
   const [selectedInitiative, setSelectedInitiative] = useState(null);
   const [lightboxData, setLightboxData] = useState(null);
 
@@ -114,7 +114,7 @@ export default function HomePage() {
   // Scroll listener for sticky navbar & active section
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -238,10 +238,10 @@ export default function HomePage() {
           <div className="top-notice-content">
             <div className="top-contact-info">
               <a href="mailto:contact@aashrayafoundation.org.in" title="Official Registered Email">
-                <i className="fa fa-envelope" style={{ color: '#C69B55' }}></i> contact@aashrayafoundation.org.in [Placeholder]
+                <i className="fa fa-envelope" style={{ color: '#0284C7' }}></i> contact@aashrayafoundation.org.in [Placeholder]
               </a>
               <a href="tel:+919876543210" title="Contact Helpline">
-                <i className="fa fa-phone" style={{ color: '#C69B55' }}></i> +91 98765 43210 [Placeholder]
+                <i className="fa fa-phone" style={{ color: '#0284C7' }}></i> +91 98765 43210 [Placeholder]
               </a>
             </div>
             <div className="top-trust-badge">
@@ -251,7 +251,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Main Sticky Navbar */}
+      {/* Main Sticky Navbar (Pure White) */}
       <header className={`ash-navbar ${isScrolled ? 'scrolled' : ''}`} id="ashNavbar">
         <div className="ash-container">
           <div className="navbar-inner">
@@ -274,7 +274,7 @@ export default function HomePage() {
             <div className="navbar-actions">
               <button
                 type="button"
-                className="ash-btn ash-btn-gold ash-btn-sm"
+                className="ash-btn ash-btn-primary ash-btn-sm"
                 onClick={() => setActiveModal('donation')}
                 id="navDonateBtn"
               >
@@ -317,7 +317,7 @@ export default function HomePage() {
         <div style={{ marginTop: '2rem' }}>
           <button
             type="button"
-            className="ash-btn ash-btn-gold"
+            className="ash-btn ash-btn-primary"
             style={{ width: '100%' }}
             onClick={() => {
               setMobileMenuOpen(false);
@@ -326,69 +326,77 @@ export default function HomePage() {
           >
             <i className="fa fa-heart"></i> Support Our Mission
           </button>
-          <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', textAlign: 'center' }}>
+          <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#4B5563', textAlign: 'center' }}>
             Aashraya Foundation &bull; India
           </p>
         </div>
       </aside>
 
       {/* ==========================================================================
-           HERO SECTION
+           HERO SECTION (PURE WHITE THEME WITH LIGHT GOOD BLUE HEADINGS & BLACK TEXT)
            ========================================================================== */}
       <section className="hero-section" id="home">
         <div className="ash-container">
-          <div className="hero-content reveal-on-scroll">
-            <div className="hero-pill">
-              <span className="hero-pill-badge">Grassroots NGO</span>
-              <span>Empowering Lives. Building Hope.</span>
+          <div className="hero-grid">
+            {/* Left Column: Content */}
+            <div className="hero-content reveal-on-scroll">
+              <div className="hero-pill">
+                <span className="hero-pill-badge">Grassroots NGO</span>
+                <span>Empowering Lives. Building Hope.</span>
+              </div>
+
+              <h1 className="hero-title">
+                Together, We Can Create a Better Tomorrow.
+              </h1>
+
+              <p className="hero-subheading">
+                Empowering communities through education, compassion, and meaningful action. Every small step brings us closer to a brighter, more inclusive future.
+              </p>
+
+              <div className="hero-buttons">
+                <a href="#initiatives" className="ash-btn ash-btn-primary">
+                  <span>Explore Our Work</span>
+                  <i className="fa fa-arrow-right"></i>
+                </a>
+                <button
+                  type="button"
+                  className="ash-btn ash-btn-outline"
+                  onClick={() => setActiveModal('donation')}
+                >
+                  <i className="fa fa-hands-helping"></i>
+                  <span>Support Our Mission</span>
+                </button>
+              </div>
+
+              {/* Stats Box */}
+              <div className="hero-glass-stats">
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon"><i className="fa fa-graduation-cap"></i></div>
+                  <div>
+                    <div className="glass-stat-label">Focus Areas</div>
+                    <div className="glass-stat-value">Education &amp; Care</div>
+                  </div>
+                </div>
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon"><i className="fa fa-map-marker-alt"></i></div>
+                  <div>
+                    <div className="glass-stat-label">Grassroots Reach</div>
+                    <div className="glass-stat-value">Rural &amp; Urban Hubs</div>
+                  </div>
+                </div>
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon"><i className="fa fa-hand-holding-heart"></i></div>
+                  <div>
+                    <div className="glass-stat-label">Philosophy</div>
+                    <div className="glass-stat-value">100% Compassion</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <h1 className="hero-title">
-              Together, We Can Create a Better Tomorrow.
-            </h1>
-
-            <p className="hero-subheading">
-              Empowering communities through education, compassion, and meaningful action. Every small step brings us closer to a brighter, more inclusive future.
-            </p>
-
-            <div className="hero-buttons">
-              <a href="#initiatives" className="ash-btn ash-btn-gold">
-                <span>Explore Our Work</span>
-                <i className="fa fa-arrow-right"></i>
-              </a>
-              <button
-                type="button"
-                className="ash-btn ash-btn-outline"
-                onClick={() => setActiveModal('donation')}
-              >
-                <i className="fa fa-hands-helping"></i>
-                <span>Support Our Mission</span>
-              </button>
-            </div>
-
-            {/* Glassmorphic stats */}
-            <div className="hero-glass-stats">
-              <div className="glass-stat-item">
-                <div className="glass-stat-icon"><i className="fa fa-graduation-cap"></i></div>
-                <div>
-                  <div className="glass-stat-label">Focus Areas</div>
-                  <div className="glass-stat-value">Education &amp; Care</div>
-                </div>
-              </div>
-              <div className="glass-stat-item">
-                <div className="glass-stat-icon"><i className="fa fa-map-marker-alt"></i></div>
-                <div>
-                  <div className="glass-stat-label">Grassroots Reach</div>
-                  <div className="glass-stat-value">Rural &amp; Urban Hubs</div>
-                </div>
-              </div>
-              <div className="glass-stat-item">
-                <div className="glass-stat-icon"><i className="fa fa-hand-holding-heart"></i></div>
-                <div>
-                  <div className="glass-stat-label">Philosophy</div>
-                  <div className="glass-stat-value">100% Compassion</div>
-                </div>
-              </div>
+            {/* Right Column: Hero Visual Media */}
+            <div className="hero-image-card reveal-on-scroll">
+              <img src="/images/hero_community_hope.jpg" alt="Aashraya Foundation Community Learning Hub" />
             </div>
           </div>
         </div>
@@ -397,7 +405,7 @@ export default function HomePage() {
       {/* ==========================================================================
            ABOUT AASHRAYA FOUNDATION
            ========================================================================== */}
-      <section className="ash-section ash-section-ivory" id="about">
+      <section className="ash-section" id="about">
         <div className="ash-container">
           <div className="about-grid">
             <div className="about-image-wrapper reveal-on-scroll">
@@ -422,7 +430,7 @@ export default function HomePage() {
                 Aashraya Foundation is a proposed charitable trust established with an enduring dedication to grassroots social transformation in India. We believe every child, woman, and vulnerable individual possesses the inherent right to live with dignity, self-sufficiency, and boundless opportunity.
               </p>
               <p>
-                Rather than brief relief work, our initiatives focus on sustainable community architecture: supporting educational access, nurturing preventive rural healthcare, fostering women's economic independence, and preserving child welfare.
+                Rather than brief relief work, our initiatives focus on sustainable community architecture: supporting educational access, nurturing preventive rural healthcare, fostering women&apos;s economic independence, and preserving child welfare.
               </p>
 
               <div className="mission-vision-boxes">
@@ -467,7 +475,7 @@ export default function HomePage() {
       {/* ==========================================================================
            KEY INITIATIVES (5 CARDS GRID)
            ========================================================================== */}
-      <section className="ash-section ash-section-sand" id="initiatives">
+      <section className="ash-section" id="initiatives">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -613,7 +621,7 @@ export default function HomePage() {
       {/* ==========================================================================
            OUR IMPACT / COMMITMENT & TARGETS
            ========================================================================== */}
-      <section className="ash-section ash-section-ivory" id="impact">
+      <section className="ash-section" id="impact">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -669,7 +677,7 @@ export default function HomePage() {
       {/* ==========================================================================
            FEATURED INITIATIVES
            ========================================================================== */}
-      <section className="ash-section ash-section-sand" id="featured">
+      <section className="ash-section" id="featured">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -814,7 +822,7 @@ export default function HomePage() {
       {/* ==========================================================================
            GALLERY SECTION
            ========================================================================== */}
-      <section className="ash-section ash-section-ivory" id="gallery">
+      <section className="ash-section" id="gallery">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -887,7 +895,7 @@ export default function HomePage() {
       {/* ==========================================================================
            GET INVOLVED
            ========================================================================== */}
-      <section className="ash-section ash-section-sand" id="get-involved">
+      <section className="ash-section" id="get-involved">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -914,7 +922,7 @@ export default function HomePage() {
               </p>
               <button
                 type="button"
-                className="ash-btn ash-btn-gold"
+                className="ash-btn ash-btn-primary"
                 style={{ width: '100%' }}
                 onClick={() => setActiveModal('donation')}
               >
@@ -966,7 +974,7 @@ export default function HomePage() {
       {/* ==========================================================================
            TESTIMONIALS / STORIES
            ========================================================================== */}
-      <section className="ash-section ash-section-ivory" id="stories">
+      <section className="ash-section" id="stories">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -1030,7 +1038,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.8rem', color: 'var(--color-muted)' }}>
+          <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.85rem', color: '#4B5563' }}>
             *Representative community narratives reflecting organizational program targets and field interactions.
           </p>
         </div>
@@ -1039,7 +1047,7 @@ export default function HomePage() {
       {/* ==========================================================================
            CONTACT SECTION
            ========================================================================== */}
-      <section className="ash-section ash-section-sand" id="contact">
+      <section className="ash-section" id="contact">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
@@ -1116,7 +1124,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Official Email</h4>
                   <p><a href="mailto:contact@aashrayafoundation.org.in">contact@aashrayafoundation.org.in</a></p>
-                  <p style={{ fontSize: '0.75rem', color: '#8BAF96' }}>[Official Registered Inquiry Mailbox - Placeholder]</p>
+                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Official Registered Inquiry Mailbox - Placeholder]</p>
                 </div>
               </div>
 
@@ -1125,7 +1133,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Helpline &amp; Coordination</h4>
                   <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                  <p style={{ fontSize: '0.75rem', color: '#8BAF96' }}>[Community Desk Phone - Placeholder]</p>
+                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Community Desk Phone - Placeholder]</p>
                 </div>
               </div>
 
@@ -1134,7 +1142,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Registered Office</h4>
                   <p>Aashraya Foundation, 14 Institutional Area, Sector 5, New Delhi - 110001, India</p>
-                  <p style={{ fontSize: '0.75rem', color: '#8BAF96' }}>[Registered Head Office - Placeholder]</p>
+                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Registered Head Office - Placeholder]</p>
                 </div>
               </div>
 
@@ -1143,7 +1151,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Operating Hours</h4>
                   <p>Monday &ndash; Saturday: 9:30 AM &ndash; 6:00 PM IST</p>
-                  <p style={{ fontSize: '0.75rem', color: '#8BAF96' }}>Field centers operate on extended weekend schedules</p>
+                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>Field centers operate on extended weekend schedules</p>
                 </div>
               </div>
             </div>
@@ -1152,7 +1160,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           FOOTER
+           FOOTER (PURE WHITE THEME)
            ========================================================================== */}
       <footer className="ash-footer">
         <div className="ash-container">
@@ -1204,12 +1212,12 @@ export default function HomePage() {
               </p>
               <form onSubmit={handleNewsletterSubmit} className="newsletter-form-inline">
                 <input type="email" className="newsletter-input" placeholder="Your email address" required aria-label="Newsletter email" />
-                <button type="submit" className="ash-btn ash-btn-gold ash-btn-sm" style={{ borderRadius: 'var(--radius-full)' }}>
+                <button type="submit" className="ash-btn ash-btn-primary ash-btn-sm" style={{ borderRadius: 'var(--radius-full)' }}>
                   Join
                 </button>
               </form>
-              <div style={{ marginTop: '1.5rem', fontSize: '0.775rem', color: 'rgba(250,248,242,0.6)' }}>
-                <i className="fa fa-lock" style={{ color: '#C69B55' }}></i> We respect your privacy. No spam ever.
+              <div style={{ marginTop: '1.5rem', fontSize: '0.775rem', color: '#4B5563' }}>
+                <i className="fa fa-lock" style={{ color: '#0284C7' }}></i> We respect your privacy. No spam ever.
               </div>
             </div>
           </div>
@@ -1261,7 +1269,7 @@ export default function HomePage() {
                       key={tier.val}
                       type="button"
                       className="ash-btn ash-btn-outline-dark ash-btn-sm"
-                      style={selectedTier === tier.val ? { backgroundColor: 'var(--color-primary)', color: '#fff' } : {}}
+                      style={selectedTier === tier.val ? { backgroundColor: 'var(--color-blue-heading)', color: '#fff', borderColor: 'var(--color-blue-heading)' } : {}}
                       onClick={() => {
                         setSelectedTier(tier.val);
                         setCustomAmount(tier.val);
@@ -1299,7 +1307,7 @@ export default function HomePage() {
                 <input type="tel" className="form-input" placeholder="+91 Phone Number" />
               </div>
 
-              <button type="submit" className="ash-btn ash-btn-gold" style={{ width: '100%', marginTop: '0.5rem' }}>
+              <button type="submit" className="ash-btn ash-btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>
                 <i className="fa fa-heart"></i> Submit Contribution Pledge
               </button>
             </form>
@@ -1415,7 +1423,7 @@ export default function HomePage() {
               <span className="section-eyebrow">{selectedInitiative.tag}</span>
             </div>
             <h3 className="modal-title" style={{ fontSize: '2.1rem' }}>{selectedInitiative.title}</h3>
-            <p style={{ fontSize: '1.05rem', color: 'var(--color-charcoal)', fontWeight: 500, marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '1.05rem', color: '#111827', fontWeight: 500, marginBottom: '1.5rem' }}>
               {selectedInitiative.lead}
             </p>
 
@@ -1423,15 +1431,15 @@ export default function HomePage() {
               <img src={selectedInitiative.image} alt={selectedInitiative.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
 
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-muted)', marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#111827', marginBottom: '1.5rem' }}>
               {selectedInitiative.desc}
             </p>
 
-            <h4 style={{ fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '0.75rem' }}>Key Intervention Objectives:</h4>
+            <h4 style={{ fontSize: '1.15rem', color: 'var(--color-blue-heading)', marginBottom: '0.75rem' }}>Key Intervention Objectives:</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
               {selectedInitiative.goals.map((goal, idx) => (
                 <li key={idx} style={{ display: 'flex', alignItems: 'center' }}>
-                  <i className="fa fa-check-circle" style={{ color: '#C69B55', marginRight: '8px' }}></i>
+                  <i className="fa fa-check-circle" style={{ color: '#0284C7', marginRight: '8px' }}></i>
                   <span>{goal}</span>
                 </li>
               ))}
@@ -1440,7 +1448,7 @@ export default function HomePage() {
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <button
                 type="button"
-                className="ash-btn ash-btn-gold"
+                className="ash-btn ash-btn-primary"
                 onClick={() => setActiveModal('donation')}
               >
                 <i className="fa fa-heart"></i> Support This Initiative
@@ -1466,11 +1474,11 @@ export default function HomePage() {
             <h3 className="modal-title">The Aashraya Foundation Story</h3>
             <p className="modal-subtitle">Empowering Lives. Building Hope.</p>
 
-            <div style={{ fontSize: '0.95rem', lineHeight: 1.75, color: 'var(--color-muted)' }}>
+            <div style={{ fontSize: '0.95rem', lineHeight: 1.75, color: '#111827' }}>
               <p>
                 <strong>Aashraya Foundation</strong> was conceived from a simple yet resolute understanding: sustainable community development cannot happen from afar. It requires sitting alongside children under village banyan trees, understanding the quiet aspirations of mothers seeking self-reliance, and enabling preventive health access before sickness destabilizes an entire household.
               </p>
-              <h4 style={{ color: 'var(--color-primary)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Core Approach</h4>
+              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Core Approach</h4>
               <p>
                 Unlike fragmented charity interventions, Aashraya Foundation works through an interconnected four-pillar model:
               </p>
@@ -1480,7 +1488,7 @@ export default function HomePage() {
                 <li><strong>Livelihood &amp; Dignity:</strong> Equipping rural women with vocational tailoring, craftsmanship, and financial independence.</li>
                 <li><strong>Ecological Sustainability:</strong> Creating green village groves, sapling nurseries, and community water stewardship.</li>
               </ul>
-              <h4 style={{ color: 'var(--color-primary)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Governance &amp; Trust Ethics</h4>
+              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Governance &amp; Trust Ethics</h4>
               <p>
                 We operate under uncompromising standards of financial accountability, zero tolerance for exaggerated marketing, and rigorous community consensus before any field center is initiated.
               </p>
@@ -1506,7 +1514,7 @@ export default function HomePage() {
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
             <h3 className="modal-title">Privacy Policy</h3>
             <p className="modal-subtitle">Commitment to Data Dignity &amp; Privacy</p>
-            <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'var(--color-muted)' }}>
+            <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#111827' }}>
               <p>Aashraya Foundation values the confidentiality and trust of our supporters, donors, volunteers, and website visitors.</p>
               <p>We do not sell, rent, or trade your personal information. Any information provided through contact forms, newsletter sign-ups, or volunteer inquiries is utilized exclusively for organizational communication and program updates.</p>
               <p>For questions regarding your data or to unsubscribe from bulletins, please email <a href="mailto:contact@aashrayafoundation.org.in">contact@aashrayafoundation.org.in</a>.</p>
@@ -1522,7 +1530,7 @@ export default function HomePage() {
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
             <h3 className="modal-title">Terms &amp; Conditions</h3>
             <p className="modal-subtitle">Organizational Terms of Use</p>
-            <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'var(--color-muted)' }}>
+            <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#111827' }}>
               <p>All materials, including text, photographs, and brand assets displayed on this website, are the intellectual property of Aashraya Foundation.</p>
               <p>Proposed initiatives, figures, and program frameworks are published for informational purposes and community collaboration. No financial transactions are finalized on this website without verified trust documentation.</p>
             </div>
@@ -1547,16 +1555,16 @@ export default function HomePage() {
             </div>
             <div className="lightbox-caption-wrap">
               <div>
-                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 700, color: '#C69B55' }}>
+                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 700, color: '#0284C7' }}>
                   {lightboxData.tag}
                 </span>
-                <h4 style={{ fontSize: '1.35rem', margin: '0.25rem 0 0 0', color: '#174D3A', fontFamily: "'Playfair Display', serif" }}>
+                <h4 style={{ fontSize: '1.35rem', margin: '0.25rem 0 0 0', color: '#0284C7', fontFamily: "'Playfair Display', serif" }}>
                   {lightboxData.title}
                 </h4>
               </div>
               <button
                 type="button"
-                className="ash-btn ash-btn-gold ash-btn-sm"
+                className="ash-btn ash-btn-primary ash-btn-sm"
                 onClick={() => {
                   setLightboxData(null);
                   setActiveModal('donation');
