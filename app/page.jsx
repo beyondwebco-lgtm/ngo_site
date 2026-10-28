@@ -2,84 +2,296 @@
 
 import React, { useState, useEffect } from 'react';
 
-// Initiative dynamic data for detail modal
+// Comprehensive six focus areas data with programs and community benefits
 const INITIATIVES_DATA = {
-  education: {
-    title: 'Education for Every Child',
-    tag: 'Primary & Secondary Education',
-    image: '/images/init_education.jpg',
-    lead: 'Breaking the cycle of generational poverty begins with continuous, quality learning opportunities for every girl and boy.',
-    desc: 'Our educational programs focus on bridging critical learning gaps in government and village schools. We provide supplementary remedial classes, distribute essential curriculum books, notebooks, and learning kits, and facilitate interactive digital classrooms where rural children can discover the joy of discovery.',
-    goals: [
-      'Remedial evening tutoring in underserved village clusters',
-      'Distribution of essential study materials and uniforms',
-      'Digital literacy basics and library corners',
-      'Parental sensitization to prevent early school dropout',
+  awareness: {
+    id: 'awareness',
+    title: 'Social & Environmental Awareness',
+    tag: 'Civic Responsibility & Ecology',
+    heading: 'Building Awareness. Inspiring Responsibility.',
+    image: '/images/init_awareness.jpg',
+    lead: 'Promoting responsible citizenship, environmental protection, and positive social habits through educational campaigns and community participation.',
+    desc: 'Sustainable social change begins at the grassroots when community members take conscious pride in public cleanliness, water conservation, road safety, and reducing plastic pollution. We work directly with neighborhood leaders, schools, and youth volunteers to lead high-impact public awareness campaigns.',
+    programs: [
+      {
+        name: 'Swachh Bharat & Cleanliness Drives',
+        items: [
+          'Community cleanliness campaigns in neighborhoods and public markets',
+          'Public sanitation and open-defecation prevention awareness',
+          'Clean streets, village squares, and common public spaces',
+          'Hygiene, segregation, and responsible waste management education',
+        ],
+      },
+      {
+        name: 'Save Water Campaigns',
+        items: [
+          'Water conservation awareness for households and schools',
+          'Preventing urban and rural water wastage at source',
+          'Responsible community usage and rainwater awareness',
+          'Local water-saving and groundwater protection initiatives',
+        ],
+      },
+      {
+        name: 'Road Safety & Traffic Awareness',
+        items: [
+          'Traffic discipline and fundamental road safety rules',
+          'Mandatory helmet and seatbelt compliance campaigns',
+          'Safe driving practices and pedestrian safety awareness',
+          'Interactive road safety workshops for students and commuters',
+        ],
+      },
+      {
+        name: 'Plastic-Free Environment',
+        items: [
+          'Reducing single-use plastics in daily community life',
+          'Promoting durable cloth, jute, and reusable alternatives',
+          'Plastic waste segregation and recycling awareness',
+          'Cleanliness and litter-free public campaigns',
+        ],
+      },
     ],
+    expectedBenefit: 'Fosters civic consciousness, reduces public health hazards and environmental degradation, conserves local water resources, and creates safer roads for students and families.',
+  },
+  education: {
+    id: 'education',
+    title: 'Education & Child Development',
+    tag: 'Learning & Value Education',
+    heading: 'Every Child Deserves a Better Future.',
+    image: '/images/init_education.jpg',
+    lead: 'Supporting underprivileged children through educational opportunities, learning infrastructure, life skills, and value-based awareness programs.',
+    desc: 'Education is the single most enduring pathway out of generational hardship. Our initiatives empower children from economically disadvantaged families with remedial schooling, essential study materials, science and digital labs, etiquette training, and strong moral values.',
+    programs: [
+      {
+        name: 'Education for Underprivileged Children',
+        items: [
+          'Educational assistance for children from disadvantaged families',
+          'Distribution of school bags, textbooks, and learning materials',
+          'Continuous tracking to prevent dropout and support school continuation',
+        ],
+      },
+      {
+        name: 'Free Education Initiatives',
+        items: [
+          'Free evening educational support and foundational coaching',
+          'Community learning sessions under village mentors',
+          'One-on-one academic mentoring and remedial tutoring',
+        ],
+      },
+      {
+        name: 'Educational Facilities Development',
+        items: [
+          'Supporting village school infrastructure and classroom upgrades',
+          'Setting up science models and basic computer laboratories',
+          'Curating reading libraries and learning corner facilities',
+          'Providing essential educational resources and desks',
+        ],
+      },
+      {
+        name: 'Mobile Phone & Digital Awareness',
+        items: [
+          'Guidance on responsible smartphone usage for young learners',
+          'Awareness about the harms of excessive screen time and gaming',
+          'Online safety, cyber hygiene, and digital discipline',
+          'Encouraging healthy reading and outdoor physical play habits',
+        ],
+      },
+      {
+        name: 'Cleanliness, Etiquette & Discipline',
+        items: [
+          'Personal hygiene, handwashing, and oral healthcare awareness',
+          'Keeping classrooms, study desks, and surroundings clean',
+          'Good manners, attentive listening, and respectful communication',
+          'Cultivating positive daily routines and time management',
+        ],
+      },
+      {
+        name: 'Family Values & Respect',
+        items: [
+          'Instilling deep respect for parents, elders, and teachers',
+          'Encouraging empathy, kindness, and peer support among students',
+          'Building strong family bonds and community civic responsibility',
+        ],
+      },
+    ],
+    expectedBenefit: 'Improves school retention rates, fosters academic confidence in first-generation students, cultivates digital discipline, and nurtures well-mannered, responsible citizens.',
+  },
+  temple: {
+    id: 'temple',
+    title: 'Temple Development & Cultural Activities',
+    tag: 'Heritage Preservation & Seva',
+    heading: 'Preserving Heritage. Strengthening Communities.',
+    image: '/images/init_temple.jpg',
+    lead: 'Supporting the preservation of spiritual and cultural heritage through temple renovation, community events, and charitable service activities.',
+    desc: 'Throughout Indian history, traditional temples have served as sacred centers of spiritual peace, community congregation, ethical education, and compassionate charity. We support the architectural preservation, cleanliness, cultural celebrations, and traditional Annadanam seva at heritage shrines.',
+    programs: [
+      {
+        name: 'Temple Renovation & Development',
+        items: [
+          'Renovation and restoration of ancient and rural temple structures',
+          'Maintenance, paving, and hygiene improvement of temple precincts',
+          'Supporting essential pilgrim amenities, drinking water, and lighting',
+        ],
+      },
+      {
+        name: 'Cultural & Spiritual Events',
+        items: [
+          'Organizing uplifting community festivals and heritage celebrations',
+          'Supporting traditional arts, devotional music, and cultural programs',
+          'Mobilizing dedicated volunteer teams for crowd care and public events',
+        ],
+      },
+      {
+        name: 'Food Donation & Annadanam',
+        items: [
+          'Organizing structured Annadanam food distribution programs',
+          'Providing freshly cooked, wholesome meals to pilgrims and underprivileged citizens',
+          'Supporting permanent community food service and hunger relief initiatives',
+        ],
+      },
+    ],
+    expectedBenefit: 'Preserves cherished architectural and cultural heritage, nurtures community harmony and social cohesion, and ensures dignified nutrition through the noble tradition of Annadanam.',
   },
   healthcare: {
-    title: 'Healthcare & Wellness Camps',
-    tag: 'Preventive & Primary Care',
+    id: 'healthcare',
+    title: 'Healthcare & Medical Support',
+    tag: 'Preventive Care & Clinical Camps',
+    heading: 'Accessible Healthcare. Healthier Communities.',
     image: '/images/init_healthcare.jpg',
-    lead: 'Empowering communities through accessible medical consultations, diagnostic screenings, and preventive health guidance.',
-    desc: 'Many underserved rural families lack easy access to primary medical centers. Our mobile medical camps bring certified doctors, pediatricians, and nurses directly to village doorsteps, providing general checkups, anemia screening, vision tests, and free basic medicines.',
-    goals: [
-      'Regular free general checkup and pediatric screening camps',
-      'Maternal and adolescent health guidance and hygiene kits',
-      'Nutritional monitoring and micronutrient guidance',
-      'Referral pathways to district health institutions',
+    lead: 'Improving access to preventive healthcare, basic medical screening, and community health awareness through organized medical initiatives.',
+    desc: 'Quality primary healthcare should not be a privilege reserved only for urban centers. We bring qualified doctors, diagnostic screenings, preventive consultations, and voluntary blood donation drives directly to remote and underserved community doorsteps.',
+    programs: [
+      {
+        name: 'Free Medical Camps',
+        items: [
+          'Comprehensive general health checkups in rural and slum clusters',
+          'Primary consultations with licensed general physicians',
+          'Preventive healthcare, sanitation, and nutritional counseling',
+        ],
+      },
+      {
+        name: 'Blood Donation Camps',
+        items: [
+          'Organizing voluntary blood donation drives across community centers',
+          'Close coordination with authorized hospitals and certified blood banks',
+          'Encouraging healthy eligible youth and donors to save lives',
+        ],
+      },
+      {
+        name: 'Diabetes & Blood Pressure Screening',
+        items: [
+          'Free blood glucose screening camps for early diabetes detection',
+          'Hypertension and blood pressure monitoring for adults and seniors',
+          'Dietary counseling and medical guidance for chronic condition management',
+        ],
+      },
+      {
+        name: 'Eye Checkup Camps',
+        items: [
+          'Basic vision testing and cataract screening for seniors',
+          'Preventive eye care awareness for schoolchildren and workers',
+          'Facilitating specialized referrals to partner ophthalmic hospitals',
+        ],
+      },
     ],
+    expectedBenefit: 'Catches silent chronic diseases at early stages, prevents catastrophic healthcare spending for low-income households, and bolsters life-saving blood bank reserves.',
   },
-  women: {
-    title: 'Women Empowerment & Skill Building',
-    tag: 'Self-Reliance & Livelihood',
-    image: '/images/init_women.jpg',
-    lead: 'When a woman is empowered, she uplifts her entire household and sets a new precedent for her community.',
-    desc: 'We facilitate practical vocational training centers where rural and semi-urban women learn tailoring, embroidery, textile crafts, and digital financial management. Through Self-Help Groups (SHGs), participants receive peer mentoring, basic accounting skills, and access to fair market linkages.',
-    goals: [
-      'Certificate courses in tailoring, sewing, and artisanal crafts',
-      'Financial literacy and banking enablement for women',
-      'Formation and mentorship of Self-Help Groups (SHGs)',
-      'Market linkage workshops to sell hand-crafted goods',
+  elderly: {
+    id: 'elderly',
+    title: 'Elderly Care & Social Welfare',
+    tag: 'Senior Dignity & Compassion',
+    heading: 'Care, Compassion & Dignity for Every Elder.',
+    image: '/images/init_elderly.jpg',
+    lead: 'Extending compassionate support to senior citizens, vulnerable individuals, and people living in old age homes.',
+    desc: 'Our elders laid the foundations of our families and communities. When age, vulnerability, or financial hardship leaves them isolated, Anand Group Charitable Trust steps forward with food supplies, medical care, clothing, and the warm touch of compassionate companionship.',
+    programs: [
+      {
+        name: 'Old Age Home Support',
+        items: [
+          'Regular nutritious food distribution and grocery supply support',
+          'Provision of bed linens, hygiene essentials, and personal toiletries',
+          'Warm seasonal clothing, shawls, and mobility assistance aids',
+          'Heartwarming volunteer visits, listening circles, and emotional companionship',
+        ],
+      },
+      {
+        name: 'Food & Essential Donations',
+        items: [
+          'Nutritious meal packages for impoverished elderly and destitute individuals',
+          'Monthly grocery and dry ration support for senior-headed households',
+          'Emergency relief support during harsh winter and monsoon periods',
+        ],
+      },
+      {
+        name: 'Community Welfare Activities',
+        items: [
+          'Direct welfare support to disadvantaged and destitute individuals',
+          'Grassroots community outreach to identify unserved vulnerable pockets',
+          'Promoting civic empathy and encouraging youth to adopt elder-care values',
+        ],
+      },
     ],
+    expectedBenefit: 'Combats loneliness and despair among seniors, provides guaranteed daily nutrition and clothing, and ensures elderly individuals live with the profound dignity they deserve.',
   },
-  'child-welfare': {
-    title: 'Child Welfare & Protection',
-    tag: 'Safe & Nurturing Environments',
-    image: '/images/init_child_welfare.jpg',
-    lead: 'Every child deserves a secure childhood filled with warmth, play, emotional nourishment, and zero fear.',
-    desc: 'We support local community spaces where children can learn creatively after school hours, participate in arts and crafts, sports, and life-skills workshops. We actively advocate against child labor and foster child protection committees comprising village elders and educators.',
-    goals: [
-      'Safe community learning hubs with recreational spaces',
-      'Child rights awareness campaigns and community protection',
-      'Nutrition reinforcement and emotional well-being mentorship',
-      'Extracurricular arts, music, and sports engagement',
+  ashram: {
+    id: 'ashram',
+    title: 'Naadha Ashram Support',
+    tag: 'Sanctuary & Loving Care',
+    heading: 'A Place of Compassion, Care & Belonging.',
+    image: '/images/init_ashram.jpg',
+    lead: 'Extending compassionate support to Naadha Ashram through regular nutritional aid, daily essential supplies, healthcare assistance, and volunteer engagement.',
+    desc: 'Naadha Ashram provides sanctuary, shelter, and peace to vulnerable individuals seeking care and belonging. Anand Group Charitable Trust proudly collaborates with Naadha Ashram to deliver consistent food supplies, hygiene items, seasonal clothing, and dedicated volunteer support.',
+    programs: [
+      {
+        name: 'Food & Nutrition Support',
+        items: [
+          'Provision of daily wholesome grains, pulses, cooking oil, and vegetables',
+          'Ensuring balanced, nutritious meals for all residents',
+          'Special festive Annadanam meal services prepared with love and care',
+        ],
+      },
+      {
+        name: 'Daily Essential Supplies',
+        items: [
+          'Household hygiene kits, soaps, sanitizers, and cleaning necessities',
+          'Comfortable bedding, blankets, bed linens, and mosquito nets',
+          'Essential kitchen and maintenance provisions for the ashram premises',
+        ],
+      },
+      {
+        name: 'Clothing & Hygiene Assistance',
+        items: [
+          'Clean, comfortable seasonal clothing, kurtas, sarees, and sweaters',
+          'Personal hygiene products and dignity kits for all residents',
+          'Assisting with laundry supplies and daily cleanliness routines',
+        ],
+      },
+      {
+        name: 'Healthcare & Volunteer Engagement',
+        items: [
+          'Arranging basic medical consultations and regular health monitoring',
+          'Providing prescribed daily medicines, supplements, and first-aid kits',
+          'Coordinating volunteer companionship, devotional singing, and interactive sessions',
+        ],
+      },
     ],
-  },
-  community: {
-    title: 'Sustainable Community Development',
-    tag: 'Grassroots Resilience',
-    image: '/images/init_community.jpg',
-    lead: 'Building self-sustaining, clean, and green communities through shared collective action.',
-    desc: 'True empowerment occurs when local communities take active ownership of their environment and common assets. We facilitate community tree plantations, clean drinking water awareness, solar lighting for village study halls, and waste management practices.',
-    goals: [
-      'Native sapling plantation drives and green cover expansion',
-      'Safe drinking water purification awareness',
-      'Community clean-up and sanitation awareness sessions',
-      'Solar lanterns and energy solutions for study centers',
-    ],
+    expectedBenefit: 'Provides an unbroken safety net of wholesome nourishment, hygienic living conditions, and genuine emotional warmth for all residents of Naadha Ashram.',
   },
 };
 
+// Curated authentic gallery items matching prompt categories
 const GALLERY_ITEMS = [
-  { id: 1, category: 'education', src: '/images/hero_community_hope.jpg', title: 'Village Learning Hub', tag: 'Education' },
-  { id: 2, category: 'education', src: '/images/about_mentorship.jpg', title: 'Mentorship Under the Banyan', tag: 'Mentorship' },
-  { id: 3, category: 'education', src: '/images/init_education.jpg', title: 'Classroom Discovery', tag: 'Education' },
-  { id: 4, category: 'healthcare', src: '/images/init_healthcare.jpg', title: 'Compassionate Health Camp', tag: 'Healthcare' },
-  { id: 5, category: 'community', src: '/images/init_women.jpg', title: 'Vocational Skill Center', tag: 'Livelihood' },
-  { id: 6, category: 'education', src: '/images/init_child_welfare.jpg', title: 'Creative Children Workshop', tag: 'Child Welfare' },
-  { id: 7, category: 'community', src: '/images/init_community.jpg', title: 'Community Sapling Drive', tag: 'Community' },
-  { id: 8, category: 'volunteers', src: '/images/gallery_volunteers.jpg', title: 'Youth Volunteer Network', tag: 'Volunteers' },
+  { id: 1, category: 'awareness', src: '/images/init_awareness.jpg', title: 'Clean Village Awareness Drive', tag: 'Awareness' },
+  { id: 2, category: 'education', src: '/images/init_education.jpg', title: 'Underprivileged Children Classroom', tag: 'Education' },
+  { id: 3, category: 'education', src: '/images/about_mentorship.jpg', title: 'Values & Academic Mentorship', tag: 'Education' },
+  { id: 4, category: 'temple', src: '/images/init_temple.jpg', title: 'Heritage Temple Precinct Renovation', tag: 'Temple' },
+  { id: 5, category: 'medical', src: '/images/init_healthcare.jpg', title: 'Free Community Health Screening', tag: 'Medical Camps' },
+  { id: 6, category: 'elderly', src: '/images/init_elderly.jpg', title: 'Dignity & Care for Senior Citizens', tag: 'Elderly Care' },
+  { id: 7, category: 'ashram', src: '/images/init_ashram.jpg', title: 'Daily Support at Naadha Ashram', tag: 'Naadha Ashram' },
+  { id: 8, category: 'food', src: '/images/init_annadanam.jpg', title: 'Community Annadanam Food Distribution', tag: 'Food Donations' },
+  { id: 9, category: 'awareness', src: '/images/gallery_volunteers.jpg', title: 'Youth Volunteers for Cleanliness', tag: 'Awareness' },
+  { id: 10, category: 'education', src: '/images/hero_community_hope.jpg', title: 'Curiosity and Learning Opportunities', tag: 'Education' },
+  { id: 11, category: 'food', src: '/images/gallery_nutrition.jpg', title: 'Wholesome Grocery Kit Support', tag: 'Food Donations' },
+  { id: 12, category: 'elderly', src: '/images/init_child_welfare.jpg', title: 'Intergenerational Care & Life Skills', tag: 'Elderly Care' },
 ];
 
 export default function HomePage() {
@@ -89,20 +301,23 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
 
   // Modals state
-  const [activeModal, setActiveModal] = useState(null);
-  const [selectedInitiative, setSelectedInitiative] = useState(null);
+  const [activeModal, setActiveModal] = useState(null); // 'donation' | 'volunteer' | 'csr' | 'sponsor' | 'initiative' | 'story' | 'privacy' | 'terms'
+  const [selectedInitiativeKey, setSelectedInitiativeKey] = useState('awareness');
+  const [activeInitiativeTab, setActiveInitiativeTab] = useState('awareness');
   const [lightboxData, setLightboxData] = useState(null);
 
-  // Gallery filter
+  // Gallery filter state
   const [galleryFilter, setGalleryFilter] = useState('all');
 
   // Toast notification
   const [toast, setToast] = useState(null);
 
-  // Form states
+  // Form handling states
   const [customAmount, setCustomAmount] = useState('');
   const [selectedTier, setSelectedTier] = useState('');
+  const [donationTarget, setDonationTarget] = useState('All Initiatives');
   const [contactSubmitting, setContactSubmitting] = useState(false);
+  const [csrSubmitting, setCsrSubmitting] = useState(false);
 
   const showToast = (message, type = 'success') => {
     setToast({ message, type });
@@ -120,7 +335,7 @@ export default function HomePage() {
         setIsScrolled(false);
       }
 
-      const sections = ['home', 'about', 'initiatives', 'impact', 'featured', 'gallery', 'get-involved', 'stories', 'contact'];
+      const sections = ['home', 'about', 'initiatives', 'ashram', 'impact', 'csr', 'gallery', 'get-involved', 'stories', 'contact'];
       const scrollPos = window.scrollY + 140;
 
       for (const sectionId of sections) {
@@ -161,32 +376,11 @@ export default function HomePage() {
     } else {
       reveals.forEach((el) => el.classList.add('is-visible'));
     }
-  }, []);
+  }, [activeInitiativeTab, galleryFilter]);
 
-  // Lock body scroll when modal or lightbox is open
-  useEffect(() => {
-    if (activeModal || lightboxData || mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [activeModal, lightboxData, mobileMenuOpen]);
-
-  // Escape key handler
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setActiveModal(null);
-        setLightboxData(null);
-        setMobileMenuOpen(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
+  // Handle Initiative Modal opening
   const openInitiativeModal = (key) => {
-    setSelectedInitiative(INITIATIVES_DATA[key]);
+    setSelectedInitiativeKey(key);
     setActiveModal('initiative');
   };
 
@@ -197,7 +391,18 @@ export default function HomePage() {
       setContactSubmitting(false);
       e.target.reset();
       showToast('Thank you! Your message has been received by Anand Group Charitable Trust. We will connect with you shortly.');
-    }, 900);
+    }, 800);
+  };
+
+  const handleCsrSubmit = (e) => {
+    e.preventDefault();
+    setCsrSubmitting(true);
+    setTimeout(() => {
+      setCsrSubmitting(false);
+      e.target.reset();
+      setActiveModal(null);
+      showToast('Thank you for your CSR partnership enquiry! Our institutional collaboration team will connect with your CSR office within 24-48 business hours.');
+    }, 850);
   };
 
   const handleDonationSubmit = (e) => {
@@ -205,7 +410,7 @@ export default function HomePage() {
     setActiveModal(null);
     setCustomAmount('');
     setSelectedTier('');
-    showToast('Thank you for your contribution pledge! Our outreach team will share official trust documentation and credentials.');
+    showToast('Thank you for your contribution pledge! Our trust coordinator will reach out with official verification details and credentials.');
   };
 
   const handleVolunteerSubmit = (e) => {
@@ -214,10 +419,10 @@ export default function HomePage() {
     showToast('Thank you for applying to volunteer with Anand Group Charitable Trust! Welcome to the movement.');
   };
 
-  const handlePartnerSubmit = (e) => {
+  const handleSponsorSubmit = (e) => {
     e.preventDefault();
     setActiveModal(null);
-    showToast('Partnership inquiry received! Our institutional collaboration team will reach out with the proposal docket.');
+    showToast('Thank you for your sponsorship enquiry! A coordinator will share project metrics and implementation schedules shortly.');
   };
 
   const handleNewsletterSubmit = (e) => {
@@ -229,6 +434,9 @@ export default function HomePage() {
   const filteredGallery = galleryFilter === 'all'
     ? GALLERY_ITEMS
     : GALLERY_ITEMS.filter((item) => item.category === galleryFilter);
+
+  const selectedInit = INITIATIVES_DATA[selectedInitiativeKey] || INITIATIVES_DATA.awareness;
+  const tabInit = INITIATIVES_DATA[activeInitiativeTab] || INITIATIVES_DATA.awareness;
 
   return (
     <>
@@ -245,7 +453,7 @@ export default function HomePage() {
               </a>
             </div>
             <div className="top-trust-badge">
-              <i className="fa fa-shield-alt"></i> Non-Governmental Organization / Registered Charitable Trust &bull; India
+              <i className="fa fa-shield-alt"></i> Registered Indian Non-Governmental Organization &amp; Charitable Trust
             </div>
           </div>
         </div>
@@ -265,28 +473,30 @@ export default function HomePage() {
               <li><a href="#about" className={`nav-item-link ${activeSection === 'about' ? 'active' : ''}`}>About Us</a></li>
               <li><a href="#initiatives" className={`nav-item-link ${activeSection === 'initiatives' ? 'active' : ''}`}>Our Initiatives</a></li>
               <li><a href="#impact" className={`nav-item-link ${activeSection === 'impact' ? 'active' : ''}`}>Our Impact</a></li>
+              <li><a href="#ashram" className={`nav-item-link ${activeSection === 'ashram' ? 'active' : ''}`}>Naadha Ashram</a></li>
               <li><a href="#gallery" className={`nav-item-link ${activeSection === 'gallery' ? 'active' : ''}`}>Gallery</a></li>
+              <li><a href="#csr" className={`nav-item-link ${activeSection === 'csr' ? 'active' : ''}`}>CSR Partnerships</a></li>
               <li><a href="#get-involved" className={`nav-item-link ${activeSection === 'get-involved' ? 'active' : ''}`}>Get Involved</a></li>
               <li><a href="#contact" className={`nav-item-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a></li>
             </ul>
 
-            {/* Navbar Actions */}
             <div className="navbar-actions">
               <button
                 type="button"
-                className="ash-btn ash-btn-primary ash-btn-sm"
-                onClick={() => setActiveModal('donation')}
-                id="navDonateBtn"
+                className="ash-btn ash-btn-primary"
+                onClick={() => {
+                  setDonationTarget('All Initiatives');
+                  setActiveModal('donation');
+                }}
               >
                 <i className="fa fa-heart"></i> Donate Now
               </button>
 
-              {/* Mobile Hamburger Toggle */}
               <button
                 type="button"
                 className={`mobile-nav-toggle ${mobileMenuOpen ? 'open' : ''}`}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label="Toggle Navigation Menu"
+                aria-label="Toggle navigation menu"
               >
                 <span></span>
                 <span></span>
@@ -297,21 +507,23 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu & Backdrop */}
+      {/* Mobile Drawer Menu */}
       <div
         className={`mobile-menu-backdrop ${mobileMenuOpen ? 'open' : ''}`}
         onClick={() => setMobileMenuOpen(false)}
       ></div>
       <aside className={`mobile-menu-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <nav>
-          <ul className="mobile-nav-list">
-            <li><a href="#home" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
-            <li><a href="#about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>About Us</a></li>
-            <li><a href="#initiatives" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Our Initiatives</a></li>
-            <li><a href="#impact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Our Impact</a></li>
-            <li><a href="#gallery" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Gallery</a></li>
-            <li><a href="#get-involved" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Get Involved</a></li>
-            <li><a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <li><a href="#home" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
+            <li><a href="#about" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>About Us</a></li>
+            <li><a href="#initiatives" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Our Initiatives</a></li>
+            <li><a href="#impact" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Our Impact</a></li>
+            <li><a href="#ashram" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Naadha Ashram Support</a></li>
+            <li><a href="#gallery" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Gallery</a></li>
+            <li><a href="#csr" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>CSR Partnerships</a></li>
+            <li><a href="#get-involved" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Get Involved</a></li>
+            <li><a href="#contact" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Contact Us</a></li>
           </ul>
         </nav>
         <div style={{ marginTop: '2rem' }}>
@@ -321,10 +533,11 @@ export default function HomePage() {
             style={{ width: '100%' }}
             onClick={() => {
               setMobileMenuOpen(false);
+              setDonationTarget('All Initiatives');
               setActiveModal('donation');
             }}
           >
-            <i className="fa fa-heart"></i> Support Our Mission
+            <i className="fa fa-heart"></i> Donate Now
           </button>
           <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#4B5563', textAlign: 'center' }}>
             Anand Group Charitable Trust &bull; India
@@ -333,7 +546,7 @@ export default function HomePage() {
       </aside>
 
       {/* ==========================================================================
-           HERO SECTION (PURE WHITE THEME WITH LIGHT GOOD BLUE HEADINGS & BLACK TEXT)
+           1. HERO SECTION
            ========================================================================== */}
       <section className="hero-section" id="home">
         <div className="ash-container">
@@ -341,49 +554,52 @@ export default function HomePage() {
             {/* Left Column: Content */}
             <div className="hero-content reveal-on-scroll">
               <h1 className="hero-title">
-                Together, We Can Create a Better Tomorrow.
+                Together, We Build a Better Tomorrow.
               </h1>
 
               <p className="hero-subheading">
-                Empowering communities through education, compassion, and meaningful action. Every small step brings us closer to a brighter, more inclusive future.
+                Empowering communities through education, social awareness, healthcare, cultural preservation, and compassionate service. Creating meaningful change, one initiative at a time.
               </p>
 
               <div className="hero-buttons">
                 <a href="#initiatives" className="ash-btn ash-btn-primary">
-                  <span>Explore Our Work</span>
+                  <span>Explore Our Initiatives</span>
                   <i className="fa fa-arrow-right"></i>
                 </a>
                 <button
                   type="button"
                   className="ash-btn ash-btn-outline"
-                  onClick={() => setActiveModal('donation')}
+                  onClick={() => {
+                    setDonationTarget('All Initiatives');
+                    setActiveModal('donation');
+                  }}
                 >
                   <i className="fa fa-hands-helping"></i>
                   <span>Support Our Mission</span>
                 </button>
               </div>
 
-              {/* Stats Box */}
+              {/* Stats / Highlight Box */}
               <div className="hero-glass-stats">
                 <div className="glass-stat-item">
-                  <div className="glass-stat-icon"><i className="fa fa-graduation-cap"></i></div>
+                  <div className="glass-stat-icon"><i className="fa fa-layer-group"></i></div>
                   <div>
-                    <div className="glass-stat-label">Focus Areas</div>
-                    <div className="glass-stat-value">Education &amp; Care</div>
-                  </div>
-                </div>
-                <div className="glass-stat-item">
-                  <div className="glass-stat-icon"><i className="fa fa-map-marker-alt"></i></div>
-                  <div>
-                    <div className="glass-stat-label">Grassroots Reach</div>
-                    <div className="glass-stat-value">Rural &amp; Urban Hubs</div>
+                    <div className="glass-stat-label">Core Pillars</div>
+                    <div className="glass-stat-value">6 Focus Areas</div>
                   </div>
                 </div>
                 <div className="glass-stat-item">
                   <div className="glass-stat-icon"><i className="fa fa-hand-holding-heart"></i></div>
                   <div>
-                    <div className="glass-stat-label">Philosophy</div>
-                    <div className="glass-stat-value">100% Compassion</div>
+                    <div className="glass-stat-label">Approach</div>
+                    <div className="glass-stat-value">Grassroots Seva</div>
+                  </div>
+                </div>
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon"><i className="fa fa-handshake"></i></div>
+                  <div>
+                    <div className="glass-stat-label">Alliances</div>
+                    <div className="glass-stat-value">CSR &amp; Donors</div>
                   </div>
                 </div>
               </div>
@@ -391,14 +607,14 @@ export default function HomePage() {
 
             {/* Right Column: Hero Visual Media */}
             <div className="hero-image-card reveal-on-scroll">
-              <img src="/images/hero_community_hope.jpg" alt="Anand Group Charitable Trust Community Learning Hub" />
+              <img src="/images/hero_community_hope.jpg" alt="Anand Group Charitable Trust Community Initiatives" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ==========================================================================
-           ABOUT ANAND GROUP CHARITABLE TRUST
+           2. ABOUT US SECTION
            ========================================================================== */}
       <section className="ash-section" id="about">
         <div className="ash-container">
@@ -410,7 +626,7 @@ export default function HomePage() {
               </div>
               <div className="about-floating-badge">
                 <h4>Grassroots Upliftment</h4>
-                <p>Empowering children and women through continuous community-based mentoring.</p>
+                <p>Empowering children, seniors, and communities through dedicated humanitarian seva.</p>
               </div>
             </div>
 
@@ -422,23 +638,23 @@ export default function HomePage() {
                 Rooted in Compassion. Driven by Purpose.
               </h2>
               <p className="about-text-lead">
-                Anand Group Charitable Trust is a dedicated non-governmental organization and registered charitable trust established with an enduring dedication to grassroots social transformation in India. We believe every child, woman, and vulnerable individual possesses the inherent right to live with dignity, self-sufficiency, and boundless opportunity.
+                Anand Group Charitable Trust is a dedicated non-governmental organization and registered charitable trust established with an enduring dedication to grassroots social transformation in India. We believe every individual possesses the inherent right to live with dignity, good health, and boundless opportunity.
               </p>
               <p>
-                Rather than brief relief work, our initiatives focus on sustainable community architecture: supporting educational access, nurturing preventive rural healthcare, fostering women&apos;s economic independence, and preserving child welfare.
+                Rather than short-term relief, our initiatives focus on enduring community empowerment: delivering quality child education, instilling civic and environmental awareness, providing preventive healthcare and clinical camps, restoring cultural temples, providing elder care, and offering comprehensive support to Naadha Ashram.
               </p>
 
               <div className="mission-vision-boxes">
                 <div className="mv-card">
                   <div className="mv-icon"><i className="fa fa-compass"></i></div>
                   <h3>Our Mission</h3>
-                  <p>Creating meaningful opportunities for underserved communities through education, healthcare, empowerment, and sustainable development.</p>
+                  <p>To create meaningful social change through education, environmental awareness, accessible healthcare, cultural preservation, and compassionate community service.</p>
                 </div>
 
                 <div className="mv-card">
                   <div className="mv-icon"><i className="fa fa-eye"></i></div>
                   <h3>Our Vision</h3>
-                  <p>A compassionate and inclusive society where every individual has access to dignity, opportunity, and a better future.</p>
+                  <p>To build an inclusive, responsible, and compassionate society where individuals and communities have opportunities to live with dignity, good health, and purpose.</p>
                 </div>
               </div>
 
@@ -447,8 +663,10 @@ export default function HomePage() {
                 <div className="values-grid">
                   <div className="value-pill"><i className="fa fa-heart"></i> Compassion</div>
                   <div className="value-pill"><i className="fa fa-balance-scale"></i> Integrity</div>
+                  <div className="value-pill"><i className="fa fa-hands-helping"></i> Service</div>
+                  <div className="value-pill"><i className="fa fa-leaf"></i> Responsibility</div>
                   <div className="value-pill"><i className="fa fa-equals"></i> Equality</div>
-                  <div className="value-pill"><i className="fa fa-bolt"></i> Empowerment</div>
+                  <div className="value-pill"><i className="fa fa-users"></i> Community Development</div>
                 </div>
               </div>
 
@@ -468,7 +686,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           KEY INITIATIVES (5 CARDS GRID)
+           3. MAIN INITIATIVES — SIX CORE FOCUS AREAS (CARDS GRID)
            ========================================================================== */}
       <section className="ash-section" id="initiatives">
         <div className="ash-container">
@@ -477,144 +695,396 @@ export default function HomePage() {
               <i className="fa fa-hands"></i> Core Focus Areas
             </div>
             <h2 className="section-title">
-              Creating Change Where It Matters Most
+              Six Pillars of Community Transformation
             </h2>
             <p className="section-subtitle">
-              Holistic, community-centered programs designed to address core challenges and foster sustainable independence across underserved regions.
+              Comprehensive, compassionate initiatives designed to address core societal needs, promote environmental responsibility, and build lasting grassroots self-reliance.
             </p>
           </div>
 
           <div className="initiatives-grid">
-            {/* Card 1 */}
+            {/* 1. Social & Environmental Awareness */}
             <article className="initiative-card reveal-on-scroll">
               <div className="initiative-img-container">
-                <img src="/images/init_education.jpg" alt="Children reading in school" loading="lazy" />
+                <img src="/images/init_awareness.jpg" alt="Swachh Bharat Cleanliness and Tree Planting Drive" loading="lazy" />
+                <span className="initiative-badge">Awareness</span>
+              </div>
+              <div className="initiative-body">
+                <h3 className="initiative-title">1. Social &amp; Environmental Awareness</h3>
+                <p className="initiative-desc">
+                  Building awareness and inspiring responsibility through Swachh Bharat cleanliness drives, save water campaigns, traffic road safety, and plastic-free living.
+                </p>
+                <div className="initiative-footer">
+                  <button
+                    type="button"
+                    className="learn-more-btn"
+                    onClick={() => {
+                      setActiveInitiativeTab('awareness');
+                      openInitiativeModal('awareness');
+                    }}
+                    aria-label="Explore Social and Environmental Awareness"
+                  >
+                    <span>Explore Initiative</span>
+                    <i className="fa fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* 2. Education & Child Development */}
+            <article className="initiative-card reveal-on-scroll">
+              <div className="initiative-img-container">
+                <img src="/images/init_education.jpg" alt="Underprivileged Children Classroom Tutoring" loading="lazy" />
                 <span className="initiative-badge">Education</span>
               </div>
               <div className="initiative-body">
-                <h3 className="initiative-title">1. Education for Every Child</h3>
+                <h3 className="initiative-title">2. Education &amp; Child Development</h3>
                 <p className="initiative-desc">
-                  Supporting access to quality education, learning resources, and educational opportunities for underserved children across rural and semi-urban learning hubs.
+                  Every child deserves a better future. Supporting underprivileged learners with free education, school infrastructure, digital discipline, and value-based mentoring.
                 </p>
                 <div className="initiative-footer">
                   <button
                     type="button"
                     className="learn-more-btn"
-                    onClick={() => openInitiativeModal('education')}
-                    aria-label="Learn more about Education for Every Child"
+                    onClick={() => {
+                      setActiveInitiativeTab('education');
+                      openInitiativeModal('education');
+                    }}
+                    aria-label="Explore Education and Child Development"
                   >
-                    <span>Learn More</span>
+                    <span>Explore Initiative</span>
                     <i className="fa fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
             </article>
 
-            {/* Card 2 */}
+            {/* 3. Temple Development & Cultural Activities */}
             <article className="initiative-card reveal-on-scroll">
               <div className="initiative-img-container">
-                <img src="/images/init_healthcare.jpg" alt="Doctor conducting health checkup" loading="lazy" />
+                <img src="/images/init_temple.jpg" alt="Heritage Temple Courtyard Renovation" loading="lazy" />
+                <span className="initiative-badge">Heritage &amp; Seva</span>
+              </div>
+              <div className="initiative-body">
+                <h3 className="initiative-title">3. Temple Development &amp; Culture</h3>
+                <p className="initiative-desc">
+                  Preserving heritage and strengthening communities through temple renovation, sacred precinct hygiene, cultural events, and traditional Annadanam food distribution.
+                </p>
+                <div className="initiative-footer">
+                  <button
+                    type="button"
+                    className="learn-more-btn"
+                    onClick={() => {
+                      setActiveInitiativeTab('temple');
+                      openInitiativeModal('temple');
+                    }}
+                    aria-label="Explore Temple Development"
+                  >
+                    <span>Explore Initiative</span>
+                    <i className="fa fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* 4. Healthcare & Medical Support */}
+            <article className="initiative-card reveal-on-scroll">
+              <div className="initiative-img-container">
+                <img src="/images/init_healthcare.jpg" alt="Free Medical Camp and Screening" loading="lazy" />
                 <span className="initiative-badge">Healthcare</span>
               </div>
               <div className="initiative-body">
-                <h3 className="initiative-title">2. Healthcare &amp; Wellness</h3>
+                <h3 className="initiative-title">4. Healthcare &amp; Medical Support</h3>
                 <p className="initiative-desc">
-                  Promoting health awareness, preventive care, diagnostic medical screening, and improved access to essential healthcare services for remote families.
+                  Accessible healthcare for healthier communities. Free general medical camps, voluntary blood donation drives, diabetes &amp; BP screening, and eye checkups.
                 </p>
                 <div className="initiative-footer">
                   <button
                     type="button"
                     className="learn-more-btn"
-                    onClick={() => openInitiativeModal('healthcare')}
-                    aria-label="Learn more about Healthcare and Wellness"
+                    onClick={() => {
+                      setActiveInitiativeTab('healthcare');
+                      openInitiativeModal('healthcare');
+                    }}
+                    aria-label="Explore Healthcare and Medical Support"
                   >
-                    <span>Learn More</span>
+                    <span>Explore Initiative</span>
                     <i className="fa fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
             </article>
 
-            {/* Card 3 */}
+            {/* 5. Elderly Care & Social Welfare */}
             <article className="initiative-card reveal-on-scroll">
               <div className="initiative-img-container">
-                <img src="/images/init_women.jpg" alt="Women vocational training center" loading="lazy" />
-                <span className="initiative-badge">Livelihood</span>
+                <img src="/images/init_elderly.jpg" alt="Senior Citizen Care and Comfort" loading="lazy" />
+                <span className="initiative-badge">Elderly Care</span>
               </div>
               <div className="initiative-body">
-                <h3 className="initiative-title">3. Women Empowerment</h3>
+                <h3 className="initiative-title">5. Elderly Care &amp; Social Welfare</h3>
                 <p className="initiative-desc">
-                  Encouraging financial independence through vocational skill development, tailoring, craft incubation, and self-help group mentorship.
+                  Care, compassion, and dignity for every elder. Supporting old age homes, food and grocery assistance, warm seasonal clothing, and dedicated volunteer visits.
                 </p>
                 <div className="initiative-footer">
                   <button
                     type="button"
                     className="learn-more-btn"
-                    onClick={() => openInitiativeModal('women')}
-                    aria-label="Learn more about Women Empowerment"
+                    onClick={() => {
+                      setActiveInitiativeTab('elderly');
+                      openInitiativeModal('elderly');
+                    }}
+                    aria-label="Explore Elderly Care and Social Welfare"
                   >
-                    <span>Learn More</span>
+                    <span>Explore Initiative</span>
                     <i className="fa fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
             </article>
 
-            {/* Card 4 */}
+            {/* 6. Naadha Ashram Support */}
             <article className="initiative-card reveal-on-scroll">
               <div className="initiative-img-container">
-                <img src="/images/init_child_welfare.jpg" alt="Children drawing and smiling" loading="lazy" />
-                <span className="initiative-badge">Child Rights</span>
+                <img src="/images/init_ashram.jpg" alt="Naadha Ashram Community Food and Care" loading="lazy" />
+                <span className="initiative-badge">Naadha Ashram</span>
               </div>
               <div className="initiative-body">
-                <h3 className="initiative-title">4. Child Welfare</h3>
+                <h3 className="initiative-title">6. Naadha Ashram Support</h3>
                 <p className="initiative-desc">
-                  Supporting safe, nurturing environments where children can learn, grow, play, and thrive free from exploitation and neglect.
+                  A place of compassion, care, and belonging. Providing ongoing wholesome nutrition, daily essential supplies, clothing, hygiene, and volunteer companionship.
                 </p>
                 <div className="initiative-footer">
                   <button
                     type="button"
                     className="learn-more-btn"
-                    onClick={() => openInitiativeModal('child-welfare')}
-                    aria-label="Learn more about Child Welfare"
+                    onClick={() => {
+                      setActiveInitiativeTab('ashram');
+                      openInitiativeModal('ashram');
+                    }}
+                    aria-label="Explore Naadha Ashram Support"
                   >
-                    <span>Learn More</span>
+                    <span>Explore Initiative</span>
                     <i className="fa fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
             </article>
+          </div>
 
-            {/* Card 5 */}
-            <article className="initiative-card reveal-on-scroll">
-              <div className="initiative-img-container">
-                <img src="/images/init_community.jpg" alt="Villagers planting trees together" loading="lazy" />
-                <span className="initiative-badge">Sustainability</span>
+          {/* ==========================================================================
+               DETAILED INITIATIVE BROWSER (EXPANDABLE TABS)
+               ========================================================================== */}
+          <div style={{ marginTop: '4.5rem' }} className="reveal-on-scroll">
+            <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+              <div className="section-eyebrow">
+                <i className="fa fa-book-open"></i> Detailed Program Showcase
               </div>
-              <div className="initiative-body">
-                <h3 className="initiative-title">5. Community Development</h3>
-                <p className="initiative-desc">
-                  Strengthening communities through ecological sustainability, green tree plantations, clean water awareness, and inclusive local development.
-                </p>
-                <div className="initiative-footer">
-                  <button
-                    type="button"
-                    className="learn-more-btn"
-                    onClick={() => openInitiativeModal('community')}
-                    aria-label="Learn more about Community Development"
-                  >
-                    <span>Learn More</span>
-                    <i className="fa fa-arrow-right"></i>
-                  </button>
+              <h3 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Browse All Six Focus Categories</h3>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.975rem' }}>
+                Select a category below to explore its specific programs, key activities, and expected community benefits.
+              </p>
+            </div>
+
+            {/* Tabs Selector */}
+            <div className="initiatives-nav-tabs">
+              <button
+                type="button"
+                className={`init-tab-btn ${activeInitiativeTab === 'awareness' ? 'active' : ''}`}
+                onClick={() => setActiveInitiativeTab('awareness')}
+              >
+                <i className="fa fa-leaf"></i> 1. Social &amp; Environment
+              </button>
+              <button
+                type="button"
+                className={`init-tab-btn ${activeInitiativeTab === 'education' ? 'active' : ''}`}
+                onClick={() => setActiveInitiativeTab('education')}
+              >
+                <i className="fa fa-graduation-cap"></i> 2. Education &amp; Children
+              </button>
+              <button
+                type="button"
+                className={`init-tab-btn ${activeInitiativeTab === 'temple' ? 'active' : ''}`}
+                onClick={() => setActiveInitiativeTab('temple')}
+              >
+                <i className="fa fa-om"></i> 3. Temple &amp; Culture
+              </button>
+              <button
+                type="button"
+                className={`init-tab-btn ${activeInitiativeTab === 'healthcare' ? 'active' : ''}`}
+                onClick={() => setActiveInitiativeTab('healthcare')}
+              >
+                <i className="fa fa-stethoscope"></i> 4. Medical Support
+              </button>
+              <button
+                type="button"
+                className={`init-tab-btn ${activeInitiativeTab === 'elderly' ? 'active' : ''}`}
+                onClick={() => setActiveInitiativeTab('elderly')}
+              >
+                <i className="fa fa-heart"></i> 5. Elderly Care
+              </button>
+              <button
+                type="button"
+                className={`init-tab-btn ${activeInitiativeTab === 'ashram' ? 'active' : ''}`}
+                onClick={() => setActiveInitiativeTab('ashram')}
+              >
+                <i className="fa fa-hands-helping"></i> 6. Naadha Ashram
+              </button>
+            </div>
+
+            {/* Tab Detail Card */}
+            <div className="init-detail-card">
+              <div className="init-detail-grid">
+                <div className="init-detail-media">
+                  <img src={tabInit.image} alt={tabInit.title} loading="lazy" />
+                  <div className="init-detail-badge">{tabInit.tag}</div>
+                </div>
+
+                <div>
+                  <div style={{ color: 'var(--color-blue-heading)', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '0.35rem' }}>
+                    {tabInit.title}
+                  </div>
+                  <h3 style={{ fontSize: '1.85rem', marginBottom: '0.85rem' }}>{tabInit.heading}</h3>
+                  <p style={{ fontSize: '1.05rem', color: '#111827', fontWeight: 500, lineHeight: 1.7, marginBottom: '1rem' }}>
+                    {tabInit.lead}
+                  </p>
+                  <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: 1.68 }}>
+                    {tabInit.desc}
+                  </p>
+
+                  <h4 style={{ fontSize: '1.15rem', marginTop: '1.75rem', marginBottom: '0.75rem' }}>
+                    Key Activities &amp; Programs
+                  </h4>
+
+                  <div className="init-programs-subgrid">
+                    {tabInit.programs.map((prog, idx) => (
+                      <div key={idx} className="init-program-card">
+                        <h4><i className="fa fa-check-circle"></i> {prog.name}</h4>
+                        <ul>
+                          {prog.items.map((it, itemIdx) => (
+                            <li key={itemIdx}>{it}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="init-benefit-box">
+                    <strong style={{ color: 'var(--color-blue-heading)' }}><i className="fa fa-chart-line"></i> Expected Community Benefit:</strong> {tabInit.expectedBenefit}
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                    <button
+                      type="button"
+                      className="ash-btn ash-btn-primary"
+                      onClick={() => {
+                        setDonationTarget(tabInit.title);
+                        setActiveModal('donation');
+                      }}
+                    >
+                      <i className="fa fa-heart"></i> Support This Initiative
+                    </button>
+                    <button
+                      type="button"
+                      className="ash-btn ash-btn-outline"
+                      onClick={() => setActiveModal('volunteer')}
+                    >
+                      <i className="fa fa-user-plus"></i> Volunteer for Program
+                    </button>
+                  </div>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ==========================================================================
-           OUR IMPACT / COMMITMENT & TARGETS
+           4. DEDICATED NAADHA ASHRAM SUPPORT SECTION
+           ========================================================================== */}
+      <section className="ash-section" id="ashram" style={{ backgroundColor: 'var(--color-blue-tint)' }}>
+        <div className="ash-container">
+          <div className="ashram-hero-card reveal-on-scroll">
+            <div className="ashram-grid">
+              <div className="ashram-media-col">
+                <img src="/images/init_ashram.jpg" alt="Naadha Ashram Community Food and Care" loading="lazy" />
+              </div>
+
+              <div className="ashram-info-col">
+                <div className="ashram-pill">
+                  <i className="fa fa-star"></i> Dedicated Social Support Initiative
+                </div>
+                <div className="section-eyebrow">
+                  <i className="fa fa-hands-helping"></i> Naadha Ashram Support
+                </div>
+                <h2 className="section-title" style={{ fontSize: '2.3rem' }}>
+                  A Place of Compassion, Care &amp; Belonging
+                </h2>
+                <p style={{ fontSize: '1.05rem', lineHeight: 1.75, color: '#111827', fontWeight: 500 }}>
+                  Naadha Ashram provides sanctuary, shelter, and peace to vulnerable individuals seeking care and belonging. Anand Group Charitable Trust works in active community partnership to extend an unbroken safety net of nutritious food, clean daily essentials, and emotional warmth.
+                </p>
+                <p style={{ fontSize: '0.925rem', color: '#4B5563', lineHeight: 1.65 }}>
+                  Every day, our dedicated volunteer teams collaborate with the ashram to support wholesome meal preparation, distribute clean clothing, organize primary medical checkups, and sit with residents to share comforting fellowship.
+                </p>
+
+                <div style={{ marginTop: '1.75rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <button
+                    type="button"
+                    className="ash-btn ash-btn-primary"
+                    onClick={() => {
+                      setDonationTarget('Naadha Ashram Support');
+                      setActiveModal('donation');
+                    }}
+                  >
+                    <i className="fa fa-heart"></i> Support Naadha Ashram
+                  </button>
+                  <button
+                    type="button"
+                    className="ash-btn ash-btn-outline"
+                    onClick={() => setActiveModal('volunteer')}
+                  >
+                    <i className="fa fa-hands"></i> Join as Ashram Volunteer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 Ashram Focus Grid Cards */}
+          <div className="ashram-focus-grid reveal-on-scroll">
+            <div className="ashram-focus-card">
+              <div className="ashram-focus-icon"><i className="fa fa-utensils"></i></div>
+              <h4>Food &amp; Nutrition Support</h4>
+              <p>Daily provision of quality rice, wheat flour, pulses, cooking oils, and fresh seasonal vegetables to ensure wholesome, balanced meals for every resident.</p>
+            </div>
+
+            <div className="ashram-focus-card">
+              <div className="ashram-focus-icon"><i className="fa fa-box-open"></i></div>
+              <h4>Daily Essential Supplies</h4>
+              <p>Supplying household hygiene necessities, soaps, detergents, clean bedsheets, blankets, and essential maintenance supplies to ensure dignified living spaces.</p>
+            </div>
+
+            <div className="ashram-focus-card">
+              <div className="ashram-focus-icon"><i className="fa fa-tshirt"></i></div>
+              <h4>Clothing &amp; Hygiene Assistance</h4>
+              <p>Providing clean, comfortable seasonal garments, winter shawls, and personal dignity kits tailored to the needs of residents throughout the year.</p>
+            </div>
+
+            <div className="ashram-focus-card">
+              <div className="ashram-focus-icon"><i className="fa fa-user-md"></i></div>
+              <h4>Healthcare &amp; Volunteer Care</h4>
+              <p>Arranging periodic doctor visits, first aid kits, necessary prescribed medicines, and heart-to-heart volunteer companionship to brighten daily life.</p>
+            </div>
+          </div>
+
+          <div style={{ marginTop: '2rem', textAlign: 'center', fontSize: '0.85rem', color: '#6B7280' }}>
+            <i className="fa fa-info-circle" style={{ color: 'var(--color-blue-heading)' }}></i> <em>Transparency Note: Anand Group Charitable Trust supports Naadha Ashram as a voluntary humanitarian initiative and community partner to foster welfare and shared compassion.</em>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================================================
+           5. OUR IMPACT / COMMITMENT & TARGETS
            ========================================================================== */}
       <section className="ash-section" id="impact">
         <div className="ash-container">
@@ -670,143 +1140,196 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           FEATURED INITIATIVES
+           6. DEDICATED CSR FUNDING & PARTNERSHIPS SECTION
            ========================================================================== */}
-      <section className="ash-section" id="featured">
+      <section className="ash-section" id="csr">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
-              <i className="fa fa-star"></i> Flagship Programs
+              <i className="fa fa-handshake"></i> Corporate Social Responsibility
             </div>
             <h2 className="section-title">
-              Featured Community Interventions
+              Partner With Us. Create Lasting Impact.
             </h2>
             <p className="section-subtitle">
-              An editorial look into our proposed grassroots programs designed for enduring, measurable social transformation.
+              We welcome collaboration with businesses, corporate organizations, institutions, and socially responsible partners to support meaningful community development initiatives.
             </p>
           </div>
 
-          <div className="featured-programs-list">
-            {/* Program 1 */}
-            <div className="featured-program-item reveal-on-scroll">
-              <div className="program-img-box">
-                <img src="/images/init_education.jpg" alt="Education Support Program" loading="lazy" />
-              </div>
-              <div className="program-info-box">
-                <div className="program-status-pill">
-                  <i className="fa fa-clipboard-check"></i> Proposed Initiative &bull; Active Planning
+          <div className="csr-container-grid">
+            {/* Left Column: CSR Opportunities & Benefits */}
+            <div className="reveal-on-scroll">
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>
+                CSR Collaboration Opportunities
+              </h3>
+              <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: 1.68 }}>
+                Align your corporate social responsibility vision with verified, impactful grassroots projects designed for long-term community transformation:
+              </p>
+
+              <div className="csr-opp-grid">
+                <div className="csr-opp-item">
+                  <div className="csr-opp-icon"><i className="fa fa-school"></i></div>
+                  <div>
+                    <h4>Education &amp; Infrastructure</h4>
+                    <p>School upgrades, science/computer labs, libraries, and remedial tutoring centers.</p>
+                  </div>
                 </div>
-                <h3 className="program-title">Education Support Program</h3>
-                <p className="program-summary">
-                  Ensuring uninterrupted academic learning for first-generation school-goers through after-school remedial learning circles, educational kits, and dedicated youth tutors.
-                </p>
-                <ul className="program-features-list">
-                  <li><i className="fa fa-check"></i> Remedial Evening Tutoring</li>
-                  <li><i className="fa fa-check"></i> Textbook &amp; Stationery Kits</li>
-                  <li><i className="fa fa-check"></i> Foundational Numeracy &amp; Reading</li>
-                  <li><i className="fa fa-check"></i> Dropout Prevention Tracking</li>
-                </ul>
-                <div>
-                  <button
-                    type="button"
-                    className="ash-btn ash-btn-primary ash-btn-sm"
-                    onClick={() => openInitiativeModal('education')}
-                  >
-                    View Program Details <i className="fa fa-arrow-right"></i>
-                  </button>
+
+                <div className="csr-opp-item">
+                  <div className="csr-opp-icon"><i className="fa fa-leaf"></i></div>
+                  <div>
+                    <h4>Environment &amp; Cleanliness</h4>
+                    <p>Swachh Bharat village drives, sapling plantations, and water-saving initiatives.</p>
+                  </div>
+                </div>
+
+                <div className="csr-opp-item">
+                  <div className="csr-opp-icon"><i className="fa fa-heartbeat"></i></div>
+                  <div>
+                    <h4>Healthcare &amp; Medical Camps</h4>
+                    <p>Mobile clinical camps, diabetes &amp; BP screening, and voluntary blood donation drives.</p>
+                  </div>
+                </div>
+
+                <div className="csr-opp-item">
+                  <div className="csr-opp-icon"><i className="fa fa-user-shield"></i></div>
+                  <div>
+                    <h4>Elderly Care &amp; Social Welfare</h4>
+                    <p>Sustained old age home care, dignity rations, and essential supplies distribution.</p>
+                  </div>
+                </div>
+
+                <div className="csr-opp-item">
+                  <div className="csr-opp-icon"><i className="fa fa-utensils"></i></div>
+                  <div>
+                    <h4>Food &amp; Nutrition Support</h4>
+                    <p>Structured Annadanam seva and ongoing meal support for Naadha Ashram residents.</p>
+                  </div>
+                </div>
+
+                <div className="csr-opp-item">
+                  <div className="csr-opp-icon"><i className="fa fa-hands"></i></div>
+                  <div>
+                    <h4>Community Development</h4>
+                    <p>Multi-sectoral grassroots upliftment programs subject to applicable CSR eligibility.</p>
+                  </div>
                 </div>
               </div>
+
+              <h4 style={{ fontSize: '1.25rem', marginTop: '2rem', marginBottom: '0.75rem' }}>
+                Why Partner With Anand Group Charitable Trust?
+              </h4>
+              <ul className="csr-benefit-list">
+                <li>
+                  <i className="fa fa-check-circle"></i>
+                  <div><strong>Structured Community Programs:</strong> Well-planned implementation frameworks aligned with Schedule VII priorities.</div>
+                </li>
+                <li>
+                  <i className="fa fa-check-circle"></i>
+                  <div><strong>Employee Volunteering Engagement:</strong> Meaningful on-ground participation opportunities for your company workforce.</div>
+                </li>
+                <li>
+                  <i className="fa fa-check-circle"></i>
+                  <div><strong>Transparent Utilization Reporting:</strong> Clear documentation, milestone reviews, and auditable expense tracking.</div>
+                </li>
+                <li>
+                  <i className="fa fa-check-circle"></i>
+                  <div><strong>Potential for Measurable Impact:</strong> Regular baseline tracking and field reporting to verify authentic community transformation.</div>
+                </li>
+              </ul>
             </div>
 
-            {/* Program 2 */}
-            <div className="featured-program-item reverse reveal-on-scroll">
-              <div className="program-img-box">
-                <img src="/images/init_healthcare.jpg" alt="Community Health Awareness" loading="lazy" />
-              </div>
-              <div className="program-info-box">
-                <div className="program-status-pill">
-                  <i className="fa fa-clipboard-check"></i> Proposed Initiative &bull; Active Planning
-                </div>
-                <h3 className="program-title">Community Health Awareness</h3>
-                <p className="program-summary">
-                  Bridging the last-mile medical divide by organizing mobile health camps, periodic pediatric growth tracking, and adolescent hygiene guidance sessions.
+            {/* Right Column: CSR Enquiry Form */}
+            <div className="reveal-on-scroll">
+              <div className="csr-form-card">
+                <h3 className="csr-form-title">CSR Partnership Enquiry</h3>
+                <p className="csr-form-desc">
+                  Connect with our institutional collaborations desk to design or sponsor a targeted CSR initiative.
                 </p>
-                <ul className="program-features-list">
-                  <li><i className="fa fa-check"></i> General Health &amp; Eye Checkups</li>
-                  <li><i className="fa fa-check"></i> Maternal Nutrition Screening</li>
-                  <li><i className="fa fa-check"></i> Free Basic Medicines &amp; Vitamins</li>
-                  <li><i className="fa fa-check"></i> Water-borne Disease Prevention</li>
-                </ul>
-                <div>
-                  <button
-                    type="button"
-                    className="ash-btn ash-btn-primary ash-btn-sm"
-                    onClick={() => openInitiativeModal('healthcare')}
-                  >
-                    View Program Details <i className="fa fa-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            {/* Program 3 */}
-            <div className="featured-program-item reveal-on-scroll">
-              <div className="program-img-box">
-                <img src="/images/init_women.jpg" alt="Women Skill Development" loading="lazy" />
-              </div>
-              <div className="program-info-box">
-                <div className="program-status-pill">
-                  <i className="fa fa-clipboard-check"></i> Proposed Initiative &bull; Active Planning
-                </div>
-                <h3 className="program-title">Women Skill Development</h3>
-                <p className="program-summary">
-                  Equipping women with marketable vocational skills in sewing, handloom textile finishing, and digital financial management to nurture independent livelihoods.
-                </p>
-                <ul className="program-features-list">
-                  <li><i className="fa fa-check"></i> Tailoring &amp; Embroidery Courses</li>
-                  <li><i className="fa fa-check"></i> Self-Help Group (SHG) Incubation</li>
-                  <li><i className="fa fa-check"></i> Banking &amp; Financial Literacy</li>
-                  <li><i className="fa fa-check"></i> Fair Craft Market Linkages</li>
-                </ul>
-                <div>
-                  <button
-                    type="button"
-                    className="ash-btn ash-btn-primary ash-btn-sm"
-                    onClick={() => openInitiativeModal('women')}
-                  >
-                    View Program Details <i className="fa fa-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
+                <form onSubmit={handleCsrSubmit}>
+                  <div className="form-group">
+                    <label className="form-label">Company / Organization Name *</label>
+                    <input type="text" className="form-input" placeholder="e.g. Acme Enterprises Ltd." required />
+                  </div>
 
-            {/* Program 4 */}
-            <div className="featured-program-item reverse reveal-on-scroll">
-              <div className="program-img-box">
-                <img src="/images/gallery_nutrition.jpg" alt="Food & Essential Supplies Support" loading="lazy" />
-              </div>
-              <div className="program-info-box">
-                <div className="program-status-pill">
-                  <i className="fa fa-clipboard-check"></i> Proposed Initiative &bull; Active Planning
-                </div>
-                <h3 className="program-title">Food &amp; Essential Supplies Support</h3>
-                <p className="program-summary">
-                  Distributing wholesome nutritional rations and essential hygiene kits to vulnerable elderly, single mothers, and families experiencing sudden hardship.
-                </p>
-                <ul className="program-features-list">
-                  <li><i className="fa fa-check"></i> Nutritious Dry Ration Kits</li>
-                  <li><i className="fa fa-check"></i> Vulnerable Household Identification</li>
-                  <li><i className="fa fa-check"></i> Community Grain Bank Partnerships</li>
-                  <li><i className="fa fa-check"></i> Emergency Seasonal Relief Packs</li>
-                </ul>
-                <div>
+                  <div className="form-row-2">
+                    <div className="form-group">
+                      <label className="form-label">Contact Person *</label>
+                      <input type="text" className="form-input" placeholder="e.g. Rajesh Malhotra" required />
+                    </div>
+                    <div className="form-group">
+                      <label className="form-label">Designation / Role</label>
+                      <input type="text" className="form-input" placeholder="e.g. Head of CSR / Director" />
+                    </div>
+                  </div>
+
+                  <div className="form-row-2">
+                    <div className="form-group">
+                      <label className="form-label">Official Work Email *</label>
+                      <input type="email" className="form-input" placeholder="csr@company.com" required />
+                    </div>
+                    <div className="form-group">
+                      <label className="form-label">Phone Number *</label>
+                      <input type="tel" className="form-input" placeholder="+91 98765 43210" required />
+                    </div>
+                  </div>
+
+                  <div className="form-row-2">
+                    <div className="form-group">
+                      <label className="form-label">CSR Focus Area *</label>
+                      <select className="form-select" required>
+                        <option value="Education & Infrastructure">Education &amp; School Infrastructure</option>
+                        <option value="Environmental Awareness">Environmental &amp; Cleanliness Drives</option>
+                        <option value="Healthcare & Medical Camps">Healthcare &amp; Medical Camps</option>
+                        <option value="Elderly Care & Welfare">Elderly Care &amp; Social Welfare</option>
+                        <option value="Naadha Ashram & Food Support">Naadha Ashram &amp; Food Assistance</option>
+                        <option value="Multi-Sectoral Program">Multi-Sectoral CSR Program</option>
+                      </select>
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Estimated Budget (Optional)</label>
+                      <select className="form-select">
+                        <option value="₹2 Lakhs - ₹5 Lakhs">₹2 Lakhs - ₹5 Lakhs</option>
+                        <option value="₹5 Lakhs - ₹15 Lakhs">₹5 Lakhs - ₹15 Lakhs</option>
+                        <option value="₹15 Lakhs - ₹50 Lakhs">₹15 Lakhs - ₹50 Lakhs</option>
+                        <option value="Above ₹50 Lakhs">Above ₹50 Lakhs</option>
+                        <option value="To Be Discussed">To Be Discussed</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Partnership Message / Project Goals *</label>
+                    <textarea
+                      className="form-textarea"
+                      placeholder="Share your company's CSR objectives, target geographies, or proposed partnership scope..."
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+
                   <button
-                    type="button"
-                    className="ash-btn ash-btn-primary ash-btn-sm"
-                    onClick={() => setActiveModal('donation')}
+                    type="submit"
+                    className="ash-btn ash-btn-primary"
+                    style={{ width: '100%', borderRadius: 'var(--radius-full)' }}
+                    disabled={csrSubmitting}
                   >
-                    Support This Cause <i className="fa fa-arrow-right"></i>
+                    {csrSubmitting ? (
+                      <>
+                        <i className="fa fa-spinner fa-spin"></i> Submitting Proposal...
+                      </>
+                    ) : (
+                      <>
+                        <i className="fa fa-paper-plane"></i> Become a CSR Partner
+                      </>
+                    )}
                   </button>
+                </form>
+
+                <div className="csr-compliance-box">
+                  <strong><i className="fa fa-shield-alt"></i> Compliance &amp; Verification Note:</strong> Official trust incorporation credentials, project docket documents, and relevant statutory documentation are furnished upon formal corporate review. Individual program CSR eligibility is subject to applicable legal guidelines and project structuring.
                 </div>
               </div>
             </div>
@@ -815,7 +1338,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           GALLERY SECTION
+           7. GALLERY SECTION
            ========================================================================== */}
       <section className="ash-section" id="gallery">
         <div className="ash-container">
@@ -827,7 +1350,7 @@ export default function HomePage() {
               Moments of Hope. Stories of Change.
             </h2>
             <p className="section-subtitle">
-              Authentic glimpses of community unity, educational milestones, and ground-level engagement across India.
+              Authentic glimpses of community unity, educational milestones, medical outreach, and selfless service across India.
             </p>
           </div>
 
@@ -837,7 +1360,14 @@ export default function HomePage() {
               className={`gallery-filter-btn ${galleryFilter === 'all' ? 'active' : ''}`}
               onClick={() => setGalleryFilter('all')}
             >
-              All Moments
+              All Activities
+            </button>
+            <button
+              type="button"
+              className={`gallery-filter-btn ${galleryFilter === 'awareness' ? 'active' : ''}`}
+              onClick={() => setGalleryFilter('awareness')}
+            >
+              Awareness Campaigns
             </button>
             <button
               type="button"
@@ -848,24 +1378,38 @@ export default function HomePage() {
             </button>
             <button
               type="button"
-              className={`gallery-filter-btn ${galleryFilter === 'healthcare' ? 'active' : ''}`}
-              onClick={() => setGalleryFilter('healthcare')}
+              className={`gallery-filter-btn ${galleryFilter === 'temple' ? 'active' : ''}`}
+              onClick={() => setGalleryFilter('temple')}
             >
-              Healthcare
+              Temple Development
             </button>
             <button
               type="button"
-              className={`gallery-filter-btn ${galleryFilter === 'community' ? 'active' : ''}`}
-              onClick={() => setGalleryFilter('community')}
+              className={`gallery-filter-btn ${galleryFilter === 'medical' ? 'active' : ''}`}
+              onClick={() => setGalleryFilter('medical')}
             >
-              Community
+              Medical Camps
             </button>
             <button
               type="button"
-              className={`gallery-filter-btn ${galleryFilter === 'volunteers' ? 'active' : ''}`}
-              onClick={() => setGalleryFilter('volunteers')}
+              className={`gallery-filter-btn ${galleryFilter === 'elderly' ? 'active' : ''}`}
+              onClick={() => setGalleryFilter('elderly')}
             >
-              Volunteers
+              Elderly Care
+            </button>
+            <button
+              type="button"
+              className={`gallery-filter-btn ${galleryFilter === 'ashram' ? 'active' : ''}`}
+              onClick={() => setGalleryFilter('ashram')}
+            >
+              Naadha Ashram
+            </button>
+            <button
+              type="button"
+              className={`gallery-filter-btn ${galleryFilter === 'food' ? 'active' : ''}`}
+              onClick={() => setGalleryFilter('food')}
+            >
+              Food Donations
             </button>
           </div>
 
@@ -888,7 +1432,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           GET INVOLVED
+           8. GET INVOLVED (FOUR OPTIONS)
            ========================================================================== */}
       <section className="ash-section" id="get-involved">
         <div className="ash-container">
@@ -897,7 +1441,7 @@ export default function HomePage() {
               <i className="fa fa-hand-holding-heart"></i> Get Involved
             </div>
             <h2 className="section-title">
-              Be the Reason Someone Smiles Today.
+              Be the Reason Someone Smiles Today
             </h2>
             <p className="section-subtitle">
               Sustainable social change requires collective action. Discover the multiple pathways you can contribute your heart, skills, or resources to Anand Group Charitable Trust.
@@ -905,34 +1449,37 @@ export default function HomePage() {
           </div>
 
           <div className="get-involved-grid">
-            {/* Card 1: Donate */}
+            {/* Option 1: Donate */}
             <div className="involve-card featured reveal-on-scroll">
               <div className="involve-badge-top">Direct Impact</div>
               <div className="involve-icon-box">
-                <i className="fa fa-hand-holding-usd"></i>
+                <i className="fa fa-hand-holding-heart"></i>
               </div>
               <h3>Donate</h3>
               <p>
-                Support meaningful community initiatives. Your contributions help fund student education kits, primary healthcare supplies, and critical food relief.
+                Support education, healthcare, food assistance, and community welfare initiatives that transform lives.
               </p>
               <button
                 type="button"
                 className="ash-btn ash-btn-primary"
                 style={{ width: '100%' }}
-                onClick={() => setActiveModal('donation')}
+                onClick={() => {
+                  setDonationTarget('All Initiatives');
+                  setActiveModal('donation');
+                }}
               >
                 <i className="fa fa-heart"></i> Make a Contribution
               </button>
             </div>
 
-            {/* Card 2: Volunteer */}
+            {/* Option 2: Volunteer */}
             <div className="involve-card reveal-on-scroll">
               <div className="involve-icon-box">
                 <i className="fa fa-user-friends"></i>
               </div>
               <h3>Volunteer</h3>
               <p>
-                Contribute your time, skills, and compassion. Be part of our on-ground education drives, weekend reading clubs, health camps, and creative workshops.
+                Participate in cleanliness campaigns, educational programs, medical camps, and food distribution activities.
               </p>
               <button
                 type="button"
@@ -944,22 +1491,40 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* Card 3: Partner */}
+            {/* Option 3: CSR Partnership */}
             <div className="involve-card reveal-on-scroll">
               <div className="involve-icon-box">
                 <i className="fa fa-handshake"></i>
               </div>
-              <h3>Partner With Us</h3>
+              <h3>CSR Partnership</h3>
               <p>
-                Explore opportunities to collaborate for social good. Partner through Corporate Social Responsibility (CSR) grants, institutional alliances, and joint initiatives.
+                Collaborate with the trust on structured community development programs aligned with your corporate values.
+              </p>
+              <a
+                href="#csr"
+                className="ash-btn ash-btn-outline-dark"
+                style={{ width: '100%' }}
+              >
+                <i className="fa fa-briefcase"></i> Partner With Us
+              </a>
+            </div>
+
+            {/* Option 4: Sponsor an Initiative */}
+            <div className="involve-card reveal-on-scroll">
+              <div className="involve-icon-box">
+                <i className="fa fa-star"></i>
+              </div>
+              <h3>Sponsor an Initiative</h3>
+              <p>
+                Support a specific education, healthcare, awareness, Naadha Ashram, or elder welfare program directly.
               </p>
               <button
                 type="button"
                 className="ash-btn ash-btn-outline-dark"
                 style={{ width: '100%' }}
-                onClick={() => setActiveModal('partner')}
+                onClick={() => setActiveModal('sponsor')}
               >
-                <i className="fa fa-briefcase"></i> CSR Collaboration
+                <i className="fa fa-award"></i> Sponsor a Program
               </button>
             </div>
           </div>
@@ -967,7 +1532,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           TESTIMONIALS / STORIES
+           9. TESTIMONIALS / VOICES
            ========================================================================== */}
       <section className="ash-section" id="stories">
         <div className="ash-container">
@@ -988,14 +1553,14 @@ export default function HomePage() {
               <div>
                 <div className="quote-icon"><i className="fa fa-quote-left"></i></div>
                 <p className="story-quote-text">
-                  &ldquo;The vocational skill center has brought a newfound dignity and financial confidence to over 30 women in our village cluster. Being able to sew and earn independently changed how our families look at our daughters&apos; futures.&rdquo;
+                  &ldquo;The awareness drives on cleanliness and digital screen time have inspired our entire village school. Children are more attentive, hygiene has improved, and parents feel actively supported.&rdquo;
                 </p>
               </div>
               <div className="story-author-box">
                 <div className="author-avatar">SD</div>
                 <div className="author-info">
                   <h4>Sunita Devi</h4>
-                  <p>Self-Help Group Coordinator &bull; Rural Outreach</p>
+                  <p>Community Teacher &bull; Village Learning Hub</p>
                 </div>
               </div>
             </div>
@@ -1004,14 +1569,14 @@ export default function HomePage() {
               <div>
                 <div className="quote-icon"><i className="fa fa-quote-left"></i></div>
                 <p className="story-quote-text">
-                  &ldquo;Volunteering for the weekend learning sessions taught me that even an hour of dedicated mentorship can completely reignite a child&apos;s curiosity for mathematics and reading. The children&apos;s energy is infectious.&rdquo;
+                  &ldquo;Volunteering for the weekend food distribution and temple heritage cleanups taught me how much strength lies in selfless service. The joy of giving back is truly unmatched.&rdquo;
                 </p>
               </div>
               <div className="story-author-box">
                 <div className="author-avatar">RS</div>
                 <div className="author-info">
                   <h4>Rahul Sharma</h4>
-                  <p>Weekend Learning Mentor &bull; Youth Volunteer</p>
+                  <p>Youth Volunteer &bull; Community Outreach</p>
                 </div>
               </div>
             </div>
@@ -1032,24 +1597,20 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
-          <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.85rem', color: '#4B5563' }}>
-            *Representative community narratives reflecting organizational program targets and field interactions.
-          </p>
         </div>
       </section>
 
       {/* ==========================================================================
-           CONTACT SECTION
+           10. CONTACT SECTION
            ========================================================================== */}
       <section className="ash-section" id="contact">
         <div className="ash-container">
           <div className="section-header reveal-on-scroll">
             <div className="section-eyebrow">
-              <i className="fa fa-envelope-open-text"></i> Reach Out To Us
+              <i className="fa fa-map-marker-alt"></i> Connect With Us
             </div>
             <h2 className="section-title">
-              Let&apos;s Make a Difference Together.
+              We Would Love to Hear From You
             </h2>
             <p className="section-subtitle">
               Have questions about our initiatives, want to partner, or wish to visit a community center? Reach out to our dedicated team.
@@ -1085,10 +1646,11 @@ export default function HomePage() {
                     <label htmlFor="contactSubject" className="form-label">Subject</label>
                     <select id="contactSubject" className="form-select">
                       <option value="General Inquiry">General Inquiry</option>
-                      <option value="Volunteering">Volunteering Opportunity</option>
                       <option value="CSR Partnership">CSR &amp; Corporate Partnership</option>
+                      <option value="Naadha Ashram Support">Naadha Ashram Support</option>
+                      <option value="Volunteering">Volunteering Opportunity</option>
                       <option value="Donation Inquiry">Donation &amp; Support Inquiry</option>
-                      <option value="Media & Outreach">Media &amp; Community Outreach</option>
+                      <option value="Temple Heritage & Annadanam">Temple Heritage &amp; Annadanam</option>
                     </select>
                   </div>
                 </div>
@@ -1146,7 +1708,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Operating Hours</h4>
                   <p>Monday &ndash; Saturday: 9:30 AM &ndash; 6:00 PM IST</p>
-                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>Field centers operate on extended weekend schedules</p>
+                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>Community camps and field centers operate on extended schedules</p>
                 </div>
               </div>
             </div>
@@ -1155,7 +1717,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           FOOTER (PURE WHITE THEME)
+           11. FOOTER (PURE WHITE THEME)
            ========================================================================== */}
       <footer className="ash-footer">
         <div className="ash-container">
@@ -1165,7 +1727,7 @@ export default function HomePage() {
                 <img src="/logo-anand-trust.svg" alt="Anand Group Charitable Trust" />
               </a>
               <p className="footer-mission-text">
-                Anand Group Charitable Trust is a registered Indian non-governmental organization and charitable trust dedicated to empowering underserved communities through education, healthcare, women&apos;s self-reliance, and sustainable grassroots development.
+                Anand Group Charitable Trust is a registered Indian non-governmental organization dedicated to creating sustainable social transformation through education, environmental awareness, accessible healthcare, temple heritage, elderly welfare, and Naadha Ashram support.
               </p>
               <div className="footer-social-links">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
@@ -1180,23 +1742,26 @@ export default function HomePage() {
               <h4 className="footer-col-title">Quick Links</h4>
               <ul className="footer-links-list">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Anand Group</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#initiatives">Our Initiatives</a></li>
                 <li><a href="#impact">Our Impact &amp; Targets</a></li>
+                <li><a href="#ashram">Naadha Ashram Support</a></li>
+                <li><a href="#csr">CSR Partnerships</a></li>
                 <li><a href="#gallery">Moments &amp; Gallery</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
-                <li><a href="#contact">Contact &amp; Visit</a></li>
+                <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="footer-col-title">Our Initiatives</h4>
               <ul className="footer-links-list">
-                <li><button type="button" onClick={() => openInitiativeModal('education')}>Education for Every Child</button></li>
-                <li><button type="button" onClick={() => openInitiativeModal('healthcare')}>Healthcare &amp; Wellness</button></li>
-                <li><button type="button" onClick={() => openInitiativeModal('women')}>Women Empowerment</button></li>
-                <li><button type="button" onClick={() => openInitiativeModal('child-welfare')}>Child Welfare</button></li>
-                <li><button type="button" onClick={() => openInitiativeModal('community')}>Community Development</button></li>
+                <li><button type="button" onClick={() => openInitiativeModal('awareness')}>Social &amp; Environment</button></li>
+                <li><button type="button" onClick={() => openInitiativeModal('education')}>Education &amp; Children</button></li>
+                <li><button type="button" onClick={() => openInitiativeModal('temple')}>Temple &amp; Cultural Heritage</button></li>
+                <li><button type="button" onClick={() => openInitiativeModal('healthcare')}>Healthcare &amp; Medical Camps</button></li>
+                <li><button type="button" onClick={() => openInitiativeModal('elderly')}>Elderly Care &amp; Welfare</button></li>
+                <li><button type="button" onClick={() => openInitiativeModal('ashram')}>Naadha Ashram Support</button></li>
               </ul>
             </div>
 
@@ -1234,7 +1799,72 @@ export default function HomePage() {
            MODALS
            ========================================================================== */}
 
-      {/* 1. Donation Modal */}
+      {/* 1. Initiative Deep Dive Modal */}
+      {activeModal === 'initiative' && selectedInit && (
+        <div className="ash-modal-backdrop open" onClick={(e) => { if (e.target === e.currentTarget) setActiveModal(null); }}>
+          <div className="ash-modal-dialog wide">
+            <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
+            <div className="modal-header-icon"><i className="fa fa-seedling"></i></div>
+            <h3 className="modal-title">{selectedInit.title}</h3>
+            <p className="modal-subtitle">{selectedInit.heading}</p>
+
+            <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', maxHeight: '320px', marginBottom: '1.5rem', boxShadow: 'var(--shadow-sm)' }}>
+              <img src={selectedInit.image} alt={selectedInit.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+
+            <div style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#111827' }}>
+              <p style={{ fontWeight: 600, color: 'var(--color-blue-heading)' }}>{selectedInit.lead}</p>
+              <p>{selectedInit.desc}</p>
+
+              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.15rem', marginTop: '1.25rem', marginBottom: '0.75rem' }}>
+                Programs &amp; Action Areas:
+              </h4>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', margin: '1rem 0' }}>
+                {selectedInit.programs.map((prog, idx) => (
+                  <div key={idx} style={{ background: 'var(--color-blue-tint)', border: '1px solid var(--color-blue-border)', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
+                    <h5 style={{ fontSize: '0.975rem', marginBottom: '0.5rem', color: 'var(--color-blue-heading)', fontWeight: 700 }}>
+                      <i className="fa fa-check-circle" style={{ color: 'var(--color-blue-heading)', marginRight: '0.4rem' }}></i>
+                      {prog.name}
+                    </h5>
+                    <ul style={{ margin: 0, paddingLeft: '1.15rem', fontSize: '0.85rem', color: '#1F2937', lineHeight: 1.6 }}>
+                      {prog.items.map((it, itemIdx) => (
+                        <li key={itemIdx}>{it}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              <div className="init-benefit-box">
+                <strong style={{ color: 'var(--color-blue-heading)' }}>Expected Community Benefit:</strong> {selectedInit.expectedBenefit}
+              </div>
+            </div>
+
+            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                className="ash-btn ash-btn-primary"
+                onClick={() => {
+                  setDonationTarget(selectedInit.title);
+                  setActiveModal('donation');
+                }}
+              >
+                <i className="fa fa-heart"></i> Support This Initiative
+              </button>
+              <button
+                type="button"
+                className="ash-btn ash-btn-outline"
+                onClick={() => setActiveModal('volunteer')}
+              >
+                <i className="fa fa-user-plus"></i> Volunteer for Cause
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 2. Donation / Support Pledge Modal */}
       {activeModal === 'donation' && (
         <div className="ash-modal-backdrop open" onClick={(e) => { if (e.target === e.currentTarget) setActiveModal(null); }}>
           <div className="ash-modal-dialog">
@@ -1252,19 +1882,36 @@ export default function HomePage() {
 
             <form onSubmit={handleDonationSubmit}>
               <div className="form-group">
+                <label className="form-label">Select Initiative Focus</label>
+                <select
+                  className="form-select"
+                  value={donationTarget}
+                  onChange={(e) => setDonationTarget(e.target.value)}
+                >
+                  <option value="All Initiatives">All Initiatives (Where Most Needed)</option>
+                  <option value="Naadha Ashram Support">Naadha Ashram Support (Food &amp; Essentials)</option>
+                  <option value="Education & Child Development">Education &amp; Underprivileged Children</option>
+                  <option value="Social & Environmental Awareness">Social &amp; Environmental Cleanliness Drives</option>
+                  <option value="Healthcare & Medical Support">Healthcare &amp; Free Medical Camps</option>
+                  <option value="Temple Development & Annadanam">Temple Development &amp; Food Annadanam</option>
+                  <option value="Elderly Care & Social Welfare">Elderly Care &amp; Old Age Home Support</option>
+                </select>
+              </div>
+
+              <div className="form-group">
                 <label className="form-label">Select Support Tier</label>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
                   {[
                     { label: '₹500 (Kit)', val: '500' },
                     { label: '₹1,500 (Month Care)', val: '1500' },
-                    { label: '₹3,000 (Skill Training)', val: '3000' },
-                    { label: '₹5,000 (Health Camp)', val: '5000' },
+                    { label: '₹3,000 (Ashram Aid)', val: '3000' },
+                    { label: '₹5,000 (Medical Camp)', val: '5000' },
                   ].map((tier) => (
                     <button
                       key={tier.val}
                       type="button"
-                      className="ash-btn ash-btn-outline-dark ash-btn-sm"
-                      style={selectedTier === tier.val ? { backgroundColor: 'var(--color-blue-heading)', color: '#fff', borderColor: 'var(--color-blue-heading)' } : {}}
+                      className={`ash-btn ${selectedTier === tier.val ? 'ash-btn-primary' : 'ash-btn-outline'}`}
+                      style={{ padding: '0.45rem 0.9rem', fontSize: '0.85rem' }}
                       onClick={() => {
                         setSelectedTier(tier.val);
                         setCustomAmount(tier.val);
@@ -1277,82 +1924,95 @@ export default function HomePage() {
                 <input
                   type="number"
                   className="form-input"
-                  placeholder="Or enter custom amount in ₹"
-                  min="100"
+                  placeholder="Or enter custom pledge amount (₹)"
                   value={customAmount}
                   onChange={(e) => {
                     setCustomAmount(e.target.value);
                     setSelectedTier('');
                   }}
+                  required
                 />
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Your Full Name *</label>
-                <input type="text" className="form-input" placeholder="Donor / Supporter Name" required />
+              <div className="form-row-2">
+                <div className="form-group">
+                  <label className="form-label">Full Name *</label>
+                  <input type="text" className="form-input" placeholder="Your Name" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Email Address *</label>
+                  <input type="email" className="form-input" placeholder="you@example.com" required />
+                </div>
               </div>
 
               <div className="form-group">
-                <label className="form-label">Email Address *</label>
-                <input type="email" className="form-input" placeholder="Email for receipt & acknowledgment" required />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Contact Number</label>
-                <input type="tel" className="form-input" placeholder="+91 Phone Number" />
+                <label className="form-label">Phone Number *</label>
+                <input type="tel" className="form-input" placeholder="+91 98765 43210" required />
               </div>
 
               <button type="submit" className="ash-btn ash-btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>
-                <i className="fa fa-heart"></i> Submit Contribution Pledge
+                <i className="fa fa-hand-holding-usd"></i> Submit Support Pledge
               </button>
             </form>
           </div>
         </div>
       )}
 
-      {/* 2. Volunteer Modal */}
+      {/* 3. Volunteer Application Modal */}
       {activeModal === 'volunteer' && (
         <div className="ash-modal-backdrop open" onClick={(e) => { if (e.target === e.currentTarget) setActiveModal(null); }}>
           <div className="ash-modal-dialog">
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
-            <div className="modal-header-icon"><i className="fa fa-user-friends"></i></div>
-            <h3 className="modal-title">Join As a Volunteer</h3>
-            <p className="modal-subtitle">Contribute your time, skills, and energy to make an active difference.</p>
+            <div className="modal-header-icon"><i className="fa fa-user-plus"></i></div>
+            <h3 className="modal-title">Join as a Volunteer</h3>
+            <p className="modal-subtitle">Contribute your skills, time, and heart to our initiatives.</p>
 
             <form onSubmit={handleVolunteerSubmit}>
-              <div className="form-group">
-                <label className="form-label">Full Name *</label>
-                <input type="text" className="form-input" placeholder="Your Name" required />
+              <div className="form-row-2">
+                <div className="form-group">
+                  <label className="form-label">Full Name *</label>
+                  <input type="text" className="form-input" placeholder="Full Name" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Email Address *</label>
+                  <input type="email" className="form-input" placeholder="Email" required />
+                </div>
               </div>
 
               <div className="form-row-2">
                 <div className="form-group">
-                  <label className="form-label">Email Address *</label>
-                  <input type="email" className="form-input" placeholder="Your Email" required />
+                  <label className="form-label">Phone Number *</label>
+                  <input type="tel" className="form-input" placeholder="Phone" required />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Phone Number *</label>
-                  <input type="tel" className="form-input" placeholder="Contact Number" required />
+                  <label className="form-label">Preferred Focus Area</label>
+                  <select className="form-select">
+                    <option value="Cleanliness & Swachh Bharat">Cleanliness &amp; Swachh Bharat Drives</option>
+                    <option value="Education Mentoring">Child Education &amp; Mentoring</option>
+                    <option value="Naadha Ashram Seva">Naadha Ashram Food &amp; Companionship</option>
+                    <option value="Medical Camps">Free Medical &amp; Blood Camps</option>
+                    <option value="Temple Heritage">Temple Heritage &amp; Annadanam</option>
+                    <option value="Elderly Welfare">Elderly Care &amp; Old Age Homes</option>
+                  </select>
                 </div>
               </div>
 
               <div className="form-group">
-                <label className="form-label">Primary Interest Area</label>
+                <label className="form-label">Availability</label>
                 <select className="form-select">
-                  <option value="Child Education & Teaching">Child Education &amp; Teaching</option>
-                  <option value="Health Camps & Nutrition">Healthcare Camps &amp; Nutrition</option>
-                  <option value="Women Skill Training">Women Skill Training</option>
-                  <option value="Tree Plantation & Clean Village">Tree Plantation &amp; Clean Village</option>
-                  <option value="Content, Photography & Design">Content, Photography &amp; Design</option>
+                  <option value="Weekends Only">Weekends Only</option>
+                  <option value="Weekdays (Part-time)">Weekdays (Part-time)</option>
+                  <option value="Monthly Events">Monthly Community Events</option>
+                  <option value="Virtual / Remote">Virtual / Remote Coordination</option>
                 </select>
               </div>
 
               <div className="form-group">
-                <label className="form-label">Your Location / City</label>
-                <input type="text" className="form-input" placeholder="e.g. Delhi NCR, Bengaluru, Mumbai" />
+                <label className="form-label">Brief Background / Motivation</label>
+                <textarea className="form-textarea" placeholder="Tell us how you would like to help..." rows="3"></textarea>
               </div>
 
-              <button type="submit" className="ash-btn ash-btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>
+              <button type="submit" className="ash-btn ash-btn-primary" style={{ width: '100%' }}>
                 <i className="fa fa-paper-plane"></i> Submit Volunteer Application
               </button>
             </form>
@@ -1360,107 +2020,64 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* 3. Partner Modal */}
-      {activeModal === 'partner' && (
+      {/* 4. Sponsor an Initiative Modal */}
+      {activeModal === 'sponsor' && (
         <div className="ash-modal-backdrop open" onClick={(e) => { if (e.target === e.currentTarget) setActiveModal(null); }}>
           <div className="ash-modal-dialog">
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
-            <div className="modal-header-icon"><i className="fa fa-handshake"></i></div>
-            <h3 className="modal-title">Partner With Anand Group Charitable Trust</h3>
-            <p className="modal-subtitle">Corporate Social Responsibility (CSR), Grants &amp; Institutional Alliances.</p>
+            <div className="modal-header-icon"><i className="fa fa-award"></i></div>
+            <h3 className="modal-title">Sponsor a Specific Initiative</h3>
+            <p className="modal-subtitle">Direct your personal or institutional sponsorship to an active community program.</p>
 
-            <form onSubmit={handlePartnerSubmit}>
+            <form onSubmit={handleSponsorSubmit}>
               <div className="form-group">
-                <label className="form-label">Organization / Company Name *</label>
-                <input type="text" className="form-input" placeholder="Company or Foundation Name" required />
+                <label className="form-label">Select Program to Sponsor *</label>
+                <select className="form-select" required>
+                  <option value="Naadha Ashram Nutrition">Naadha Ashram Month Nutrition &amp; Essentials</option>
+                  <option value="Underprivileged School Kit">School Supplies &amp; Books for 50 Children</option>
+                  <option value="Rural Free Medical Camp">Full-Day Free Village Medical Camp</option>
+                  <option value="Swachh Bharat Cleanliness Drive">Swachh Bharat Community Drive &amp; Saplings</option>
+                  <option value="Annadanam Food Service">Temple Annadanam Community Meal Service</option>
+                  <option value="Elder Care Dignity Packs">Elderly Dignity &amp; Hygiene Supplies</option>
+                </select>
               </div>
 
               <div className="form-row-2">
                 <div className="form-group">
-                  <label className="form-label">Representative Name *</label>
-                  <input type="text" className="form-input" placeholder="Full Name" required />
+                  <label className="form-label">Sponsor / Organization Name *</label>
+                  <input type="text" className="form-input" placeholder="Your Name or Org" required />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Official Work Email *</label>
-                  <input type="email" className="form-input" placeholder="corporate@company.com" required />
+                  <label className="form-label">Email Address *</label>
+                  <input type="email" className="form-input" placeholder="you@domain.com" required />
+                </div>
+              </div>
+
+              <div className="form-row-2">
+                <div className="form-group">
+                  <label className="form-label">Phone Number *</label>
+                  <input type="tel" className="form-input" placeholder="+91 98765 43210" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Proposed Sponsorship (₹)</label>
+                  <input type="text" className="form-input" placeholder="e.g. ₹25,000 / ₹50,000" />
                 </div>
               </div>
 
               <div className="form-group">
-                <label className="form-label">Collaboration Type</label>
-                <select className="form-select">
-                  <option value="CSR Grant">CSR Grant Partnership</option>
-                  <option value="Employee Volunteering">Employee Volunteering Drive</option>
-                  <option value="Educational Sponsorship">Direct Educational Sponsorship</option>
-                  <option value="Healthcare Infrastructure">Healthcare Equipment / Medical Support</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Brief Partnership Objectives</label>
-                <textarea className="form-textarea" placeholder="Describe your CSR focus or alignment areas"></textarea>
+                <label className="form-label">Special Dedication / Note</label>
+                <textarea className="form-textarea" placeholder="In honor/memory of, or specific execution guidance..." rows="3"></textarea>
               </div>
 
               <button type="submit" className="ash-btn ash-btn-primary" style={{ width: '100%' }}>
-                <i className="fa fa-briefcase"></i> Submit Partnership Inquiry
+                <i className="fa fa-hand-holding-heart"></i> Submit Sponsorship Enquiry
               </button>
             </form>
           </div>
         </div>
       )}
 
-      {/* 4. Initiative Detail Modal */}
-      {activeModal === 'initiative' && selectedInitiative && (
-        <div className="ash-modal-backdrop open" onClick={(e) => { if (e.target === e.currentTarget) setActiveModal(null); }}>
-          <div className="ash-modal-dialog wide">
-            <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
-            <div style={{ marginBottom: '1.25rem' }}>
-              <span className="section-eyebrow">{selectedInitiative.tag}</span>
-            </div>
-            <h3 className="modal-title" style={{ fontSize: '2.1rem' }}>{selectedInitiative.title}</h3>
-            <p style={{ fontSize: '1.05rem', color: '#111827', fontWeight: 500, marginBottom: '1.5rem' }}>
-              {selectedInitiative.lead}
-            </p>
-
-            <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1.5rem', height: '260px' }}>
-              <img src={selectedInitiative.image} alt={selectedInitiative.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#111827', marginBottom: '1.5rem' }}>
-              {selectedInitiative.desc}
-            </p>
-
-            <h4 style={{ fontSize: '1.15rem', color: 'var(--color-blue-heading)', marginBottom: '0.75rem' }}>Key Intervention Objectives:</h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {selectedInitiative.goals.map((goal, idx) => (
-                <li key={idx} style={{ display: 'flex', alignItems: 'center' }}>
-                  <i className="fa fa-check-circle" style={{ color: '#0284C7', marginRight: '8px' }}></i>
-                  <span>{goal}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <button
-                type="button"
-                className="ash-btn ash-btn-primary"
-                onClick={() => setActiveModal('donation')}
-              >
-                <i className="fa fa-heart"></i> Support This Initiative
-              </button>
-              <button
-                type="button"
-                className="ash-btn ash-btn-outline-dark"
-                onClick={() => setActiveModal('volunteer')}
-              >
-                Volunteer For This Program
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* 5. Story Modal */}
+      {/* 5. Trust Story Modal */}
       {activeModal === 'story' && (
         <div className="ash-modal-backdrop open" onClick={(e) => { if (e.target === e.currentTarget) setActiveModal(null); }}>
           <div className="ash-modal-dialog wide">
@@ -1471,21 +2088,23 @@ export default function HomePage() {
 
             <div style={{ fontSize: '0.95rem', lineHeight: 1.75, color: '#111827' }}>
               <p>
-                <strong>Anand Group Charitable Trust</strong> was conceived from a simple yet resolute understanding: sustainable community development cannot happen from afar. It requires sitting alongside children under village banyan trees, understanding the quiet aspirations of mothers seeking self-reliance, and enabling preventive health access before sickness destabilizes an entire household.
+                <strong>Anand Group Charitable Trust</strong> was conceived from a simple yet resolute understanding: sustainable community development cannot happen from afar. It requires sitting alongside children in community learning circles, listening to elders who need warmth and companionship, ensuring public hygiene through Swachh Bharat campaigns, and extending loving care to sanctuary homes like Naadha Ashram.
               </p>
-              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Core Approach</h4>
+              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Holistic Model</h4>
               <p>
-                Unlike fragmented charity interventions, Anand Group Charitable Trust works through an interconnected four-pillar model:
+                Unlike fragmented single-cause interventions, our trust works across six interconnected social welfare pillars:
               </p>
               <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
-                <li><strong>Foundational Education:</strong> Ensuring no child drops out of school due to lack of books, coaching, or basic guidance.</li>
-                <li><strong>Preventive Healthcare:</strong> Delivering doorstep screening, anemia awareness, and maternal support.</li>
-                <li><strong>Livelihood &amp; Dignity:</strong> Equipping rural women with vocational tailoring, craftsmanship, and financial independence.</li>
-                <li><strong>Ecological Sustainability:</strong> Creating green village groves, sapling nurseries, and community water stewardship.</li>
+                <li><strong>Social &amp; Environmental Awareness:</strong> Swachh Bharat cleanliness, save water campaigns, traffic discipline, and plastic-free living.</li>
+                <li><strong>Education &amp; Child Development:</strong> Remedial coaching, school kits, digital screen-time discipline, and core family values.</li>
+                <li><strong>Temple Development &amp; Cultural Heritage:</strong> Temple renovation, spiritual celebrations, and community Annadanam meal seva.</li>
+                <li><strong>Healthcare &amp; Medical Support:</strong> Doorstep general clinical checkups, blood donation camps, diabetes &amp; BP screening, and eye care.</li>
+                <li><strong>Elderly Care &amp; Social Welfare:</strong> Dedicated support for old age homes, grocery kits, seasonal clothing, and volunteer visits.</li>
+                <li><strong>Naadha Ashram Support:</strong> Sustained food assistance, daily essentials, hygiene supplies, and compassionate companionship.</li>
               </ul>
               <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Governance &amp; Trust Ethics</h4>
               <p>
-                We operate under uncompromising standards of financial accountability, zero tolerance for exaggerated marketing, and rigorous community consensus before any field center is initiated.
+                We operate under uncompromising standards of financial accountability, zero tolerance for exaggerated marketing, and rigorous community consensus before any field center or program is initiated.
               </p>
             </div>
 
@@ -1511,7 +2130,7 @@ export default function HomePage() {
             <p className="modal-subtitle">Commitment to Data Dignity &amp; Privacy</p>
             <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#111827' }}>
               <p>Anand Group Charitable Trust values the confidentiality and trust of our supporters, donors, volunteers, and website visitors.</p>
-              <p>We do not sell, rent, or trade your personal information. Any information provided through contact forms, newsletter sign-ups, or volunteer inquiries is utilized exclusively for organizational communication and program updates.</p>
+              <p>We do not sell, rent, or trade your personal information. Any information provided through contact forms, newsletter sign-ups, CSR enquiries, or volunteer applications is utilized exclusively for organizational communication and program updates.</p>
               <p>For questions regarding your data or to unsubscribe from bulletins, please email <a href="mailto:contact@anandgroupcharitabletrust.org.in">contact@anandgroupcharitabletrust.org.in</a>.</p>
             </div>
           </div>
@@ -1541,7 +2160,7 @@ export default function HomePage() {
               type="button"
               className="lightbox-close-btn"
               onClick={() => setLightboxData(null)}
-              aria-label="Close preview"
+              aria-label="Close Lightbox"
             >
               &times;
             </button>
@@ -1550,12 +2169,8 @@ export default function HomePage() {
             </div>
             <div className="lightbox-caption-wrap">
               <div>
-                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 700, color: '#0284C7' }}>
-                  {lightboxData.tag}
-                </span>
-                <h4 style={{ fontSize: '1.35rem', margin: '0.25rem 0 0 0', color: '#0284C7', fontFamily: "'Playfair Display', serif" }}>
-                  {lightboxData.title}
-                </h4>
+                <span className="gallery-item-tag" style={{ color: 'var(--color-blue-heading)' }}>{lightboxData.tag}</span>
+                <h4 style={{ margin: 0, fontSize: '1.25rem', color: '#111827' }}>{lightboxData.title}</h4>
               </div>
               <button
                 type="button"
@@ -1565,20 +2180,18 @@ export default function HomePage() {
                   setActiveModal('donation');
                 }}
               >
-                <i className="fa fa-heart"></i> Support
+                Support Cause
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* Floating Toast Notification */}
+      {/* Toast Alert */}
       {toast && (
-        <div className="ash-toast-container">
-          <div className={`ash-toast ${toast.type}`}>
-            <i className={`fa ${toast.type === 'success' ? 'fa-check-circle' : 'fa-info-circle'}`}></i>
-            <span>{toast.message}</span>
-          </div>
+        <div className={`ash-toast ${toast.type}`}>
+          <i className="fa fa-check-circle"></i>
+          <span>{toast.message}</span>
         </div>
       )}
     </>
