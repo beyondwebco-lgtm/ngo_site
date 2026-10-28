@@ -340,11 +340,6 @@ export default function HomePage() {
           <div className="hero-grid">
             {/* Left Column: Content */}
             <div className="hero-content reveal-on-scroll">
-              <div className="hero-pill">
-                <span className="hero-pill-badge">Grassroots NGO</span>
-                <span>Empowering Lives. Building Hope.</span>
-              </div>
-
               <h1 className="hero-title">
                 Together, We Can Create a Better Tomorrow.
               </h1>
