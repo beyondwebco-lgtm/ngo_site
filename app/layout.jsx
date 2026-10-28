@@ -1,26 +1,26 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://www.aashrayafoundation.org.in'),
-  title: 'Aashraya Foundation | Empowering Lives. Building Hope.',
-  description: 'Aashraya Foundation is a premier charitable trust and NGO in India dedicated to community empowerment, child education, healthcare, and sustainable grassroots development.',
-  keywords: ['Aashraya Foundation', 'NGO in India', 'charitable trust', 'child education', 'women empowerment', 'community healthcare', 'sustainable development'],
+  metadataBase: new URL('https://www.anandgroupcharitabletrust.org.in'),
+  title: 'Anand Group Charitable Trust | Empowering Lives. Building Hope.',
+  description: 'Anand Group Charitable Trust is a premier charitable trust and NGO in India dedicated to community empowerment, child education, healthcare, and sustainable grassroots development.',
+  keywords: ['Anand Group Charitable Trust', 'Anand Group NGO', 'NGO in India', 'charitable trust', 'child education', 'women empowerment', 'community healthcare', 'sustainable development'],
   icons: {
-    icon: '/favicon-aashraya.svg',
-    shortcut: '/favicon-aashraya.svg',
-    apple: '/favicon-aashraya.svg',
+    icon: '/favicon-anand-trust.svg',
+    shortcut: '/favicon-anand-trust.svg',
+    apple: '/favicon-anand-trust.svg',
   },
   openGraph: {
-    title: 'Aashraya Foundation | Empowering Lives. Building Hope.',
+    title: 'Anand Group Charitable Trust | Empowering Lives. Building Hope.',
     description: 'Creating meaningful opportunities for underserved communities through education, healthcare, empowerment, and sustainable development.',
-    url: 'https://www.aashrayafoundation.org.in/',
-    siteName: 'Aashraya Foundation',
+    url: 'https://www.anandgroupcharitabletrust.org.in/',
+    siteName: 'Anand Group Charitable Trust',
     images: [
       {
         url: '/images/hero_community_hope.jpg',
         width: 1200,
         height: 675,
-        alt: 'Aashraya Foundation Community Education',
+        alt: 'Anand Group Charitable Trust Community Education',
       },
     ],
     locale: 'en_IN',
@@ -28,7 +28,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aashraya Foundation | Empowering Lives. Building Hope.',
+    title: 'Anand Group Charitable Trust | Empowering Lives. Building Hope.',
     description: 'Empowering communities through education, healthcare, compassion, and meaningful grassroots action.',
     images: ['/images/hero_community_hope.jpg'],
   },

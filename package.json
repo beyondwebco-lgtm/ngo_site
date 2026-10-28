@@ -1,7 +1,7 @@
 {
-  "name": "aashraya-foundation",
+  "name": "anand-group-charitable-trust",
   "version": "1.0.0",
-  "description": "Aashraya Foundation — Empowering Lives. Building Hope.",
+  "description": "Anand Group Charitable Trust — Empowering Lives. Building Hope.",
   "type": "module",
   "main": "server.mjs",
   "scripts": {
@@ -12,12 +12,12 @@
   "keywords": [
     "ngo",
     "charitable-trust",
-    "aashraya-foundation",
+    "anand-group-charitable-trust",
     "education",
     "healthcare",
     "empowerment"
   ],
-  "author": "Aashraya Foundation",
+  "author": "Anand Group Charitable Trust",
   "license": "ISC",
   "dependencies": {
     "next": "^16.4.3",

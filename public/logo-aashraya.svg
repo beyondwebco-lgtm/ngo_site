@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" fill="none">
-  <!-- Symbol: Sheltering hands & hope sprout in fresh blue palette -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 70" width="400" height="70" fill="none">
+  <!-- Symbol: Anand emblem - Compassionate hands holding blooming hope -->
   <g transform="translate(10, 8)">
     <circle cx="27" cy="27" r="26" fill="#0284C7" />
-    <!-- Inner bright light -->
+    <!-- Inner radiant light -->
     <circle cx="27" cy="19" r="5" fill="#38BDF8" />
-    <!-- Emerging sprout & hands -->
+    <!-- Emerging sprout & nurturing hands -->
     <path d="M27 38 C27 31 22 25 17 22 C18 29 22 35 27 38 Z" fill="#BAE6FD" />
     <path d="M27 38 C27 31 32 25 37 22 C36 29 32 35 27 38 Z" fill="#38BDF8" />
     <path d="M27 42 C21 42 16 38 14 34 C16 41 21 44 27 44 C33 44 38 41 40 34 C38 38 33 42 27 42 Z" fill="#FFFFFF" />
@@ -12,7 +12,7 @@
   </g>
   <!-- Text Brand -->
   <g transform="translate(74, 14)">
-    <text x="0" y="26" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="700" fill="#111827" letter-spacing="1.5">AASHRAYA</text>
-    <text x="1" y="42" font-family="'Inter', -apple-system, sans-serif" font-size="9" font-weight="700" fill="#0284C7" letter-spacing="3.5">FOUNDATION</text>
+    <text x="0" y="24" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#111827" letter-spacing="1">ANAND GROUP</text>
+    <text x="1" y="42" font-family="'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#0284C7" letter-spacing="3.2">CHARITABLE TRUST</text>
   </g>
 </svg>

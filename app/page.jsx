@@ -196,7 +196,7 @@ export default function HomePage() {
     setTimeout(() => {
       setContactSubmitting(false);
       e.target.reset();
-      showToast('Thank you! Your message has been received by Aashraya Foundation. We will connect with you shortly.');
+      showToast('Thank you! Your message has been received by Anand Group Charitable Trust. We will connect with you shortly.');
     }, 900);
   };
 
@@ -211,7 +211,7 @@ export default function HomePage() {
   const handleVolunteerSubmit = (e) => {
     e.preventDefault();
     setActiveModal(null);
-    showToast('Thank you for applying to volunteer with Aashraya Foundation! Welcome to the movement.');
+    showToast('Thank you for applying to volunteer with Anand Group Charitable Trust! Welcome to the movement.');
   };
 
   const handlePartnerSubmit = (e) => {
@@ -223,7 +223,7 @@ export default function HomePage() {
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     e.target.reset();
-    showToast('Subscribed! You will receive our quarterly Aashraya Foundation impact bulletin.');
+    showToast('Subscribed! You will receive our quarterly Anand Group Charitable Trust impact bulletin.');
   };
 
   const filteredGallery = galleryFilter === 'all'
@@ -237,8 +237,8 @@ export default function HomePage() {
         <div className="ash-container">
           <div className="top-notice-content">
             <div className="top-contact-info">
-              <a href="mailto:contact@aashrayafoundation.org.in" title="Official Registered Email">
-                <i className="fa fa-envelope" style={{ color: '#0284C7' }}></i> contact@aashrayafoundation.org.in [Placeholder]
+              <a href="mailto:contact@anandgroupcharitabletrust.org.in" title="Official Registered Email">
+                <i className="fa fa-envelope" style={{ color: '#0284C7' }}></i> contact@anandgroupcharitabletrust.org.in [Placeholder]
               </a>
               <a href="tel:+919876543210" title="Contact Helpline">
                 <i className="fa fa-phone" style={{ color: '#0284C7' }}></i> +91 98765 43210 [Placeholder]
@@ -255,8 +255,8 @@ export default function HomePage() {
       <header className={`ash-navbar ${isScrolled ? 'scrolled' : ''}`} id="ashNavbar">
         <div className="ash-container">
           <div className="navbar-inner">
-            <a href="#home" className="navbar-brand-link" aria-label="Aashraya Foundation Home">
-              <img src="/logo-aashraya.svg" alt="Aashraya Foundation Logo" />
+            <a href="#home" className="navbar-brand-link" aria-label="Anand Group Charitable Trust Home">
+              <img src="/logo-anand-trust.svg" alt="Anand Group Charitable Trust Logo" />
             </a>
 
             {/* Desktop Navigation Links */}
@@ -327,7 +327,7 @@ export default function HomePage() {
             <i className="fa fa-heart"></i> Support Our Mission
           </button>
           <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#4B5563', textAlign: 'center' }}>
-            Aashraya Foundation &bull; India
+            Anand Group Charitable Trust &bull; India
           </p>
         </div>
       </aside>
@@ -396,14 +396,14 @@ export default function HomePage() {
 
             {/* Right Column: Hero Visual Media */}
             <div className="hero-image-card reveal-on-scroll">
-              <img src="/images/hero_community_hope.jpg" alt="Aashraya Foundation Community Learning Hub" />
+              <img src="/images/hero_community_hope.jpg" alt="Anand Group Charitable Trust Community Learning Hub" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ==========================================================================
-           ABOUT AASHRAYA FOUNDATION
+           ABOUT ANAND GROUP CHARITABLE TRUST
            ========================================================================== */}
       <section className="ash-section" id="about">
         <div className="ash-container">
@@ -411,7 +411,7 @@ export default function HomePage() {
             <div className="about-image-wrapper reveal-on-scroll">
               <div className="about-image-accent-border"></div>
               <div className="about-image-card">
-                <img src="/images/about_mentorship.jpg" alt="Aashraya Foundation Community Mentorship in Village" />
+                <img src="/images/about_mentorship.jpg" alt="Anand Group Charitable Trust Community Mentorship in Village" />
               </div>
               <div className="about-floating-badge">
                 <h4>Grassroots Upliftment</h4>
@@ -421,13 +421,13 @@ export default function HomePage() {
 
             <div className="about-content-col reveal-on-scroll">
               <div className="section-eyebrow">
-                <i className="fa fa-seedling"></i> About Aashraya Foundation
+                <i className="fa fa-seedling"></i> About Anand Group Charitable Trust
               </div>
               <h2 className="section-title">
                 Rooted in Compassion. Driven by Purpose.
               </h2>
               <p className="about-text-lead">
-                Aashraya Foundation is a proposed charitable trust established with an enduring dedication to grassroots social transformation in India. We believe every child, woman, and vulnerable individual possesses the inherent right to live with dignity, self-sufficiency, and boundless opportunity.
+                Anand Group Charitable Trust is a dedicated non-governmental organization and registered charitable trust established with an enduring dedication to grassroots social transformation in India. We believe every child, woman, and vulnerable individual possesses the inherent right to live with dignity, self-sufficiency, and boundless opportunity.
               </p>
               <p>
                 Rather than brief relief work, our initiatives focus on sustainable community architecture: supporting educational access, nurturing preventive rural healthcare, fostering women&apos;s economic independence, and preserving child welfare.
@@ -668,7 +668,7 @@ export default function HomePage() {
           <div className="impact-disclaimer-card reveal-on-scroll">
             <i className="fa fa-info-circle"></i>
             <p>
-              <strong>Transparency Disclosure:</strong> As a dedicated charitable organization, Aashraya Foundation holds transparency as a foundational pillar. All figures represent projected benchmarks and ongoing capacity commitments. We do not display unverified achievements as concluded results.
+              <strong>Transparency Disclosure:</strong> As a dedicated charitable organization, Anand Group Charitable Trust holds transparency as a foundational pillar. All figures represent projected benchmarks and ongoing capacity commitments. We do not display unverified achievements as concluded results.
             </p>
           </div>
         </div>
@@ -905,7 +905,7 @@ export default function HomePage() {
               Be the Reason Someone Smiles Today.
             </h2>
             <p className="section-subtitle">
-              Sustainable social change requires collective action. Discover the multiple pathways you can contribute your heart, skills, or resources to Aashraya Foundation.
+              Sustainable social change requires collective action. Discover the multiple pathways you can contribute your heart, skills, or resources to Anand Group Charitable Trust.
             </p>
           </div>
 
@@ -984,7 +984,7 @@ export default function HomePage() {
               Stories That Inspire Change
             </h2>
             <p className="section-subtitle">
-              Reflections from beneficiary families, dedicated volunteers, and medical partners collaborating with Aashraya Foundation.
+              Reflections from beneficiary families, dedicated volunteers, and medical partners collaborating with Anand Group Charitable Trust.
             </p>
           </div>
 
@@ -1025,7 +1025,7 @@ export default function HomePage() {
               <div>
                 <div className="quote-icon"><i className="fa fa-quote-left"></i></div>
                 <p className="story-quote-text">
-                  &ldquo;Preventive rural health screening catches conditions early. Aashraya Foundation’s community health camps bridge a crucial gap between remote households and quality primary clinical advice.&rdquo;
+                  &ldquo;Preventive rural health screening catches conditions early. Anand Group Charitable Trust’s community health camps bridge a crucial gap between remote households and quality primary clinical advice.&rdquo;
                 </p>
               </div>
               <div className="story-author-box">
@@ -1066,7 +1066,7 @@ export default function HomePage() {
             <div className="contact-form-card reveal-on-scroll">
               <h3 className="contact-form-title">Send Us a Message</h3>
               <p className="contact-form-desc">
-                Fill in the details below and an Aashraya Foundation coordinator will respond within 24-48 business hours.
+                Fill in the details below and an Anand Group Charitable Trust coordinator will respond within 24-48 business hours.
               </p>
 
               <form onSubmit={handleContactSubmit}>
@@ -1100,7 +1100,7 @@ export default function HomePage() {
 
                 <div className="form-group">
                   <label htmlFor="contactMessage" className="form-label">Your Message *</label>
-                  <textarea id="contactMessage" className="form-textarea" placeholder="How would you like to collaborate with or support Aashraya Foundation?" required></textarea>
+                  <textarea id="contactMessage" className="form-textarea" placeholder="How would you like to collaborate with or support Anand Group Charitable Trust?" required></textarea>
                 </div>
 
                 <button type="submit" className="ash-btn ash-btn-primary" style={{ width: '100%' }} disabled={contactSubmitting}>
@@ -1123,7 +1123,7 @@ export default function HomePage() {
                 <div className="info-item-icon"><i className="fa fa-envelope"></i></div>
                 <div className="info-item-text">
                   <h4>Official Email</h4>
-                  <p><a href="mailto:contact@aashrayafoundation.org.in">contact@aashrayafoundation.org.in</a></p>
+                  <p><a href="mailto:contact@anandgroupcharitabletrust.org.in">contact@anandgroupcharitabletrust.org.in</a></p>
                   <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Official Registered Inquiry Mailbox - Placeholder]</p>
                 </div>
               </div>
@@ -1141,7 +1141,7 @@ export default function HomePage() {
                 <div className="info-item-icon"><i className="fa fa-map-marked-alt"></i></div>
                 <div className="info-item-text">
                   <h4>Registered Office</h4>
-                  <p>Aashraya Foundation, 14 Institutional Area, Sector 5, New Delhi - 110001, India</p>
+                  <p>Anand Group Charitable Trust, 14 Institutional Area, Sector 5, New Delhi - 110001, India</p>
                   <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Registered Head Office - Placeholder]</p>
                 </div>
               </div>
@@ -1167,10 +1167,10 @@ export default function HomePage() {
           <div className="footer-top-grid">
             <div className="footer-brand-col">
               <a href="#home" className="footer-brand-logo">
-                <img src="/logo-aashraya.svg" alt="Aashraya Foundation" />
+                <img src="/logo-anand-trust.svg" alt="Anand Group Charitable Trust" />
               </a>
               <p className="footer-mission-text">
-                Aashraya Foundation is a registered Indian non-governmental organization and charitable trust dedicated to empowering underserved communities through education, healthcare, women&apos;s self-reliance, and sustainable grassroots development.
+                Anand Group Charitable Trust is a registered Indian non-governmental organization and charitable trust dedicated to empowering underserved communities through education, healthcare, women&apos;s self-reliance, and sustainable grassroots development.
               </p>
               <div className="footer-social-links">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
@@ -1185,7 +1185,7 @@ export default function HomePage() {
               <h4 className="footer-col-title">Quick Links</h4>
               <ul className="footer-links-list">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Aashraya</a></li>
+                <li><a href="#about">About Anand Group</a></li>
                 <li><a href="#initiatives">Our Initiatives</a></li>
                 <li><a href="#impact">Our Impact &amp; Targets</a></li>
                 <li><a href="#gallery">Moments &amp; Gallery</a></li>
@@ -1224,7 +1224,7 @@ export default function HomePage() {
 
           <div className="footer-bottom-bar">
             <div>
-              &copy; 2026 Aashraya Foundation. All Rights Reserved.
+              &copy; 2026 Anand Group Charitable Trust. All Rights Reserved.
             </div>
             <div className="footer-bottom-links">
               <button type="button" onClick={() => setActiveModal('privacy')}>Privacy Policy</button>
@@ -1245,13 +1245,13 @@ export default function HomePage() {
           <div className="ash-modal-dialog">
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
             <div className="modal-header-icon"><i className="fa fa-hand-holding-heart"></i></div>
-            <h3 className="modal-title">Support Aashraya Foundation</h3>
+            <h3 className="modal-title">Support Anand Group Charitable Trust</h3>
             <p className="modal-subtitle">Empower lives and build hope in underserved communities.</p>
 
             <div className="modal-disclaimer-box">
               <i className="fa fa-info-circle"></i>
               <div>
-                <strong>Informational Notice:</strong> Aashraya Foundation does not process live card/gateway payments without confirmed organizational verification and 80G tax clearance. Submit your pledge below and our team will furnish official trust verification credentials.
+                <strong>Informational Notice:</strong> Anand Group Charitable Trust does not process live card/gateway payments without confirmed organizational verification and 80G tax clearance. Submit your pledge below and our team will furnish official trust verification credentials.
               </div>
             </div>
 
@@ -1371,7 +1371,7 @@ export default function HomePage() {
           <div className="ash-modal-dialog">
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
             <div className="modal-header-icon"><i className="fa fa-handshake"></i></div>
-            <h3 className="modal-title">Partner With Aashraya Foundation</h3>
+            <h3 className="modal-title">Partner With Anand Group Charitable Trust</h3>
             <p className="modal-subtitle">Corporate Social Responsibility (CSR), Grants &amp; Institutional Alliances.</p>
 
             <form onSubmit={handlePartnerSubmit}>
@@ -1471,16 +1471,16 @@ export default function HomePage() {
           <div className="ash-modal-dialog wide">
             <button type="button" className="modal-close-trigger" onClick={() => setActiveModal(null)}>&times;</button>
             <div className="modal-header-icon"><i className="fa fa-book-open"></i></div>
-            <h3 className="modal-title">The Aashraya Foundation Story</h3>
+            <h3 className="modal-title">The Anand Group Charitable Trust Story</h3>
             <p className="modal-subtitle">Empowering Lives. Building Hope.</p>
 
             <div style={{ fontSize: '0.95rem', lineHeight: 1.75, color: '#111827' }}>
               <p>
-                <strong>Aashraya Foundation</strong> was conceived from a simple yet resolute understanding: sustainable community development cannot happen from afar. It requires sitting alongside children under village banyan trees, understanding the quiet aspirations of mothers seeking self-reliance, and enabling preventive health access before sickness destabilizes an entire household.
+                <strong>Anand Group Charitable Trust</strong> was conceived from a simple yet resolute understanding: sustainable community development cannot happen from afar. It requires sitting alongside children under village banyan trees, understanding the quiet aspirations of mothers seeking self-reliance, and enabling preventive health access before sickness destabilizes an entire household.
               </p>
               <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Core Approach</h4>
               <p>
-                Unlike fragmented charity interventions, Aashraya Foundation works through an interconnected four-pillar model:
+                Unlike fragmented charity interventions, Anand Group Charitable Trust works through an interconnected four-pillar model:
               </p>
               <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
                 <li><strong>Foundational Education:</strong> Ensuring no child drops out of school due to lack of books, coaching, or basic guidance.</li>
@@ -1515,9 +1515,9 @@ export default function HomePage() {
             <h3 className="modal-title">Privacy Policy</h3>
             <p className="modal-subtitle">Commitment to Data Dignity &amp; Privacy</p>
             <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#111827' }}>
-              <p>Aashraya Foundation values the confidentiality and trust of our supporters, donors, volunteers, and website visitors.</p>
+              <p>Anand Group Charitable Trust values the confidentiality and trust of our supporters, donors, volunteers, and website visitors.</p>
               <p>We do not sell, rent, or trade your personal information. Any information provided through contact forms, newsletter sign-ups, or volunteer inquiries is utilized exclusively for organizational communication and program updates.</p>
-              <p>For questions regarding your data or to unsubscribe from bulletins, please email <a href="mailto:contact@aashrayafoundation.org.in">contact@aashrayafoundation.org.in</a>.</p>
+              <p>For questions regarding your data or to unsubscribe from bulletins, please email <a href="mailto:contact@anandgroupcharitabletrust.org.in">contact@anandgroupcharitabletrust.org.in</a>.</p>
             </div>
           </div>
         </div>
@@ -1531,7 +1531,7 @@ export default function HomePage() {
             <h3 className="modal-title">Terms &amp; Conditions</h3>
             <p className="modal-subtitle">Organizational Terms of Use</p>
             <div style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#111827' }}>
-              <p>All materials, including text, photographs, and brand assets displayed on this website, are the intellectual property of Aashraya Foundation.</p>
+              <p>All materials, including text, photographs, and brand assets displayed on this website, are the intellectual property of Anand Group Charitable Trust.</p>
               <p>Proposed initiatives, figures, and program frameworks are published for informational purposes and community collaboration. No financial transactions are finalized on this website without verified trust documentation.</p>
             </div>
           </div>
