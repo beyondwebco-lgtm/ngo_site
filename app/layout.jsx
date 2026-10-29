@@ -1,5 +1,12 @@
 import './globals.css';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#0284C7',
+};
+
 export const metadata = {
   metadataBase: new URL('https://www.anandgroupcharitabletrust.org.in'),
   title: 'Anand Group Charitable Trust | Together, We Build a Better Tomorrow',

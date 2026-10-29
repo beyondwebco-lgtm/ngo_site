@@ -1820,7 +1820,7 @@ export default function HomePage() {
                 Programs &amp; Action Areas:
               </h4>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', margin: '1rem 0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', margin: '1rem 0' }}>
                 {selectedInit.programs.map((prog, idx) => (
                   <div key={idx} style={{ background: 'var(--color-blue-tint)', border: '1px solid var(--color-blue-border)', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
                     <h5 style={{ fontSize: '0.975rem', marginBottom: '0.5rem', color: 'var(--color-blue-heading)', fontWeight: 700 }}>
@@ -1900,7 +1900,7 @@ export default function HomePage() {
 
               <div className="form-group">
                 <label className="form-label">Select Support Tier</label>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+                <div className="donation-tier-grid">
                   {[
                     { label: '₹500 (Kit)', val: '500' },
                     { label: '₹1,500 (Month Care)', val: '1500' },
