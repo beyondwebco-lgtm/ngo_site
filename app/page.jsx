@@ -446,10 +446,10 @@ export default function HomePage() {
           <div className="top-notice-content">
             <div className="top-contact-info">
               <a href="mailto:contact@anandgroupcharitabletrust.org.in" title="Official Registered Email">
-                <i className="fa fa-envelope" style={{ color: '#0284C7' }}></i> contact@anandgroupcharitabletrust.org.in [Placeholder]
+                <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i> contact@anandgroupcharitabletrust.org.in [Placeholder]
               </a>
               <a href="tel:+919876543210" title="Contact Helpline">
-                <i className="fa fa-phone" style={{ color: '#0284C7' }}></i> +91 98765 43210 [Placeholder]
+                <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i> +91 98765 43210 [Placeholder]
               </a>
             </div>
             <div className="top-trust-badge">
@@ -554,7 +554,7 @@ export default function HomePage() {
             {/* Left Column: Content */}
             <div className="hero-content reveal-on-scroll">
               <h1 className="hero-title">
-                Together, We Build a Better Tomorrow.
+                Together, We Build a <span className="hero-highlight">Better Tomorrow</span>.
               </h1>
 
               <p className="hero-subheading">
@@ -941,7 +941,7 @@ export default function HomePage() {
                 </div>
 
                 <div>
-                  <div style={{ color: 'var(--color-blue-heading)', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '0.35rem' }}>
+                  <div style={{ color: 'var(--color-yellow-deep)', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '0.35rem' }}>
                     {tabInit.title}
                   </div>
                   <h3 style={{ fontSize: '1.85rem', marginBottom: '0.85rem' }}>{tabInit.heading}</h3>
@@ -970,7 +970,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="init-benefit-box">
-                    <strong style={{ color: 'var(--color-blue-heading)' }}><i className="fa fa-chart-line"></i> Expected Community Benefit:</strong> {tabInit.expectedBenefit}
+                    <strong style={{ color: 'var(--color-yellow-deep)' }}><i className="fa fa-chart-line"></i> Expected Community Benefit:</strong> {tabInit.expectedBenefit}
                   </div>
 
                   <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
@@ -1002,7 +1002,7 @@ export default function HomePage() {
       {/* ==========================================================================
            4. DEDICATED NAADHA ASHRAM SUPPORT SECTION
            ========================================================================== */}
-      <section className="ash-section" id="ashram" style={{ backgroundColor: 'var(--color-blue-tint)' }}>
+      <section className="ash-section" id="ashram" style={{ backgroundColor: 'var(--color-bg-cream)' }}>
         <div className="ash-container">
           <div className="ashram-hero-card reveal-on-scroll">
             <div className="ashram-grid">
@@ -1078,7 +1078,7 @@ export default function HomePage() {
           </div>
 
           <div style={{ marginTop: '2rem', textAlign: 'center', fontSize: '0.85rem', color: '#6B7280' }}>
-            <i className="fa fa-info-circle" style={{ color: 'var(--color-blue-heading)' }}></i> <em>Transparency Note: Anand Group Charitable Trust supports Naadha Ashram as a voluntary humanitarian initiative and community partner to foster welfare and shared compassion.</em>
+            <i className="fa fa-info-circle" style={{ color: 'var(--color-yellow-deep)' }}></i> <em>Transparency Note: Anand Group Charitable Trust supports Naadha Ashram as a voluntary humanitarian initiative and community partner to foster welfare and shared compassion.</em>
           </div>
         </div>
       </section>
@@ -1681,7 +1681,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Official Email</h4>
                   <p><a href="mailto:contact@anandgroupcharitabletrust.org.in">contact@anandgroupcharitabletrust.org.in</a></p>
-                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Official Registered Inquiry Mailbox - Placeholder]</p>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--color-yellow-dark)' }}>[Official Registered Inquiry Mailbox - Placeholder]</p>
                 </div>
               </div>
 
@@ -1690,7 +1690,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Helpline &amp; Coordination</h4>
                   <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Community Desk Phone - Placeholder]</p>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--color-yellow-dark)' }}>[Community Desk Phone - Placeholder]</p>
                 </div>
               </div>
 
@@ -1699,7 +1699,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Registered Office</h4>
                   <p>Anand Group Charitable Trust, 14 Institutional Area, Sector 5, New Delhi - 110001, India</p>
-                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>[Registered Head Office - Placeholder]</p>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--color-yellow-dark)' }}>[Registered Head Office - Placeholder]</p>
                 </div>
               </div>
 
@@ -1708,7 +1708,7 @@ export default function HomePage() {
                 <div className="info-item-text">
                   <h4>Operating Hours</h4>
                   <p>Monday &ndash; Saturday: 9:30 AM &ndash; 6:00 PM IST</p>
-                  <p style={{ fontSize: '0.75rem', color: '#0284C7' }}>Community camps and field centers operate on extended schedules</p>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--color-yellow-dark)' }}>Community camps and field centers operate on extended schedules</p>
                 </div>
               </div>
             </div>
@@ -1777,7 +1777,7 @@ export default function HomePage() {
                 </button>
               </form>
               <div style={{ marginTop: '1.5rem', fontSize: '0.775rem', color: '#4B5563' }}>
-                <i className="fa fa-lock" style={{ color: '#0284C7' }}></i> We respect your privacy. No spam ever.
+                <i className="fa fa-lock" style={{ color: 'var(--color-yellow-deep)' }}></i> We respect your privacy. No spam ever.
               </div>
             </div>
           </div>
@@ -1813,18 +1813,18 @@ export default function HomePage() {
             </div>
 
             <div style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#111827' }}>
-              <p style={{ fontWeight: 600, color: 'var(--color-blue-heading)' }}>{selectedInit.lead}</p>
+              <p style={{ fontWeight: 600, color: 'var(--color-yellow-deep)' }}>{selectedInit.lead}</p>
               <p>{selectedInit.desc}</p>
 
-              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.15rem', marginTop: '1.25rem', marginBottom: '0.75rem' }}>
+              <h4 style={{ color: 'var(--color-yellow-deep)', fontSize: '1.15rem', marginTop: '1.25rem', marginBottom: '0.75rem' }}>
                 Programs &amp; Action Areas:
               </h4>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', margin: '1rem 0' }}>
                 {selectedInit.programs.map((prog, idx) => (
-                  <div key={idx} style={{ background: 'var(--color-blue-tint)', border: '1px solid var(--color-blue-border)', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
-                    <h5 style={{ fontSize: '0.975rem', marginBottom: '0.5rem', color: 'var(--color-blue-heading)', fontWeight: 700 }}>
-                      <i className="fa fa-check-circle" style={{ color: 'var(--color-blue-heading)', marginRight: '0.4rem' }}></i>
+                  <div key={idx} style={{ background: 'var(--color-bg-cream)', border: '1px solid var(--color-border-gold)', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
+                    <h5 style={{ fontSize: '0.975rem', marginBottom: '0.5rem', color: 'var(--color-yellow-deep)', fontWeight: 700 }}>
+                      <i className="fa fa-check-circle" style={{ color: 'var(--color-yellow-deep)', marginRight: '0.4rem' }}></i>
                       {prog.name}
                     </h5>
                     <ul style={{ margin: 0, paddingLeft: '1.15rem', fontSize: '0.85rem', color: '#1F2937', lineHeight: 1.6 }}>
@@ -1837,7 +1837,7 @@ export default function HomePage() {
               </div>
 
               <div className="init-benefit-box">
-                <strong style={{ color: 'var(--color-blue-heading)' }}>Expected Community Benefit:</strong> {selectedInit.expectedBenefit}
+                <strong style={{ color: 'var(--color-yellow-deep)' }}>Expected Community Benefit:</strong> {selectedInit.expectedBenefit}
               </div>
             </div>
 
@@ -2090,7 +2090,7 @@ export default function HomePage() {
               <p>
                 <strong>Anand Group Charitable Trust</strong> was conceived from a simple yet resolute understanding: sustainable community development cannot happen from afar. It requires sitting alongside children in community learning circles, listening to elders who need warmth and companionship, ensuring public hygiene through Swachh Bharat campaigns, and extending loving care to sanctuary homes like Naadha Ashram.
               </p>
-              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Holistic Model</h4>
+              <h4 style={{ color: 'var(--color-yellow-deep)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Our Holistic Model</h4>
               <p>
                 Unlike fragmented single-cause interventions, our trust works across six interconnected social welfare pillars:
               </p>
@@ -2102,7 +2102,7 @@ export default function HomePage() {
                 <li><strong>Elderly Care &amp; Social Welfare:</strong> Dedicated support for old age homes, grocery kits, seasonal clothing, and volunteer visits.</li>
                 <li><strong>Naadha Ashram Support:</strong> Sustained food assistance, daily essentials, hygiene supplies, and compassionate companionship.</li>
               </ul>
-              <h4 style={{ color: 'var(--color-blue-heading)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Governance &amp; Trust Ethics</h4>
+              <h4 style={{ color: 'var(--color-yellow-deep)', fontSize: '1.2rem', marginTop: '1.5rem' }}>Governance &amp; Trust Ethics</h4>
               <p>
                 We operate under uncompromising standards of financial accountability, zero tolerance for exaggerated marketing, and rigorous community consensus before any field center or program is initiated.
               </p>
@@ -2169,7 +2169,7 @@ export default function HomePage() {
             </div>
             <div className="lightbox-caption-wrap">
               <div>
-                <span className="gallery-item-tag" style={{ color: 'var(--color-blue-heading)' }}>{lightboxData.tag}</span>
+                <span className="gallery-item-tag" style={{ color: 'var(--color-yellow-deep)' }}>{lightboxData.tag}</span>
                 <h4 style={{ margin: 0, fontSize: '1.25rem', color: '#111827' }}>{lightboxData.title}</h4>
               </div>
               <button
