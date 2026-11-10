@@ -11,3 +11,4 @@ export default function EducationPage() {
   const initiative = INITIATIVES_DATA['education'];
   return <InitiativeSubpageLayout initiative={initiative} />;
 }
+

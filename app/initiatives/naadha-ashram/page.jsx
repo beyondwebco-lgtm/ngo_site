@@ -11,3 +11,4 @@ export default function NaadhaAshramPage() {
   const initiative = INITIATIVES_DATA['naadha-ashram'];
   return <InitiativeSubpageLayout initiative={initiative} />;
 }
+

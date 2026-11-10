@@ -11,3 +11,4 @@ export default function ElderlyCarePage() {
   const initiative = INITIATIVES_DATA['elderly-care'];
   return <InitiativeSubpageLayout initiative={initiative} />;
 }
+

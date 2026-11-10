@@ -35,15 +35,13 @@ export default function ImpactPage() {
 
           <div className="impact-stats-grid" style={{ marginTop: '3rem' }}>
             {IMPACT_METRICS.map((metric, idx) => (
-              <div key={idx} className="stat-card">
-                <div className="stat-icon-wrap" style={{ color: 'var(--color-yellow-deep)', fontSize: '1.75rem', marginBottom: '0.75rem' }}>
+              <div key={idx} className="stat-box">
+                <div className="stat-icon">
                   <i className={`fa ${metric.icon}`}></i>
                 </div>
                 <div className="stat-number">{metric.number}</div>
-                <div className="stat-label">{metric.label}</div>
-                <p className="stat-sub" style={{ margin: '0.5rem 0 0 0', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
-                  {metric.sub}
-                </p>
+                <div className="stat-title">{metric.label}</div>
+                <div className="stat-meta">{metric.sub}</div>
               </div>
             ))}
           </div>
@@ -191,3 +189,4 @@ export default function ImpactPage() {
     </>
   );
 }
+

@@ -228,3 +228,4 @@ export const GALLERY_ITEMS = [
     description: 'Trust leader presenting potted sapling to college student at STAR Junior College to encourage home tree planting.',
   },
 ];
+

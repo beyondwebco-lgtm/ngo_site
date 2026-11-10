@@ -507,3 +507,4 @@ export const INITIATIVES_DATA = {
 };
 
 export const INITIATIVES_LIST = Object.values(INITIATIVES_DATA);
+

@@ -11,3 +11,4 @@ export default function SocialEnvironmentalPage() {
   const initiative = INITIATIVES_DATA['social-environmental'];
   return <InitiativeSubpageLayout initiative={initiative} />;
 }
+

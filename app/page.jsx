@@ -44,32 +44,27 @@ export default function HomePage() {
            1. HERO SECTION
            ========================================================================== */}
       <section className="hero-section" id="hero">
-        <div className="hero-decorations" aria-hidden="true">
-          <div className="hero-circle-accent hero-circle-1"></div>
-          <div className="hero-circle-accent hero-circle-2"></div>
-        </div>
-
-        <div className="ash-container hero-container">
+        <div className="ash-container">
           <div className="hero-grid">
             {/* Hero Left Content Column */}
             <div className="hero-content">
-              <div className="hero-eyebrow">
-                <i className="fa fa-hand-holding-heart"></i>
-                <span>Registered Charitable Trust &bull; 80G Tax Exemption</span>
+              <div className="hero-pill">
+                <span className="hero-pill-badge">Trust</span>
+                <span>Registered Indian Charitable Trust &bull; 80G Tax Exemption</span>
               </div>
 
               <h1 className="hero-title">
                 Together, We Build a{' '}
-                <span className="hero-title-highlight">Brighter, Cleaner &amp; Compassionate</span>{' '}
+                <span className="hero-highlight">Brighter, Cleaner &amp; Compassionate</span>{' '}
                 Tomorrow.
               </h1>
 
-              <p className="hero-description">
-                Anand Group Charitable Trust is committed to transformative grassroots social development across India — empowering children through education, leading Swachh Bharat and tree plantation drives, providing healthcare, and sheltering vulnerable residents at Naadha Ashram.
+              <p className="hero-subheading">
+                Anand Group Charitable Trust is committed to transformative grassroots social development across India &mdash; empowering children through education, leading Swachh Bharat and tree plantation drives, providing healthcare, and sheltering vulnerable residents at Naadha Ashram.
               </p>
 
               {/* Primary Call to Actions */}
-              <div className="hero-actions">
+              <div className="hero-buttons">
                 <Link
                   href="/donate"
                   className="ash-btn ash-btn-primary"
@@ -90,44 +85,45 @@ export default function HomePage() {
               </div>
 
               {/* Verified Trust Stats Ribbon */}
-              <div className="hero-stats-ribbon">
-                <div className="hero-stat-item">
-                  <div className="hero-stat-number">100+</div>
-                  <div className="hero-stat-label">Cleanliness Drives</div>
+              <div className="hero-glass-stats">
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon">
+                    <i className="fa fa-broom"></i>
+                  </div>
+                  <div>
+                    <div className="glass-stat-label">Cleanliness</div>
+                    <div className="glass-stat-value">100+ Drives</div>
+                  </div>
                 </div>
-                <div className="hero-stat-item">
-                  <div className="hero-stat-number">5,000+</div>
-                  <div className="hero-stat-label">Students Mentored</div>
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon">
+                    <i className="fa fa-user-graduate"></i>
+                  </div>
+                  <div>
+                    <div className="glass-stat-label">Education</div>
+                    <div className="glass-stat-value">5,000+ Students</div>
+                  </div>
                 </div>
-                <div className="hero-stat-item">
-                  <div className="hero-stat-number">25,000+</div>
-                  <div className="hero-stat-label">Meals Served</div>
+                <div className="glass-stat-item">
+                  <div className="glass-stat-icon">
+                    <i className="fa fa-bowl-rice"></i>
+                  </div>
+                  <div>
+                    <div className="glass-stat-label">Sanctuary</div>
+                    <div className="glass-stat-value">25,000+ Meals</div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Hero Right Media Column */}
-            <div className="hero-visual">
-              <div className="hero-image-frame">
-                <div className="hero-image-accent"></div>
-                <div className="hero-image-wrapper">
-                  <img
-                    src="/images/hero_community_hope.jpg"
-                    alt="Anand Group Charitable Trust Community Initiatives"
-                    fetchPriority="high"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                </div>
-                <div className="hero-floating-badge">
-                  <div className="badge-icon">
-                    <i className="fa fa-hands-holding-circle"></i>
-                  </div>
-                  <div className="badge-text">
-                    <h4>Direct Grassroots Seva</h4>
-                    <p>Transparent, accountable &amp; volunteer-driven</p>
-                  </div>
-                </div>
-              </div>
+            <div className="hero-image-card">
+              <img
+                src="/images/hero_community_hope.jpg"
+                alt="Anand Group Charitable Trust Community Initiatives"
+                fetchPriority="high"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
           </div>
         </div>
@@ -255,15 +251,13 @@ export default function HomePage() {
 
           <div className="impact-stats-grid" style={{ marginTop: '3rem' }}>
             {IMPACT_METRICS.slice(0, 4).map((metric, idx) => (
-              <div key={idx} className="stat-card">
-                <div className="stat-icon-wrap" style={{ color: 'var(--color-yellow-deep)', fontSize: '1.75rem', marginBottom: '0.75rem' }}>
+              <div key={idx} className="stat-box">
+                <div className="stat-icon">
                   <i className={`fa ${metric.icon}`}></i>
                 </div>
                 <div className="stat-number">{metric.number}</div>
-                <div className="stat-label">{metric.label}</div>
-                <p className="stat-sub" style={{ margin: '0.4rem 0 0 0', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
-                  {metric.sub}
-                </p>
+                <div className="stat-title">{metric.label}</div>
+                <div className="stat-meta">{metric.sub}</div>
               </div>
             ))}
           </div>

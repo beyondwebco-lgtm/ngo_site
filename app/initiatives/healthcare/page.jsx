@@ -11,3 +11,4 @@ export default function HealthcarePage() {
   const initiative = INITIATIVES_DATA['healthcare'];
   return <InitiativeSubpageLayout initiative={initiative} />;
 }
+

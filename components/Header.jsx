@@ -9,7 +9,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Handle sticky header shadow on scroll
+  // Scroll listener for sticky navbar shadow
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -18,10 +18,22 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
+  // Auto-close mobile drawer on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
+
+  // Lock body scroll when mobile menu is open to prevent background scrolling
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -42,78 +54,136 @@ export default function Header() {
   };
 
   return (
-    <header className={`ash-header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="ash-container header-inner">
-        {/* Brand Logo */}
-        <Link href="/" className="brand-logo" aria-label="Anand Group Charitable Trust Home">
-          <img
-            src="/logo-anand-trust.svg"
-            alt="Anand Group Charitable Trust Logo"
-            width="220"
-            height="50"
-            style={{ width: 'auto', height: '44px', objectFit: 'contain' }}
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav" aria-label="Main Navigation">
-          <ul className="nav-list">
-            {navLinks.map((link) => (
-              <li key={link.href} className="nav-item">
-                <Link
-                  href={link.href}
-                  className={`nav-link ${isActive(link.href) ? 'active' : ''}`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Desktop CTA */}
-        <div className="header-actions">
-          <Link
-            href="/donate"
-            className="ash-btn ash-btn-primary nav-donate-btn"
-            aria-label="Support Our Cause - Donate / Pledge"
-          >
-            <i className="fa fa-heart"></i>
-            <span>Donate / Pledge</span>
-          </Link>
-
-          {/* Mobile Hamburger Button */}
-          <button
-            type="button"
-            className={`mobile-toggle ${mobileMenuOpen ? 'open' : ''}`}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
-            aria-expanded={mobileMenuOpen}
-          >
-            <span className="hamburger-bar"></span>
-            <span className="hamburger-bar"></span>
-            <span className="hamburger-bar"></span>
-          </button>
+    <>
+      {/* Top Utility Information Bar */}
+      <div className="top-notice-bar">
+        <div className="ash-container top-notice-content">
+          <div className="top-contact-info">
+            <a href="mailto:contact@anandgroupcharitabletrust.org.in" aria-label="Email Anand Group Charitable Trust">
+              <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i>
+              <span>contact@anandgroupcharitabletrust.org.in</span>
+            </a>
+            <a href="tel:+919848123456" aria-label="Call Anand Group Charitable Trust helpline">
+              <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i>
+              <span>+91 98481 23456</span>
+            </a>
+          </div>
+          <div className="top-trust-badge">
+            <i className="fa fa-certificate" style={{ color: 'var(--color-yellow-deep)' }}></i>
+            <span>Registered Indian Charitable Trust &bull; 80G Tax Exemption</span>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
-      <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-nav-inner">
-          <ul className="mobile-nav-list">
-            {navLinks.map((link) => (
-              <li key={link.href} className="mobile-nav-item">
-                <Link
-                  href={link.href}
-                  className={`mobile-nav-link ${isActive(link.href) ? 'active' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mobile-drawer-cta" style={{ marginTop: '1.5rem', padding: '0 1rem' }}>
+      {/* Main Sticky Navbar */}
+      <header className={`ash-navbar ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="ash-container navbar-inner">
+          {/* Brand Logo */}
+          <Link href="/" className="navbar-brand-link" aria-label="Anand Group Charitable Trust Home">
+            <img
+              src="/logo-anand-trust.svg"
+              alt="Anand Group Charitable Trust"
+              width="210"
+              height="44"
+              className="navbar-brand-logo"
+            />
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <nav aria-label="Main Navigation" className="nav-desktop-container">
+            <ul className="nav-links-desktop">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`nav-item-link ${isActive(link.href) ? 'active' : ''}`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Navbar Right Actions (CTA & Mobile Hamburger) */}
+          <div className="navbar-actions">
+            <Link
+              href="/donate"
+              className="ash-btn ash-btn-primary nav-donate-btn"
+              aria-label="Pledge Support or Donate"
+            >
+              <i className="fa fa-heart"></i>
+              <span>Donate<span className="hide-on-mobile"> / Pledge</span></span>
+            </Link>
+
+            <button
+              type="button"
+              className={`mobile-nav-toggle ${mobileMenuOpen ? 'open' : ''}`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+              aria-expanded={mobileMenuOpen}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Backdrop Overlay */}
+        <div
+          className={`mobile-menu-backdrop ${mobileMenuOpen ? 'open' : ''}`}
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        ></div>
+
+        {/* Mobile Navigation Drawer */}
+        <div className={`mobile-menu-drawer ${mobileMenuOpen ? 'open' : ''}`} aria-label="Mobile Navigation Drawer">
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.75rem', paddingBottom: '0.85rem', borderBottom: '1px solid var(--color-border)' }}>
+              <img
+                src="/logo-anand-trust.svg"
+                alt="Anand Group Charitable Trust"
+                style={{ height: '36px', width: 'auto' }}
+              />
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  background: 'var(--color-bg-cream)',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: '50%',
+                  width: '36px',
+                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.1rem',
+                  color: 'var(--color-text)',
+                  cursor: 'pointer',
+                }}
+                aria-label="Close mobile menu"
+              >
+                <i className="fa fa-times"></i>
+              </button>
+            </div>
+
+            <ul className="mobile-nav-list">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`mobile-nav-link ${isActive(link.href) ? 'active' : ''}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid var(--color-border)' }}>
             <Link
               href="/donate"
               className="ash-btn ash-btn-primary"
@@ -123,9 +193,13 @@ export default function Header() {
               <i className="fa fa-heart"></i>
               <span>Donate / Pledge Now</span>
             </Link>
+            <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--color-text-muted)', textAlign: 'center' }}>
+              <p style={{ margin: 0 }}>Registered Indian Charitable Trust</p>
+              <p style={{ margin: '0.25rem 0 0 0', color: 'var(--color-yellow-dark)', fontWeight: 600 }}>80G Tax Exemption Eligible</p>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }

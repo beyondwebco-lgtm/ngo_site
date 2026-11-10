@@ -11,3 +11,4 @@ export default function TempleDevelopmentPage() {
   const initiative = INITIATIVES_DATA['temple-development'];
   return <InitiativeSubpageLayout initiative={initiative} />;
 }
+

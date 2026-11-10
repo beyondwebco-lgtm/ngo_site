@@ -34,3 +34,4 @@ export default function InitiativeCard({ initiative, index }) {
     </article>
   );
 }
+
