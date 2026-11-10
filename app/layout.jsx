@@ -1,4 +1,6 @@
 import './globals.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export const viewport = {
   width: 'device-width',
@@ -15,6 +17,7 @@ export const metadata = {
     'Anand Group Charitable Trust',
     'CSR Partnerships India',
     'Swachh Bharat cleanliness drives',
+    'Haritha Haram tree plantation',
     'Save water campaigns',
     'Underprivileged child education',
     'Temple renovation and Annadanam',
@@ -63,7 +66,11 @@ export default function RootLayout({ children }) {
           referrerPolicy="no-referrer"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -162,9 +162,56 @@ ngo_site/
 ├── package-lock.json                     # Deterministic dependency lockfile
 │
 ├── app/
-│   ├── globals.css                       # Master CSS architecture (57KB pure white design system)
-│   ├── layout.jsx                        # RootLayout: HTML head, viewport, SEO metadata, Font Awesome
-│   └── page.jsx                          # Main single-page interactive application (~2,200 lines)
+│   ├── globals.css                       # Master CSS architecture (pure white & golden design system)
+│   ├── layout.jsx                        # RootLayout: Header, Footer, SEO metadata, Font Awesome
+│   ├── page.jsx                          # Clean, simplified Homepage (hero, about preview, 6 cards, impact, spotlight, CTA)
+│   ├── about/
+│   │   └── page.jsx                      # Dedicated About Us page
+│   ├── initiatives/
+│   │   ├── page.jsx                      # All Initiatives overview & methodology
+│   │   ├── social-environmental/
+│   │   │   └── page.jsx                  # Swachh Bharat & Haritha Haram dedicated page
+│   │   ├── education/
+│   │   │   └── page.jsx                  # Education & Child Development dedicated page
+│   │   ├── temple-development/
+│   │   │   └── page.jsx                  # Temple Development & Annadanam dedicated page
+│   │   ├── healthcare/
+│   │   │   └── page.jsx                  # Healthcare & Medical Screening dedicated page
+│   │   ├── elderly-care/
+│   │   │   └── page.jsx                  # Elderly Care & Senior Welfare dedicated page
+│   │   └── naadha-ashram/
+│   │       └── page.jsx                  # Naadha Ashram Sanctuary dedicated page
+│   ├── impact/
+│   │   └── page.jsx                      # Impact Statistics, Milestones Timeline & Stories
+│   ├── gallery/
+│   │   └── page.jsx                      # Standalone Photo Gallery (category filters, inline viewer, NO pop-ups)
+│   ├── get-involved/
+│   │   └── page.jsx                      # Get Involved Hub (Pathways to contribute)
+│   ├── volunteer/
+│   │   └── page.jsx                      # Dedicated Volunteer Registration (inline form & validation)
+│   ├── donate/
+│   │   └── page.jsx                      # Dedicated Donation & Pledge Page (transparent 80G information, bank transfer)
+│   ├── csr-partnerships/
+│   │   └── page.jsx                      # Corporate CSR (Schedule VII Section 135 compliance & enquiry form)
+│   ├── contact/
+│   │   └── page.jsx                      # Dedicated Contact Us page (inline form, headquarters info)
+│   ├── privacy-policy/
+│   │   └── page.jsx                      # Dedicated Privacy Policy & Data Protection page
+│   └── terms-and-conditions/
+│       └── page.jsx                      # Dedicated Terms & Conditions page
+│
+├── components/
+│   ├── Header.jsx                        # Shared Sticky Navbar with active tracking & auto-closing mobile drawer
+│   ├── Footer.jsx                        # Shared 4-Column Footer with quick links, initiatives, contact & legal
+│   ├── PageBanner.jsx                    # Reusable Inner Page Hero Banner with Breadcrumbs & Headings
+│   ├── InitiativeCard.jsx                # Reusable Initiative Card navigating directly to /initiatives/<slug>
+│   ├── PhotoShowcase.jsx                 # Reusable Field Action Photo Showcase with Inline Preview (NO pop-ups)
+│   └── InitiativeSubpageLayout.jsx       # Standardized Layout for all 6 Initiative detail pages
+│
+├── data/
+│   ├── initiatives.js                    # Centralized initiatives data, programs, benefits & photo mappings
+│   ├── gallery.js                        # Curated 27+ authentic gallery items and categories
+│   └── impact.js                         # Verified metrics, historical timeline & beneficiary stories
 │
 └── public/
     ├── favicon-anand-trust.svg           # Branded SVG favicon (active)
@@ -225,51 +272,68 @@ ngo_site/
 
 ---
 
-## 5. In-Depth Feature & Section Breakdown
+## 5. In-Depth Multi-Page Subpage Architecture (Strictly Zero Pop-Ups)
 
-### 5.1 Top Information Bar & Navigation Bar
-- **Top Utility Bar:**
-  - Displays contact email (`contact@anandgroupcharitabletrust.org.in`) and helpline (`+91 98765 43210`).
-  - Trust credential badge: *"Registered Indian Non-Governmental Organization & Charitable Trust"*.
-- **Main Navbar:**
-  - Sticky header with dynamic shadow activation upon scrolling (`isScrolled` hook).
-  - High-resolution SVG trust logo.
-  - Desktop Navigation links: *Home, About, Initiatives, Ashram, Impact, CSR, Gallery, Get Involved, Stories, Contact*.
-  - Direct Action CTA: Primary pill button *"Support Us"* triggering the pledge modal.
-  - Mobile Hamburger Menu: Accessible slide-in navigation drawer with smooth backdrop blur.
+To eliminate all pop-ups, modals, accordions, and hidden panels, the website is structured into a clean, professional multi-page architecture using Next.js App Router:
 
-### 5.2 Hero Section (`#home`)
-- **Headline:** *Empowering Lives. Building Hope.*
-- **Sub-headline:** Bringing education, accessible healthcare, environmental awareness, cultural preservation, and compassionate care to those who need it most.
-- **Key Stat Highlights:**
-  - `6+` Core Social Welfare Pillars
-  - `100%` Grassroots Field Presence
-  - `24/7` Compassion & Ashram Care
-- **Action Triggers:**
-  - Primary button: *"Explore Our Initiatives"* (smooth scroll to `#initiatives`)
-  - Secondary button: *"Naadha Ashram Support"* (opens Ashram spotlight)
-  - Ghost button: *"Watch Our Story"* (opens full Trust Story modal)
+### 5.1 Simplified Homepage (`/`)
+- **Header & Navigation:** Sticky white navbar with active indicator and accessible auto-closing mobile menu drawer.
+- **Hero Section:** Clean high-impact typography, impact stat badges, primary CTA to `/donate`, secondary CTA to `/initiatives`.
+- **Short About Us Introduction:** Concise 2-paragraph trust overview with 4 feature bullets and link to `/about`.
+- **Our Six Core Initiatives:** Simple cards linking directly to each initiative subpage (`/initiatives/<slug>`).
+- **Impact Statistics:** 4 prominent stat cards with link to `/impact`.
+- **Signature Seva Spotlight:** Side-by-side featured spotlights on *Swachh Bharat & Haritha Haram* and *Naadha Ashram Sanctuary*.
+- **Photo Gallery Preview:** 6 curated field moments with CTA linking to `/gallery`.
+- **Get Involved CTA:** 3 action pathways linking to `/donate`, `/volunteer`, and `/csr-partnerships`.
+- **Contact & Helpline CTA:** Direct phone and link to `/contact`.
 
-### 5.3 About Us & Trust Philosophy (`#about`)
-- In-depth background describing the trust's origin and philosophy.
-- Four core values:
-  1. **Integrity & Transparency:** Open tracking of initiatives and resource management.
-  2. **Community Dignity:** Uplifting individuals with honor, self-respect, and compassion.
-  3. **Grassroots First:** Hands-on involvement directly in villages, ashrams, and slums.
-  4. **Sustainable Evolution:** Building self-reliance, not temporary dependencies.
-- Feature card with mentorship visual and quote highlighting the sacred duty of societal stewardship.
+### 5.2 Dedicated Subpages Architecture
 
-### 5.4 Six Core Focus Areas & Initiatives (`#initiatives`)
-An interactive tabbed interface allows seamless switching between all 6 core focus areas, each featuring deep-dive sub-programs and expected community benefits:
+#### 1. About Us (`/about`)
+- In-depth founding story and evolution.
+- Mission, Vision, and 4 Core Pillars.
+- Leadership profiles of Ambati Srinivasa Rao and Ambati Tanuja.
+- Legal trust governance and audited compliance notes.
 
-#### 1. Social & Environmental Awareness
-- **Lead:** Civic responsibility and ecological consciousness.
-- **Programs:**
-  - *Swachh Bharat & Cleanliness Drives:* Slum cleaning, street sweeps, open-defecation prevention, waste segregation.
-  - *Save Water Campaigns:* Household leak prevention, groundwater replenishment, rainwater harvesting advocacy.
-  - *Road Safety & Traffic Discipline:* Helmet campaigns, zebra-crossing respect, student road safety workshops.
-  - *Plastic-Free Environment:* Phasing out single-use plastics, distributing durable cloth/jute bags, recycling awareness.
-- **Expected Benefit:** Reduces public health hazards, fosters civic pride, saves vital water reserves.
+#### 2. All Initiatives (`/initiatives`)
+- Comprehensive overview of all 6 core focus pillars.
+- Grassroots methodology and three-point delivery framework.
+- Direct cards linking to each specialized subpage.
+
+#### 3. Six Specialized Initiative Subpages:
+- `/initiatives/social-environmental`: Swachh Bharat street sanitation, Haritha Haram tree plantations, Save Water campaigns, plastic-free living, and 10 authentic field photos.
+- `/initiatives/education`: Underprivileged child schooling, digital discipline, family values, and 6 authentic school awareness photos.
+- `/initiatives/temple-development`: Historic temple renovation, sacred Annadanam food service, and cultural preservation.
+- `/initiatives/healthcare`: Free rural medical camps, diagnostic check-ups, voluntary blood donation, and emergency medical assistance.
+- `/initiatives/elderly-care`: Old age home support, senior citizen dignity, mobility aids, and companionship.
+- `/initiatives/naadha-ashram`: 365-day daily nutrition, shelter improvements, and child schooling at Naadha Ashram sanctuary.
+
+#### 4. Impact & Milestones (`/impact`)
+- 6 verified field impact metrics.
+- Historical milestones timeline from 2014 to present.
+- Real community stories and beneficiary testimonials.
+
+#### 5. Photo Gallery (`/gallery`)
+- 27 authentic photographs with category filter tabs.
+- **Strictly NO Pop-Up Lightbox:** High-resolution photos expand into an inline focus display panel directly within the page layout.
+
+#### 6. Get Involved (`/get-involved`)
+- 6 actionable pathways: Donate, Volunteer, CSR, Sponsor Ashram Meals, Adopt a School, Spread Awareness.
+
+#### 7. Volunteer Registration (`/volunteer`)
+- Dedicated volunteer onboarding page with inline registration form, skills selection, time availability, and inline confirmation (no pop-ups).
+
+#### 8. Donation & Pledge (`/donate`)
+- Direct support pledge form with tier selector (₹1,000, ₹2,500, ₹5,000, ₹10,000, Custom), initiative designation selector, official bank transfer particulars, and transparent 80G tax exemption guidelines.
+
+#### 9. CSR Partnerships (`/csr-partnerships`)
+- Schedule VII Section 135 statutory compliance alignment, CA fund utilization certificates, milestone audits, and inline corporate enquiry form.
+
+#### 10. Contact Us (`/contact`)
+- Office location in Andhra Pradesh & Telangana, direct helplines, email addresses, working hours, and inline inquiry form.
+
+#### 11. Privacy Policy (`/privacy-policy`) & Terms and Conditions (`/terms-and-conditions`)
+- Comprehensive statutory disclosures, donor confidentiality guarantees, non-refundable donation terms, and legal jurisdiction.
 
 #### 2. Education & Child Development
 - **Lead:** Enduring pathways out of generational hardship for disadvantaged children.
