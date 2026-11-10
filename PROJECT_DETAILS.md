@@ -242,6 +242,15 @@ ngo_site/
         │   ├── swachh-bharat-mind-cleanliness-news-speech.webp
         │   └── swachh-bharat-english-press-film-coverage.webp
         │
+        ├── leadership/                   # Trust Leadership & Founder Photography (WebP)
+        │   └── ambati-srinivasa-rao-managing-trustee.webp
+        │
+        ├── healthcare/                   # Healthcare & Medical Relief Media & Photography (WebP)
+        │   └── healthcare-press-ambati-srinu-patient-medical-aid.webp
+        │
+        ├── education/                    # Institutional Celebrations & School Development (WebP)
+        │   └── anand-vidyalaya-school-anniversary-celebration.webp
+        │
         ├── haritha-haram/                # Haritha Haram Tree Plantation Photographic Archive (WebP)
         │   ├── haritha-haram-community-tree-plantation-drive.webp
         │   └── haritha-haram-student-sapling-distribution.webp
@@ -542,6 +551,14 @@ Authentic photography and media coverage documenting school assemblies, student 
 | `school-awareness-auditorium-mentorship-session.webp` | 1088x816 | 88 KB | Trust speaker addressing full auditorium of students at Sri Chaitanya School on moral values & civic duty |
 | `school-awareness-press-clipping-orphanage-education-support.webp` | 532x227 | 40 KB | Press media report: Ambati Srinivas distributing books, school supplies & sweets at Generation Yuva Ashram |
 | `school-awareness-press-clipping-dav-school-civic-awareness.webp` | 960x551 | 148 KB | Press media report: DAV Public School address inspiring students to avoid plastics and maintain discipline |
+
+### 7.4 Leadership, Healthcare & Institutional Development Archive (`public/images/`)
+
+| Directory | Filename | Dimensions | WebP Size | Subject & Authentic Field Description |
+|---|---|---|---|---|
+| `public/images/leadership/` | `ambati-srinivasa-rao-managing-trustee.webp` | 433x433 | 15.2 KB | Managing Trustee Ambati Srinivasa Rao (cine actor & social activist) dedicated leadership portrait |
+| `public/images/healthcare/` | `healthcare-press-ambati-srinu-patient-medical-aid.webp` | 400x992 | 93.7 KB | Andhra Jyothi Telugu press clipping: Ambati Srinivasa Rao (Ambati Srinu) presenting Rs 10,000 emergency medical aid to lung disease patient at Muralinagar |
+| `public/images/education/` | `anand-vidyalaya-school-anniversary-celebration.webp` | 1024x683 | 123.1 KB | Anand Vidyalaya School 1st Anniversary Celebrations stage event with Ambati Srinivasa Rao presenting the sacred Lord Venkateswara portrait to dignitaries |
 
 ---
 

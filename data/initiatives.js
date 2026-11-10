@@ -227,6 +227,12 @@ export const INITIATIVES_DATA = {
         tag: 'Civic Education',
         caption: 'Press coverage: Inspiring students to champion eco-cleanliness, reduce plastics, and lead by example',
       },
+      {
+        src: '/images/education/anand-vidyalaya-school-anniversary-celebration.webp',
+        title: 'Anand Vidyalaya School 1st Anniversary Celebrations',
+        tag: 'School Celebrations',
+        caption: 'Managing Trustee Ambati Srinivasa Rao presenting the sacred Lord Venkateswara portrait to dignitaries during the 1st Anniversary Celebrations of Anand Vidyalaya',
+      },
     ],
   },
 
@@ -348,6 +354,12 @@ export const INITIATIVES_DATA = {
     photoShowcaseTitle: 'Field Action Gallery — Community Healthcare & Medical Seva',
     photoShowcaseDesc: 'Photographs from our rural medical check-ups, diagnostic camps, and preventive health drives:',
     photos: [
+      {
+        src: '/images/healthcare/healthcare-press-ambati-srinu-patient-medical-aid.webp',
+        title: 'Emergency Medical Treatment Financial Assistance — Media Report',
+        tag: 'Financial Aid',
+        caption: 'Andhra Jyothi press report: Ambati Srinivasa Rao (Ambati Srinu) presenting Rs 10,000 emergency medical assistance to a patient suffering from chronic lung disease at Muralinagar',
+      },
       {
         src: '/images/init_healthcare.jpg',
         title: 'Free Community Health Screening Camp',

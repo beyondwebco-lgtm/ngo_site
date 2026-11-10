@@ -133,8 +133,14 @@ export default function AboutPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '2.5rem', marginTop: '3rem', maxWidth: '880px', margin: '3rem auto 0 auto' }}>
             <div className="sidebar-box" style={{ textAlign: 'center', padding: '2.5rem 2rem' }}>
-              <div style={{ width: '90px', height: '90px', borderRadius: '50%', background: 'var(--color-yellow-tint)', border: '3px solid var(--color-yellow-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto', color: 'var(--color-yellow-deep)', fontSize: '2.25rem' }}>
-                <i className="fa fa-user-tie"></i>
+              <div style={{ width: '100px', height: '100px', borderRadius: '50%', border: '3px solid var(--color-yellow-primary)', overflow: 'hidden', margin: '0 auto 1.25rem auto', boxShadow: '0 4px 14px rgba(234, 179, 8, 0.25)' }}>
+                <img
+                  src="/images/leadership/ambati-srinivasa-rao-managing-trustee.webp"
+                  alt="Ambati Srinivasa Rao — Managing Trustee & Civic Leader"
+                  width="100"
+                  height="100"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
               <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'var(--color-text)', marginBottom: '0.35rem' }}>
                 Ambati Srinivasa Rao
