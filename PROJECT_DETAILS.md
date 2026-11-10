@@ -195,6 +195,18 @@ ngo_site/
         │   ├── swachh-bharat-mind-cleanliness-news-speech.webp
         │   └── swachh-bharat-english-press-film-coverage.webp
         │
+        ├── haritha-haram/                # Haritha Haram Tree Plantation Photographic Archive (WebP)
+        │   ├── haritha-haram-community-tree-plantation-drive.webp
+        │   └── haritha-haram-student-sapling-distribution.webp
+        │
+        ├── school-awareness/             # Education & Youth Mentorship Photographic Archive (WebP)
+        │   ├── school-awareness-youth-inspiration-assembly.webp
+        │   ├── school-awareness-rural-government-high-school-outreach.webp
+        │   ├── school-awareness-student-civic-pledge.webp
+        │   ├── school-awareness-auditorium-mentorship-session.webp
+        │   ├── school-awareness-press-clipping-orphanage-education-support.webp
+        │   └── school-awareness-press-clipping-dav-school-civic-awareness.webp
+        │
         ├── hero_community_hope.jpg       # Hero banner visual
         ├── about_mentorship.jpg          # About section feature photo
         ├── init_awareness.jpg            # Archive environmental photo
@@ -446,6 +458,26 @@ A dedicated archive of authentic field action photography and press coverage doc
 | `swachh-bharat-press-reception-andhra-jyothy.webp` | 720x960 | 157 KB | Andhra Jyothy press report: "Tremendous Reception for Swachh Bharat" |
 | `swachh-bharat-mind-cleanliness-news-speech.webp` | 960x684 | 242 KB | Press feature on speech: "Clean Minds Lead to Successful Swachh Bharat" |
 | `swachh-bharat-english-press-film-coverage.webp` | 720x960 | 110 KB | English national newspaper clipping covering Swachh Bharat awareness film |
+
+### 7.4 Haritha Haram Tree Plantation Photographic Archive (`public/images/haritha-haram/`)
+Authentic field photography documenting Anand Group Charitable Trust's tree plantation initiatives, student sapling distributions, and green cover campaigns:
+
+| Filename | Dimensions | WebP Size | Original Content & Scene Description |
+|---|---|---|---|
+| `haritha-haram-community-tree-plantation-drive.webp` | 960x640 | 179 KB | Anand Group trustees and volunteers planting saplings, weeding, and nurturing roadside green belts |
+| `haritha-haram-student-sapling-distribution.webp` | 960x720 | 88 KB | Trust representative presenting green potted plant & sapling to college student at STAR Junior College |
+
+### 7.5 School & Youth Awareness Photographic Archive (`public/images/school-awareness/`)
+Authentic photography and media coverage documenting school assemblies, student mentorship sessions, value education, and child support initiatives:
+
+| Filename | Dimensions | WebP Size | Original Content & Scene Description |
+|---|---|---|---|
+| `school-awareness-youth-inspiration-assembly.webp` | 1040x780 | 193 KB | Cheerful school students in uniform with hands raised high cheering during interactive youth assembly |
+| `school-awareness-rural-government-high-school-outreach.webp` | 1280x960 | 208 KB | Morning assembly & outreach at Zilla Praja Parishad High School, Pedapullalanka with rural students |
+| `school-awareness-student-civic-pledge.webp` | 1280x720 | 114 KB | High school & junior college students taking formal civic, cleanliness, and responsibility pledge |
+| `school-awareness-auditorium-mentorship-session.webp` | 1088x816 | 88 KB | Trust speaker addressing full auditorium of students at Sri Chaitanya School on moral values & civic duty |
+| `school-awareness-press-clipping-orphanage-education-support.webp` | 532x227 | 40 KB | Press media report: Ambati Srinivas distributing books, school supplies & sweets at Generation Yuva Ashram |
+| `school-awareness-press-clipping-dav-school-civic-awareness.webp` | 960x551 | 148 KB | Press media report: DAV Public School address inspiring students to avoid plastics and maintain discipline |
 
 ---
 

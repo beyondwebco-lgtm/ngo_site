@@ -49,8 +49,19 @@ const INITIATIVES_DATA = {
           'Cleanliness and litter-free public campaigns',
         ],
       },
+      {
+        name: 'Haritha Haram & Tree Plantation',
+        items: [
+          'Urban and roadside sapling plantation drives with local volunteers',
+          'Free distribution of fruit and shade saplings to college students',
+          'Promoting bio-diversity, green lung corridors, and clean air in villages',
+          'Youth eco-pledges and sustained sapling nurture programs',
+        ],
+      },
     ],
     expectedBenefit: 'Fosters civic consciousness, reduces public health hazards and environmental degradation, conserves local water resources, and creates safer roads for students and families.',
+    photoShowcaseTitle: 'Field Action Gallery — Swachh Bharat & Haritha Haram Drives',
+    photoShowcaseDesc: 'Authentic photographs from our community cleanliness drives, green tree plantations, and civic awareness rallies:',
     photos: [
       {
         src: '/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp',
@@ -88,6 +99,18 @@ const INITIATIVES_DATA = {
         tag: 'Civic Responsibility',
         caption: 'Official launch of road safety and traffic rule awareness campaigns',
       },
+      {
+        src: '/images/haritha-haram/haritha-haram-community-tree-plantation-drive.webp',
+        title: 'Haritha Haram Community Tree Plantation',
+        tag: 'Haritha Haram',
+        caption: 'Volunteers and community leaders planting saplings along green corridors and public ways',
+      },
+      {
+        src: '/images/haritha-haram/haritha-haram-student-sapling-distribution.webp',
+        title: 'Student Green Sapling Distribution',
+        tag: 'Green Initiatives',
+        caption: 'Distributing potted saplings to youth to nurture environmental consciousness',
+      },
     ],
   },
   education: {
@@ -95,7 +118,7 @@ const INITIATIVES_DATA = {
     title: 'Education & Child Development',
     tag: 'Learning & Value Education',
     heading: 'Every Child Deserves a Better Future.',
-    image: '/images/init_education.jpg',
+    image: '/images/school-awareness/school-awareness-youth-inspiration-assembly.webp',
     lead: 'Supporting underprivileged children through educational opportunities, learning infrastructure, life skills, and value-based awareness programs.',
     desc: 'Education is the single most enduring pathway out of generational hardship. Our initiatives empower children from economically disadvantaged families with remedial schooling, essential study materials, science and digital labs, etiquette training, and strong moral values.',
     programs: [
@@ -152,6 +175,46 @@ const INITIATIVES_DATA = {
       },
     ],
     expectedBenefit: 'Improves school retention rates, fosters academic confidence in first-generation students, cultivates digital discipline, and nurtures well-mannered, responsible citizens.',
+    photoShowcaseTitle: 'Field Action Gallery — School & Youth Awareness Programs',
+    photoShowcaseDesc: 'Authentic moments from our school assemblies, rural outreach visits, student mentorship drives, and press recognitions:',
+    photos: [
+      {
+        src: '/images/school-awareness/school-awareness-youth-inspiration-assembly.webp',
+        title: 'Youth Inspiration School Assembly',
+        tag: 'School Awareness',
+        caption: 'High-energy student interactive session fostering leadership, confidence, and civic spirit',
+      },
+      {
+        src: '/images/school-awareness/school-awareness-rural-government-high-school-outreach.webp',
+        title: 'Rural High School Outreach',
+        tag: 'Government School Program',
+        caption: 'Zilla Praja Parishad High School assembly empowering rural children with learning resources',
+      },
+      {
+        src: '/images/school-awareness/school-awareness-student-civic-pledge.webp',
+        title: 'Student Civic & Moral Responsibility Pledge',
+        tag: 'Values & Oath',
+        caption: 'Students and trustees taking oath for discipline, cleanliness, and community responsibility',
+      },
+      {
+        src: '/images/school-awareness/school-awareness-auditorium-mentorship-session.webp',
+        title: 'Values & Ethics Mentorship Session',
+        tag: 'School Mentorship',
+        caption: 'Interactive auditorium guidance at Sri Chaitanya School inspiring youth to serve society',
+      },
+      {
+        src: '/images/school-awareness/school-awareness-press-clipping-orphanage-education-support.webp',
+        title: 'Orphanage Education & Book Distribution',
+        tag: 'Media Coverage',
+        caption: 'Press coverage: Distributing study materials, books, and nutrition to orphanage children',
+      },
+      {
+        src: '/images/school-awareness/school-awareness-press-clipping-dav-school-civic-awareness.webp',
+        title: 'DAV Public School Awareness Address',
+        tag: 'Civic Education',
+        caption: 'Press coverage: Inspiring students to champion eco-cleanliness, reduce plastics, and lead by example',
+      },
+    ],
   },
   temple: {
     id: 'temple',
@@ -320,15 +383,15 @@ const INITIATIVES_DATA = {
 const GALLERY_ITEMS = [
   // Swachh Bharat & Social Awareness (Authentic Field Action & Community Drives)
   { id: 1, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp', title: 'School Campus Swachh Bharat Cleanliness Drive', tag: 'Swachh Bharat' },
-  { id: 2, category: 'education', src: '/images/init_education.jpg', title: 'Underprivileged Children Classroom', tag: 'Education' },
-  { id: 3, category: 'education', src: '/images/about_mentorship.jpg', title: 'Values & Academic Mentorship', tag: 'Education' },
+  { id: 2, category: 'education', src: '/images/school-awareness/school-awareness-youth-inspiration-assembly.webp', title: 'Youth Inspiration School Courtyard Assembly', tag: 'School Assembly' },
+  { id: 3, category: 'education', src: '/images/school-awareness/school-awareness-rural-government-high-school-outreach.webp', title: 'Rural High School Student Outreach & Assembly', tag: 'Rural Education' },
   { id: 4, category: 'temple', src: '/images/init_temple.jpg', title: 'Heritage Temple Precinct Renovation', tag: 'Temple' },
   { id: 5, category: 'medical', src: '/images/init_healthcare.jpg', title: 'Free Community Health Screening', tag: 'Medical Camps' },
   { id: 6, category: 'elderly', src: '/images/init_elderly.jpg', title: 'Dignity & Care for Senior Citizens', tag: 'Elderly Care' },
   { id: 7, category: 'ashram', src: '/images/init_ashram.jpg', title: 'Daily Support at Naadha Ashram', tag: 'Naadha Ashram' },
   { id: 8, category: 'food', src: '/images/init_annadanam.jpg', title: 'Community Annadanam Food Distribution', tag: 'Food Donations' },
   { id: 9, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-college-campus-gate-cleaning.webp', title: 'College Gate & Street Cleaning Campaign', tag: 'Cleanliness Drive' },
-  { id: 10, category: 'education', src: '/images/hero_community_hope.jpg', title: 'Curiosity and Learning Opportunities', tag: 'Education' },
+  { id: 10, category: 'education', src: '/images/school-awareness/school-awareness-auditorium-mentorship-session.webp', title: 'Values & Ethics Mentorship Session at Sri Chaitanya School', tag: 'School Mentorship' },
   { id: 11, category: 'food', src: '/images/gallery_nutrition.jpg', title: 'Wholesome Grocery Kit Support', tag: 'Food Donations' },
   { id: 12, category: 'elderly', src: '/images/init_child_welfare.jpg', title: 'Intergenerational Care & Life Skills', tag: 'Elderly Care' },
   { id: 13, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-cleanliness-pledge-unity.webp', title: 'Volunteers Cleanliness Pledge of Unity', tag: 'Swachhata Pledge' },
@@ -341,6 +404,11 @@ const GALLERY_ITEMS = [
   { id: 20, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-anand-group-jubilee-hills-news.webp', title: 'Anand Group Jubilee Hills Swachh Bharat Drive Media Report', tag: 'Media & Press' },
   { id: 21, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-nagarjuna-campaign-endorsement.webp', title: 'Tollywood Endorsement for Swachh Bharat Movement', tag: 'Ambassador Support' },
   { id: 22, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-mother-earth-emotional-campaign.webp', title: 'Mana Bharat Manandari Amma Mother Earth Campaign', tag: 'Eco Awareness' },
+  { id: 23, category: 'education', src: '/images/school-awareness/school-awareness-student-civic-pledge.webp', title: 'Students Civic Responsibility & Anti-Plastic Pledge', tag: 'Student Oath' },
+  { id: 24, category: 'education', src: '/images/school-awareness/school-awareness-press-clipping-orphanage-education-support.webp', title: 'Press Coverage: Book & Educational Kit Distribution at Orphanage', tag: 'Media Coverage' },
+  { id: 25, category: 'education', src: '/images/school-awareness/school-awareness-press-clipping-dav-school-civic-awareness.webp', title: 'Press Coverage: DAV Public School Civic Responsibility Program', tag: 'School Awareness' },
+  { id: 26, category: 'awareness', src: '/images/haritha-haram/haritha-haram-community-tree-plantation-drive.webp', title: 'Haritha Haram Urban & Roadside Tree Plantation Drive', tag: 'Haritha Haram' },
+  { id: 27, category: 'awareness', src: '/images/haritha-haram/haritha-haram-student-sapling-distribution.webp', title: 'Haritha Haram Green Sapling Distribution to College Students', tag: 'Green Cover' },
 ];
 
 export default function HomePage() {
@@ -787,7 +855,11 @@ export default function HomePage() {
             {/* 2. Education & Child Development */}
             <article className="initiative-card reveal-on-scroll">
               <div className="initiative-img-container">
-                <img src="/images/init_education.jpg" alt="Underprivileged Children Classroom Tutoring" loading="lazy" />
+                <img
+                  src="/images/school-awareness/school-awareness-rural-government-high-school-outreach.webp"
+                  alt="Rural Government High School Outreach by Anand Group"
+                  loading="lazy"
+                />
                 <span className="initiative-badge">Education</span>
               </div>
               <div className="initiative-body">
@@ -1026,15 +1098,15 @@ export default function HomePage() {
                     <strong style={{ color: 'var(--color-yellow-deep)' }}><i className="fa fa-chart-line"></i> Expected Community Benefit:</strong> {tabInit.expectedBenefit}
                   </div>
 
-                  {/* Dedicated Swachh Bharat Field Action Showcase */}
+                  {/* Dedicated Field Action Showcase */}
                   {tabInit.photos && (
                     <div className="swachh-photo-showcase">
                       <div className="swachh-showcase-title">
-                        <i className="fa fa-broom" style={{ color: 'var(--color-yellow-deep)' }}></i>
-                        Field Action Gallery &mdash; Swachh Bharat Drives
+                        <i className={`fa ${tabInit.id === 'education' ? 'fa-graduation-cap' : 'fa-camera-retro'}`} style={{ color: 'var(--color-yellow-deep)' }}></i>
+                        {tabInit.photoShowcaseTitle || 'Field Action Gallery'}
                       </div>
                       <p className="swachh-showcase-desc">
-                        Authentic photographs from our community cleanliness drives, school campus programs, and civic awareness rallies:
+                        {tabInit.photoShowcaseDesc || 'Authentic photographs from our community programs and initiatives:'}
                       </p>
                       <div className="swachh-photo-grid">
                         {tabInit.photos.map((photo, pIdx) => (
