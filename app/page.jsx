@@ -9,7 +9,7 @@ const INITIATIVES_DATA = {
     title: 'Social & Environmental Awareness',
     tag: 'Civic Responsibility & Ecology',
     heading: 'Building Awareness. Inspiring Responsibility.',
-    image: '/images/init_awareness.jpg',
+    image: '/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp',
     lead: 'Promoting responsible citizenship, environmental protection, and positive social habits through educational campaigns and community participation.',
     desc: 'Sustainable social change begins at the grassroots when community members take conscious pride in public cleanliness, water conservation, road safety, and reducing plastic pollution. We work directly with neighborhood leaders, schools, and youth volunteers to lead high-impact public awareness campaigns.',
     programs: [
@@ -51,6 +51,44 @@ const INITIATIVES_DATA = {
       },
     ],
     expectedBenefit: 'Fosters civic consciousness, reduces public health hazards and environmental degradation, conserves local water resources, and creates safer roads for students and families.',
+    photos: [
+      {
+        src: '/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp',
+        title: 'School Campus Cleanliness Drive',
+        tag: 'Swachh Bharat',
+        caption: 'Hands-on sanitation drive with students, faculty, and village volunteers',
+      },
+      {
+        src: '/images/swachh-bharat/swachh-bharat-college-campus-gate-cleaning.webp',
+        title: 'College Gate & Street Cleaning',
+        tag: 'Cleanliness Drive',
+        caption: 'Mobilizing college youth to sweep and maintain public roadways',
+      },
+      {
+        src: '/images/swachh-bharat/swachh-bharat-cleanliness-pledge-unity.webp',
+        title: 'Swachhata Pledge of Unity',
+        tag: 'Cleanliness Oath',
+        caption: 'Volunteers and community leaders joining hands for civic duty',
+      },
+      {
+        src: '/images/swachh-bharat/swachh-bharat-railway-station-volunteer-team.webp',
+        title: 'Railway Station Volunteer Team',
+        tag: 'Transit Hub Cleanliness',
+        caption: 'Dedicated volunteers bringing cleanliness to public transit squares',
+      },
+      {
+        src: '/images/swachh-bharat/swachh-bharat-village-awareness-rally-children.webp',
+        title: 'Village Awareness Rally with Children',
+        tag: 'Awareness Rally',
+        caption: 'Grassroots awareness rally promoting hygiene and plastic-free living',
+      },
+      {
+        src: '/images/swachh-bharat/swachh-bharat-road-safety-traffic-awareness-launch.webp',
+        title: 'Road Safety & Traffic Discipline',
+        tag: 'Civic Responsibility',
+        caption: 'Official launch of road safety and traffic rule awareness campaigns',
+      },
+    ],
   },
   education: {
     id: 'education',
@@ -278,9 +316,10 @@ const INITIATIVES_DATA = {
   },
 };
 
-// Curated authentic gallery items matching prompt categories
+// Curated authentic gallery items matching prompt categories with real Swachh Bharat photographs
 const GALLERY_ITEMS = [
-  { id: 1, category: 'awareness', src: '/images/init_awareness.jpg', title: 'Clean Village Awareness Drive', tag: 'Awareness' },
+  // Swachh Bharat & Social Awareness (Authentic Field Action & Community Drives)
+  { id: 1, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp', title: 'School Campus Swachh Bharat Cleanliness Drive', tag: 'Swachh Bharat' },
   { id: 2, category: 'education', src: '/images/init_education.jpg', title: 'Underprivileged Children Classroom', tag: 'Education' },
   { id: 3, category: 'education', src: '/images/about_mentorship.jpg', title: 'Values & Academic Mentorship', tag: 'Education' },
   { id: 4, category: 'temple', src: '/images/init_temple.jpg', title: 'Heritage Temple Precinct Renovation', tag: 'Temple' },
@@ -288,10 +327,20 @@ const GALLERY_ITEMS = [
   { id: 6, category: 'elderly', src: '/images/init_elderly.jpg', title: 'Dignity & Care for Senior Citizens', tag: 'Elderly Care' },
   { id: 7, category: 'ashram', src: '/images/init_ashram.jpg', title: 'Daily Support at Naadha Ashram', tag: 'Naadha Ashram' },
   { id: 8, category: 'food', src: '/images/init_annadanam.jpg', title: 'Community Annadanam Food Distribution', tag: 'Food Donations' },
-  { id: 9, category: 'awareness', src: '/images/gallery_volunteers.jpg', title: 'Youth Volunteers for Cleanliness', tag: 'Awareness' },
+  { id: 9, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-college-campus-gate-cleaning.webp', title: 'College Gate & Street Cleaning Campaign', tag: 'Cleanliness Drive' },
   { id: 10, category: 'education', src: '/images/hero_community_hope.jpg', title: 'Curiosity and Learning Opportunities', tag: 'Education' },
   { id: 11, category: 'food', src: '/images/gallery_nutrition.jpg', title: 'Wholesome Grocery Kit Support', tag: 'Food Donations' },
   { id: 12, category: 'elderly', src: '/images/init_child_welfare.jpg', title: 'Intergenerational Care & Life Skills', tag: 'Elderly Care' },
+  { id: 13, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-cleanliness-pledge-unity.webp', title: 'Volunteers Cleanliness Pledge of Unity', tag: 'Swachhata Pledge' },
+  { id: 14, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-railway-station-volunteer-team.webp', title: 'Station Square Volunteer Cleanliness Team', tag: 'Volunteer Team' },
+  { id: 15, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-village-awareness-rally-children.webp', title: 'Swachhata Hi Seva Village Awareness Rally with Children', tag: 'Awareness Rally' },
+  { id: 16, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-village-road-cleanliness-drive.webp', title: 'Community Leaders & Elders Street Cleaning Seva', tag: 'Community Seva' },
+  { id: 17, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-volunteers-courtyard-sweeping.webp', title: 'Community Courtyard Cleanliness Action', tag: 'Cleanliness Drive' },
+  { id: 18, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-road-safety-traffic-awareness-launch.webp', title: 'Safety First Road Traffic Rules Campaign Launch with Hon CM', tag: 'Road Safety' },
+  { id: 19, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-campaign-launch-dignitaries.webp', title: 'Mana Bharat Swachh Bharat Public Campaign Launch', tag: 'Public Awareness' },
+  { id: 20, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-anand-group-jubilee-hills-news.webp', title: 'Anand Group Jubilee Hills Swachh Bharat Drive Media Report', tag: 'Media & Press' },
+  { id: 21, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-nagarjuna-campaign-endorsement.webp', title: 'Tollywood Endorsement for Swachh Bharat Movement', tag: 'Ambassador Support' },
+  { id: 22, category: 'awareness', src: '/images/swachh-bharat/swachh-bharat-mother-earth-emotional-campaign.webp', title: 'Mana Bharat Manandari Amma Mother Earth Campaign', tag: 'Eco Awareness' },
 ];
 
 export default function HomePage() {
@@ -706,8 +755,12 @@ export default function HomePage() {
             {/* 1. Social & Environmental Awareness */}
             <article className="initiative-card reveal-on-scroll">
               <div className="initiative-img-container">
-                <img src="/images/init_awareness.jpg" alt="Swachh Bharat Cleanliness and Tree Planting Drive" loading="lazy" />
-                <span className="initiative-badge">Awareness</span>
+                <img
+                  src="/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp"
+                  alt="Anand Group Charitable Trust Swachh Bharat School Cleanliness Drive"
+                  loading="lazy"
+                />
+                <span className="initiative-badge">Swachh Bharat</span>
               </div>
               <div className="initiative-body">
                 <h3 className="initiative-title">1. Social &amp; Environmental Awareness</h3>
@@ -972,6 +1025,32 @@ export default function HomePage() {
                   <div className="init-benefit-box">
                     <strong style={{ color: 'var(--color-yellow-deep)' }}><i className="fa fa-chart-line"></i> Expected Community Benefit:</strong> {tabInit.expectedBenefit}
                   </div>
+
+                  {/* Dedicated Swachh Bharat Field Action Showcase */}
+                  {tabInit.photos && (
+                    <div className="swachh-photo-showcase">
+                      <div className="swachh-showcase-title">
+                        <i className="fa fa-broom" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                        Field Action Gallery &mdash; Swachh Bharat Drives
+                      </div>
+                      <p className="swachh-showcase-desc">
+                        Authentic photographs from our community cleanliness drives, school campus programs, and civic awareness rallies:
+                      </p>
+                      <div className="swachh-photo-grid">
+                        {tabInit.photos.map((photo, pIdx) => (
+                          <div
+                            key={pIdx}
+                            className="swachh-photo-item"
+                            onClick={() => setLightboxData({ src: photo.src, title: photo.title, tag: photo.tag })}
+                            title={`View ${photo.title} in full resolution`}
+                          >
+                            <img src={photo.src} alt={photo.title} loading="lazy" />
+                            <div className="swachh-photo-caption">{photo.title}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
                     <button
@@ -1839,6 +1918,36 @@ export default function HomePage() {
               <div className="init-benefit-box">
                 <strong style={{ color: 'var(--color-yellow-deep)' }}>Expected Community Benefit:</strong> {selectedInit.expectedBenefit}
               </div>
+
+              {selectedInit.photos && (
+                <div style={{ marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid var(--color-border)' }}>
+                  <h4 style={{ color: 'var(--color-yellow-deep)', fontSize: '1.05rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <i className="fa fa-camera-retro"></i> Field Action Photographs
+                  </h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                    Click any photograph below to view in full resolution:
+                  </p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 130px), 1fr))', gap: '0.75rem' }}>
+                    {selectedInit.photos.map((ph, phIdx) => (
+                      <div
+                        key={phIdx}
+                        style={{
+                          borderRadius: 'var(--radius-sm)',
+                          overflow: 'hidden',
+                          border: '1px solid var(--color-border)',
+                          cursor: 'pointer',
+                          aspectRatio: '4 / 3',
+                          boxShadow: 'var(--shadow-sm)',
+                        }}
+                        onClick={() => setLightboxData({ src: ph.src, title: ph.title, tag: ph.tag })}
+                        title={`View ${ph.title}`}
+                      >
+                        <img src={ph.src} alt={ph.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

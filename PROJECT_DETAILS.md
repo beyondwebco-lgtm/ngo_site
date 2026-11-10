@@ -173,9 +173,31 @@ ngo_site/
     ├── logo-aashraya.svg                 # Legacy asset backup
     │
     └── images/                           # Curated photography for all focus areas
+        ├── swachh-bharat/                # Real Swachh Bharat & Awareness Field Photo Archive (WebP)
+        │   ├── swachh-bharat-school-campus-cleanliness-drive.webp
+        │   ├── swachh-bharat-college-campus-gate-cleaning.webp
+        │   ├── swachh-bharat-volunteers-courtyard-sweeping.webp
+        │   ├── swachh-bharat-cleanliness-pledge-unity.webp
+        │   ├── swachh-bharat-railway-station-volunteer-team.webp
+        │   ├── swachh-bharat-village-road-cleanliness-drive.webp
+        │   ├── swachh-bharat-village-awareness-rally-children.webp
+        │   ├── swachh-bharat-campaign-launch-dignitaries.webp
+        │   ├── swachh-bharat-press-conference-awareness-release.webp
+        │   ├── swachh-bharat-road-safety-traffic-awareness-launch.webp
+        │   ├── swachh-bharat-nagarjuna-campaign-endorsement.webp
+        │   ├── swachh-bharat-mother-earth-emotional-campaign.webp
+        │   ├── swachh-bharat-anand-group-multi-campaign-poster.webp
+        │   ├── swachh-bharat-anand-group-jubilee-hills-news.webp
+        │   ├── swachh-bharat-andhra-jyothy-news-healthy-society.webp
+        │   ├── swachh-bharat-sri-chaitanya-school-drive-news.webp
+        │   ├── swachh-bharat-student-initiative-anakapalli-news.webp
+        │   ├── swachh-bharat-press-reception-andhra-jyothy.webp
+        │   ├── swachh-bharat-mind-cleanliness-news-speech.webp
+        │   └── swachh-bharat-english-press-film-coverage.webp
+        │
         ├── hero_community_hope.jpg       # Hero banner visual
         ├── about_mentorship.jpg          # About section feature photo
-        ├── init_awareness.jpg            # Swachh Bharat & environmental drive photo
+        ├── init_awareness.jpg            # Archive environmental photo
         ├── init_education.jpg            # Classroom & child education photo
         ├── init_temple.jpg               # Heritage temple restoration & Annadanam photo
         ├── init_healthcare.jpg           # Free medical & diagnostic camp photo
@@ -387,7 +409,6 @@ All state is maintained in `app/page.jsx` with standard React primitives without
 All images are curated, compressed for fast web loading, and visually represent the authentic spirit of Indian charitable work:
 - `hero_community_hope.jpg` (991 KB): Children and community members under warm natural lighting.
 - `about_mentorship.jpg` (999 KB): Mentor interacting with students.
-- `init_awareness.jpg` (1.2 MB): Environmental drive and community clean-up.
 - `init_education.jpg` (836 KB): Underprivileged children in active study sessions.
 - `init_temple.jpg` (1.1 MB): Heritage temple precinct undergoing maintenance and community service.
 - `init_healthcare.jpg` (900 KB): Doctors conducting health screenings and diagnostics.
@@ -399,6 +420,32 @@ All images are curated, compressed for fast web loading, and visually represent 
 - `init_women.jpg` (983 KB): Grassroots family and women empowerment.
 - `gallery_nutrition.jpg` (1.0 MB): Packaging and distributing wholesome grocery ration kits.
 - `gallery_volunteers.jpg` (1.1 MB): Youth volunteers holding cleanliness supplies.
+
+### 7.3 Swachh Bharat & Environmental Awareness Photographic Archive (`public/images/swachh-bharat/`)
+A dedicated archive of authentic field action photography and press coverage documenting Anand Group Charitable Trust's historical Swachh Bharat drives, school cleanliness rallies, road safety campaigns, and community hygiene initiatives. All assets have been converted from raw PNGs into modern, lightweight, high-fidelity WebP format (averaging 85% bandwidth reduction):
+
+| Filename | Dimensions | WebP Size | Original Content & Scene Description |
+|---|---|---|---|
+| `swachh-bharat-school-campus-cleanliness-drive.webp` | 1152x648 | 140 KB | Ambati Srinivasa Rao & volunteers in protective gloves sweeping school ground with students & teachers |
+| `swachh-bharat-college-campus-gate-cleaning.webp` | 960x640 | 147 KB | College campus gate and public roadway sweep action with students and volunteers |
+| `swachh-bharat-volunteers-courtyard-sweeping.webp` | 1072x712 | 171 KB | Volunteers and community team sweeping courtyard grounds with traditional long brooms |
+| `swachh-bharat-cleanliness-pledge-unity.webp` | 960x720 | 94 KB | Community volunteers joining hands in a circle of unity taking the Swachhata cleanliness oath |
+| `swachh-bharat-railway-station-volunteer-team.webp` | 960x720 | 103 KB | Volunteer team in matching Swachh Bharat shirts with brooms and yellow flag at Sompeta station square |
+| `swachh-bharat-village-road-cleanliness-drive.webp` | 960x540 | 106 KB | Village elders, leaders, and community members sweeping rural village roadway |
+| `swachh-bharat-village-awareness-rally-children.webp` | 960x540 | 160 KB | Village awareness rally with children and youth marching with "Swachhata Hi Seva" banner & placards |
+| `swachh-bharat-campaign-launch-dignitaries.webp` | 960x640 | 92 KB | Dignitaries unveiling the "Mana Bharat - Swachh Bharat" round emblem at official launch |
+| `swachh-bharat-press-conference-awareness-release.webp` | 960x720 | 63 KB | Press conference and public awareness poster release event |
+| `swachh-bharat-road-safety-traffic-awareness-launch.webp` | 387x398 | 24 KB | Hon'ble CM Sri N. Chandrababu Naidu launching "Safety First - Traffic Rules" road safety campaign |
+| `swachh-bharat-nagarjuna-campaign-endorsement.webp` | 574x449 | 24 KB | Actor Akkineni Nagarjuna supporting the "Hamara Bharat, Hamari Maa, Swachh Bharat" campaign |
+| `swachh-bharat-mother-earth-emotional-campaign.webp` | 960x540 | 76 KB | Anand Group "Mana Bharat, Manandari Amma" mother-earth emotional campaign portrait |
+| `swachh-bharat-anand-group-multi-campaign-poster.webp` | 960x640 | 124 KB | Anand Group multi-campaign awareness poster (Plastic, Swine Flu, Traffic Safety, Swachh Bharat) |
+| `swachh-bharat-anand-group-jubilee-hills-news.webp` | 1531x508 | 311 KB | News report explicitly citing "Anand Group" organizing the Jubilee Hills Road No. 11 Swachh Bharat drive |
+| `swachh-bharat-andhra-jyothy-news-healthy-society.webp` | 780x1040 | 86 KB | Andhra Jyothy media coverage: "Healthy Society through Swachh Bharat" |
+| `swachh-bharat-sri-chaitanya-school-drive-news.webp` | 729x1032 | 113 KB | News report covering Sri Chaitanya School campus cleanliness drive |
+| `swachh-bharat-student-initiative-anakapalli-news.webp` | 805x960 | 242 KB | News report on student initiative in Swachh Bharat at Anakapalli school |
+| `swachh-bharat-press-reception-andhra-jyothy.webp` | 720x960 | 157 KB | Andhra Jyothy press report: "Tremendous Reception for Swachh Bharat" |
+| `swachh-bharat-mind-cleanliness-news-speech.webp` | 960x684 | 242 KB | Press feature on speech: "Clean Minds Lead to Successful Swachh Bharat" |
+| `swachh-bharat-english-press-film-coverage.webp` | 720x960 | 110 KB | English national newspaper clipping covering Swachh Bharat awareness film |
 
 ---
 
