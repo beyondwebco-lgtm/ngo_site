@@ -216,8 +216,6 @@ ngo_site/
 └── public/
     ├── favicon-anand-trust.svg           # Branded SVG favicon (active)
     ├── logo-anand-trust.svg              # Primary trust vector logo (active)
-    ├── favicon-aashraya.svg              # Legacy asset backup
-    ├── logo-aashraya.svg                 # Legacy asset backup
     │
     └── images/                           # Curated photography for all focus areas
         ├── swachh-bharat/                # Real Swachh Bharat & Awareness Field Photo Archive (WebP)
