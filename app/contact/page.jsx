@@ -150,7 +150,7 @@ export default function ContactPage() {
                         <option value="Donation & 80G Tax Exemption">Donation &amp; 80G Tax Exemption</option>
                         <option value="Volunteering Opportunities">Volunteering Opportunities</option>
                         <option value="CSR Collaboration Proposal">CSR Collaboration Proposal</option>
-                        <option value="Naadha Ashram Visit Request">Naadha Ashram Visit Request</option>
+                        <option value="Healthcare Camp Inquiry">Healthcare Camp Inquiry</option>
                         <option value="School Awareness Session Request">School Awareness Session Request</option>
                       </select>
                     </div>
@@ -248,8 +248,8 @@ export default function ContactPage() {
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>
                   <div>
-                    <strong style={{ color: 'var(--color-text)', display: 'block' }}>Naadha Ashram Visits:</strong>
-                    <span>ashram@anandgroupcharitabletrust.org.in</span>
+                    <strong style={{ color: 'var(--color-text)', display: 'block' }}>Community Seva Inquiries:</strong>
+                    <span>seva@anandgroupcharitabletrust.org.in</span>
                   </div>
                   <div>
                     <strong style={{ color: 'var(--color-text)', display: 'block' }}>CSR &amp; Institutional Grants:</strong>

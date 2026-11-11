@@ -15,7 +15,7 @@ export const IMPACT_METRICS = [
   {
     number: '25,000+',
     label: 'Meals Served',
-    sub: 'Hygienic Annadanam and daily nutrition at Naadha Ashram',
+    sub: 'Hygienic Annadanam and community food distributions',
     icon: 'fa-bowl-rice',
   },
   {
@@ -59,9 +59,9 @@ export const MILESTONES = [
   },
   {
     year: '2019 - 2021',
-    title: 'Adopting Naadha Ashram & Covid Relief',
-    desc: 'Adopted Naadha Ashram to provide 365-day nutrition, clothing, and elder care. Supported rural families with dry ration grocery kits and medical essentials during emergencies.',
-    tag: 'Sanctuary & Relief',
+    title: 'Community Relief & Emergency Support',
+    desc: 'Supported vulnerable rural families, daily wage earners, and elderly individuals with dry ration grocery kits, fresh meals, and medical essentials during health crises.',
+    tag: 'Community Relief',
   },
   {
     year: '2022 - Present',
@@ -73,10 +73,10 @@ export const MILESTONES = [
 
 export const STORIES = [
   {
-    title: 'A New Life of Dignity at Naadha Ashram',
-    beneficiary: 'Lakshmamma (Senior Citizen Resident)',
-    location: 'Naadha Ashram Sanctuary',
-    quote: 'When I had no one to look after my medical needs or give me two meals a day, Anand Group Charitable Trust gave me a family, warm food, and respect.',
+    title: 'Dignity and Care in My Golden Years',
+    beneficiary: 'Lakshmamma (Senior Citizen)',
+    location: 'Rural Elderly Care Outreach',
+    quote: 'When I had no one to assist with my medical needs or basic daily rations, Anand Group Charitable Trust gave me monthly healthcare support, warm food, and deep respect.',
     category: 'Elderly Care',
   },
   {

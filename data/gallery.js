@@ -6,7 +6,7 @@ export const GALLERY_CATEGORIES = [
   { id: 'education', label: 'Education & Children', icon: 'fa-graduation-cap' },
   { id: 'temple', label: 'Temple & Annadanam', icon: 'fa-gopuram' },
   { id: 'medical', label: 'Healthcare & Camps', icon: 'fa-heart-pulse' },
-  { id: 'elderly', label: 'Elderly Care & Ashram', icon: 'fa-hands-holding-child' },
+  { id: 'elderly', label: 'Elderly Care & Support', icon: 'fa-hands-holding-child' },
 ];
 
 export const GALLERY_ITEMS = [
@@ -58,14 +58,6 @@ export const GALLERY_ITEMS = [
     title: 'Dignity & Care for Senior Citizens',
     tag: 'Elderly Care',
     description: 'Providing companionship, monthly healthcare supplies, and emotional warmth to elderly residents.',
-  },
-  {
-    id: 7,
-    category: 'elderly',
-    src: '/images/init_ashram.jpg',
-    title: 'Daily Support at Naadha Ashram Sanctuary',
-    tag: 'Naadha Ashram',
-    description: 'Ensuring steady food, clothing, shelter upkeep, and loving care for vulnerable sanctuary residents.',
   },
   {
     id: 8,

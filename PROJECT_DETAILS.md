@@ -4,7 +4,7 @@
 > **Repository:** `ngo_site`  
 > **Organization:** Anand Group Charitable Trust  
 > **Tagline:** *Empowering Lives. Building Hope.*  
-> **Core Mission:** Grassroots social transformation across education, healthcare, environmental awareness, cultural heritage, elder dignity, and specialized ashram care in India.  
+> **Core Mission:** Grassroots social transformation across education, healthcare, environmental awareness, cultural heritage, and elder dignity in India.  
 > **Date Generated:** November 2026  
 > **Technical Stack:** Next.js (App Router v16+), React 19, Vanilla CSS3 (Premium Yellow & White Design System), Font Awesome 6.5, Google Fonts.
 
@@ -19,8 +19,7 @@
    - [Top Information Bar & Navigation Bar](#51-top-information-bar--navigation-bar)
    - [Hero Section](#52-hero-section)
    - [About Us & Trust Philosophy](#53-about-us--trust-philosophy)
-   - [Six Core Focus Areas & Initiatives](#54-six-core-focus-areas--initiatives)
-   - [Naadha Ashram Support (Dedicated Feature)](#55-naadha-ashram-support-dedicated-feature)
+   - [Five Core Focus Areas & Initiatives](#54-five-core-focus-areas--initiatives)
    - [Impact Targets & Metrics](#56-impact-targets--metrics)
    - [CSR Partnerships (Corporate Social Responsibility)](#57-csr-partnerships-corporate-social-responsibility)
    - [Moments & Community Photo Gallery](#58-moments--community-photo-gallery)
@@ -43,7 +42,7 @@
 
 ### 1.2 Core Pillars
 1. **Dignity for All:** Every child, elder, and destitute individual is entitled to respect, shelter, health, and nourishment.
-2. **Grassroots Direct Action:** Direct engagement with communities, rural village panchayats, schools, and ashrams without multi-layered intermediary friction.
+2. **Grassroots Direct Action:** Direct engagement with communities, rural village panchayats, schools, and community centers without multi-layered intermediary friction.
 3. **Holistic Upliftment:** Addressing systemic challenges concurrently—combining environmental cleanliness, child schooling, healthcare access, elder care, and cultural preservation.
 4. **Transparent Governance:** Zero-tolerance policy toward deceptive claims; full fidelity in reporting community metrics and partner resource utilization.
 
@@ -76,7 +75,7 @@ The visual identity is built on a sophisticated **Premium Yellow & White Theme**
 | **Deep Accent** | Rich Gold | `#CA8A04` | Prominent icons, section eyebrow tags, modal badges |
 | **Accessible Dark Gold** | Dark Amber | `#A16207` | Text on white backgrounds ensuring WCAG AA compliant contrast |
 | **Main Background** | Pure White | `#FFFFFF` | ~70% of canvas area, card surfaces, clean whitespace |
-| **Alternate Background** | Soft Cream | `#FFFEF0` | ~20% subtle section breaks (e.g., Ashram section, program cards) |
+| **Alternate Background** | Soft Cream | `#FFFEF0` | ~20% subtle section breaks (e.g., Timeline section, program cards) |
 | **Highlight Background** | Pale Yellow | `#FEF9C3` | Tag pills, stat icon boxes, input hover tints |
 | **Primary Text** | Charcoal Black | `#111827` | Headings, hero display titles, body text, primary button labels |
 | **Secondary Text** | Slate Gray | `#4B5563` | Subtitles, helper text, form labels, metadata |
@@ -177,10 +176,8 @@ ngo_site/
 │   │   │   └── page.jsx                  # Temple Development & Annadanam dedicated page
 │   │   ├── healthcare/
 │   │   │   └── page.jsx                  # Healthcare & Medical Screening dedicated page
-│   │   ├── elderly-care/
-│   │   │   └── page.jsx                  # Elderly Care & Senior Welfare dedicated page
-│   │   └── naadha-ashram/
-│   │       └── page.jsx                  # Naadha Ashram Sanctuary dedicated page
+│   │   └── elderly-care/
+│   │       └── page.jsx                  # Elderly Care & Senior Welfare dedicated page
 │   ├── impact/
 │   │   └── page.jsx                      # Impact Statistics, Milestones Timeline & Stories
 │   ├── gallery/
@@ -268,7 +265,6 @@ ngo_site/
         ├── init_temple.jpg               # Heritage temple restoration & Annadanam photo
         ├── init_healthcare.jpg           # Free medical & diagnostic camp photo
         ├── init_elderly.jpg              # Elderly care & senior home assistance photo
-        ├── init_ashram.jpg               # Naadha Ashram sanctuary & resident care photo
         ├── init_annadanam.jpg            # Community Annadanam food service photo
         ├── init_community.jpg            # Community engagement photo
         ├── init_child_welfare.jpg        # Child welfare & youth skills photo
@@ -287,9 +283,9 @@ To eliminate all pop-ups, modals, accordions, and hidden panels, the website is 
 - **Header & Navigation:** Sticky white navbar with active indicator and accessible auto-closing mobile menu drawer.
 - **Hero Section:** Clean high-impact typography, impact stat badges, primary CTA to `/donate`, secondary CTA to `/initiatives`.
 - **Short About Us Introduction:** Concise 2-paragraph trust overview with 4 feature bullets and link to `/about`.
-- **Our Six Core Initiatives:** Simple cards linking directly to each initiative subpage (`/initiatives/<slug>`).
+- **Our Five Core Initiatives:** Simple cards linking directly to each initiative subpage (`/initiatives/<slug>`).
 - **Impact Statistics:** 4 prominent stat cards with link to `/impact`.
-- **Signature Seva Spotlight:** Side-by-side featured spotlights on *Swachh Bharat & Haritha Haram* and *Naadha Ashram Sanctuary*.
+- **Signature Seva Spotlight:** Side-by-side featured spotlights on *Swachh Bharat & Haritha Haram* and *Education & Youth Mentorship*.
 - **Photo Gallery Preview:** 6 curated field moments with CTA linking to `/gallery`.
 - **Get Involved CTA:** 3 action pathways linking to `/donate`, `/volunteer`, and `/csr-partnerships`.
 - **Contact & Helpline CTA:** Direct phone and link to `/contact`.
@@ -303,17 +299,16 @@ To eliminate all pop-ups, modals, accordions, and hidden panels, the website is 
 - Legal trust governance and audited compliance notes.
 
 #### 2. All Initiatives (`/initiatives`)
-- Comprehensive overview of all 6 core focus pillars.
+- Comprehensive overview of all 5 core focus pillars.
 - Grassroots methodology and three-point delivery framework.
 - Direct cards linking to each specialized subpage.
 
-#### 3. Six Specialized Initiative Subpages:
+#### 3. Five Specialized Initiative Subpages:
 - `/initiatives/social-environmental`: Swachh Bharat street sanitation, Haritha Haram tree plantations, Save Water campaigns, plastic-free living, and 10 authentic field photos.
-- `/initiatives/education`: Underprivileged child schooling, digital discipline, family values, and 6 authentic school awareness photos.
+- `/initiatives/education`: Underprivileged child schooling, digital discipline, family values, and authentic school awareness photos.
 - `/initiatives/temple-development`: Historic temple renovation, sacred Annadanam food service, and cultural preservation.
 - `/initiatives/healthcare`: Free rural medical camps, diagnostic check-ups, voluntary blood donation, and emergency medical assistance.
 - `/initiatives/elderly-care`: Old age home support, senior citizen dignity, mobility aids, and companionship.
-- `/initiatives/naadha-ashram`: 365-day daily nutrition, shelter improvements, and child schooling at Naadha Ashram sanctuary.
 
 #### 4. Impact & Milestones (`/impact`)
 - 6 verified field impact metrics.
@@ -321,11 +316,11 @@ To eliminate all pop-ups, modals, accordions, and hidden panels, the website is 
 - Real community stories and beneficiary testimonials.
 
 #### 5. Photo Gallery (`/gallery`)
-- 27 authentic photographs with category filter tabs.
+- Authentic photographs with category filter tabs.
 - **Strictly NO Pop-Up Lightbox:** High-resolution photos expand into an inline focus display panel directly within the page layout.
 
 #### 6. Get Involved (`/get-involved`)
-- 6 actionable pathways: Donate, Volunteer, CSR, Sponsor Ashram Meals, Adopt a School, Spread Awareness.
+- 6 actionable pathways: Donate, Volunteer, CSR, Sponsor Annadanam, Adopt a School, Spread Awareness.
 
 #### 7. Volunteer Registration (`/volunteer`)
 - Dedicated volunteer onboarding page with inline registration form, skills selection, time availability, and inline confirmation (no pop-ups).
@@ -378,30 +373,14 @@ To eliminate all pop-ups, modals, accordions, and hidden panels, the website is 
   - *Companionship Visits:* Volunteer listening circles, festival celebrations with elders.
 - **Expected Benefit:** Combats elder loneliness, ensures consistent nutrition, restores elderly dignity.
 
-#### 6. Naadha Ashram Support
-- **Lead:** Dedicated support for the sanctuary home caring for destitute and vulnerable residents.
-- **Programs:**
-  - *Food & Nutrition Security:* Daily provision of rice, lentils, oil, fresh vegetables.
-  - *Daily Household Essentials:* Soaps, disinfectants, mosquito nets, kitchen supplies.
-  - *Clothing & Dignity Packs:* Sarees, dhotis, kurtas, sweaters, personal hygiene products.
-  - *Medical Care & Volunteer Visits:* Regular physician visits, maintenance medications, spiritual satsang.
-- **Expected Benefit:** Reliable daily sustenance and safety for all residents.
-
-### 5.5 Naadha Ashram Support (Dedicated Feature) (`#ashram`)
-A full section dedicated to highlighting the unique collaboration between Anand Group Charitable Trust and **Naadha Ashram**:
-- Overview of the ashram's sanctuary mission.
-- Breakdown of ongoing assistance across Food, Daily Essentials, Dignity Clothing, and Healthcare.
-- Direct CTA button allowing supporters to pledge specifically to Naadha Ashram.
-
-### 5.6 Impact Targets & Metrics (`#impact`)
+### 5.5 Impact Targets & Metrics (`#impact`)
 Quantified roadmaps tracking grassroots expansion:
 - **10,000+** Children provided educational kits, tuition, and digital etiquette coaching.
 - **25,000+** Patients examined via free rural medical camps and blood donation drives.
 - **50,000+** Community Annadanam meals served to pilgrims, elders, and destitute people.
 - **100+** Swachh Bharat village cleanliness drives and road safety awareness sessions.
-- **Dedicated Ashram Care:** Continuous safety net for Naadha Ashram residents.
 
-### 5.7 CSR Partnerships (Corporate Social Responsibility) (`#csr`)
+### 5.6 CSR Partnerships (Corporate Social Responsibility) (`#csr`)
 Designed for corporate sustainability teams and CSR executives:
 - **Statutory Alignment:** Compliance-ready frameworks adhering to Section 135 and Schedule VII of the Indian Companies Act, 2013.
 - **Why Partner with Anand Group:**
@@ -410,8 +389,8 @@ Designed for corporate sustainability teams and CSR executives:
   - Employee engagement opportunities (cleanliness drives, volunteer tutoring, medical camps).
 - **Interactive CSR Enquiry Form:** Allows corporate leaders to specify organization name, contact info, proposed focus area, and CSR allocation.
 
-### 5.8 Moments & Community Photo Gallery (`#gallery`)
-- 12 high-impact curated field photographs.
+### 5.7 Moments & Community Photo Gallery (`#gallery`)
+- High-impact curated field photographs.
 - **Instant Category Filters:**
   - *All Moments*
   - *Education*
@@ -419,8 +398,7 @@ Designed for corporate sustainability teams and CSR executives:
   - *Temple & Annadanam*
   - *Medical Camps*
   - *Elderly Care*
-  - *Naadha Ashram*
-- **Interactive Lightbox Modal:** Full-screen zoom view with initiative tag, description, and direct "Support Cause" action button.
+- **Inline Photo Viewer:** Clean display panel with initiative tag, description, and direct "Support Cause" action button.
 
 ### 5.9 Get Involved / Ways to Support (`#get-involved`)
 Structured options for individuals and groups to contribute:
@@ -436,7 +414,7 @@ Authentic case narratives illustrating real lives transformed:
 - **Dr. Arvind K. (Volunteer Physician):** On the preventive impact of regular rural medical and diabetes screening camps.
 
 ### 5.11 Contact & Field Support Section (`#contact`)
-- **Direct Interactive Form:** Name, Email, Phone, Subject dropdown (*General Inquiry, CSR Collaboration, Volunteer Opportunity, Ashram Support, Donation Question*), and Message.
+- **Direct Interactive Form:** Name, Email, Phone, Subject dropdown (*General Inquiry, CSR Collaboration, Volunteer Opportunity, Healthcare Camps, Donation Question*), and Message.
 - **Office Location Information:**
   - *Registered Office:* Anand Group Charitable Trust, 14 Institutional Area, Sector 5, New Delhi - 110001, India (Standard official placeholder).
   - *Helpline:* `+91 98765 43210`
@@ -496,7 +474,6 @@ All images are curated, compressed for fast web loading, and visually represent 
 - `init_temple.jpg` (1.1 MB): Heritage temple precinct undergoing maintenance and community service.
 - `init_healthcare.jpg` (900 KB): Doctors conducting health screenings and diagnostics.
 - `init_elderly.jpg` (894 KB): Senior citizen receiving care and support.
-- `init_ashram.jpg` (1.1 MB): Calm, clean environment at Naadha Ashram with residents.
 - `init_annadanam.jpg` (1.0 MB): Traditional Annadanam meal distribution.
 - `init_community.jpg` (1.1 MB): Community gathering and civic discussion.
 - `init_child_welfare.jpg` (943 KB): Child development and life skills activity.
@@ -569,7 +546,7 @@ To maintain trust, transparency, and legal compliance, the website incorporates 
 
 ### 8.2 Corporate Social Responsibility (CSR) Readiness
 - Aligned with **Schedule VII, Section 135 of the Indian Companies Act, 2013**:
-  - Eradicating hunger, poverty, and malnutrition; promoting healthcare and sanitation (*Annadanam, Medical Camps, Naadha Ashram*).
+  - Eradicating hunger, poverty, and malnutrition; promoting healthcare and sanitation (*Annadanam, Rural Medical Camps, Preventive Health*).
   - Promoting education, including special education and employment-enhancing vocational skills (*Education & Digital Awareness*).
   - Protection of national heritage, art, and culture (*Temple Renovation & Cultural Activities*).
   - Ensuring environmental sustainability, ecological balance, and conservation of natural resources (*Cleanliness & Save Water Campaigns*).

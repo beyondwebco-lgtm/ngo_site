@@ -52,7 +52,7 @@ export default function AboutPage() {
                 Starting with local Swachh Bharat street sanitation drives, tree plantations, and student awareness programs across Andhra Pradesh and Telangana, the Trust quickly expanded its horizon. Over the years, we recognized that poverty, lack of educational resources, environmental pollution, and senior citizen abandonment are deeply interconnected issues that require sustained, hands-on attention.
               </p>
               <p className="about-text-p">
-                Today, our operations touch thousands of lives each year — providing daily nutrition and shelter at Naadha Ashram, mentoring children in government schools, planting green corridors through Haritha Haram, organizing free rural medical camps, and restoring sacred cultural heritage sites.
+                Today, our operations touch thousands of lives each year — mentoring children in government schools, planting green corridors through Haritha Haram, organizing free rural medical camps, providing care and dignity for senior citizens, and restoring sacred cultural heritage sites.
               </p>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
                 Managing Trustee &amp; Civic Leader
               </p>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Leading on-the-ground Swachh Bharat cleanliness drives, youth mentorship sessions in colleges, rural school outreaches, and Naadha Ashram welfare programs.
+                Leading on-the-ground Swachh Bharat cleanliness drives, youth mentorship sessions in colleges, rural school outreaches, and senior citizen welfare programs.
               </p>
             </div>
 

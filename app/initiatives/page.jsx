@@ -6,7 +6,7 @@ import { INITIATIVES_LIST } from '../../data/initiatives';
 
 export const metadata = {
   title: 'Our Initiatives | Anand Group Charitable Trust',
-  description: 'Explore the 6 core pillars of Anand Group Charitable Trust: environmental awareness, education, temple heritage, healthcare, elderly care, and Naadha Ashram support.',
+  description: 'Explore the 5 core pillars of Anand Group Charitable Trust: environmental awareness, education, temple heritage, healthcare, and elderly care.',
 };
 
 export default function InitiativesOverviewPage() {
@@ -15,9 +15,9 @@ export default function InitiativesOverviewPage() {
       <PageBanner
         badge="Holistic Grassroots Focus"
         badgeIcon="fa-hand-holding-heart"
-        title="Our Six Pillars of Compassionate Action"
+        title="Our Five Pillars of Compassionate Action"
         highlightWord="Compassionate"
-        lead="We believe lasting community progress requires an interconnected approach. From clean public environments and youth education to accessible healthcare, cultural heritage preservation, and sanctuary for destitute elders, explore our six core initiatives."
+        lead="We believe lasting community progress requires an interconnected approach. From clean public environments and youth education to accessible healthcare, cultural heritage preservation, and dignity for senior citizens, explore our five core initiatives."
         breadcrumbs={[{ label: 'Initiatives', href: '/initiatives' }]}
       />
 
@@ -73,7 +73,7 @@ export default function InitiativesOverviewPage() {
                   <div>
                     <strong style={{ color: 'var(--color-text)' }}>Unbroken Long-Term Commitments:</strong>
                     <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)', fontSize: '0.92rem' }}>
-                      At sanctuaries like Naadha Ashram, our support is constant and continuous 365 days a year, not just one-off festival events.
+                      In rural school education, tree nurturing, and elderly care, our support is sustained and continuous, not just one-off promotional events.
                     </p>
                   </div>
                 </li>
@@ -104,7 +104,7 @@ export default function InitiativesOverviewPage() {
                 Pledge Your Support Today
               </h3>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-                Your contribution directly funds school supplies, daily meals at Naadha Ashram, tree saplings for Haritha Haram, and free medications for rural patients.
+                Your contribution directly funds school supplies, free medical camps, tree saplings for Haritha Haram, and healthcare assistance for rural elders.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 <Link href="/donate" className="ash-btn ash-btn-primary" style={{ justifyContent: 'center' }}>

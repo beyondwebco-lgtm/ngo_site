@@ -19,7 +19,7 @@ export default function GalleryPage() {
         badgeIcon="fa-camera-retro"
         title="Visual Chronicles of Hope &amp; Transformation"
         highlightWord="Chronicles"
-        lead="Explore authentic field photography documenting our Swachh Bharat street drives, student mentorship assemblies, Haritha Haram tree plantations, Naadha Ashram sanctuary care, and rural medical seva."
+        lead="Explore authentic field photography documenting our Swachh Bharat street drives, student mentorship assemblies, Haritha Haram tree plantations, elder welfare outreaches, and rural medical seva."
         breadcrumbs={[{ label: 'Photo Gallery', href: '/gallery' }]}
       />
 

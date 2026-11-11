@@ -27,9 +27,9 @@ export default function HomePage() {
       tag: 'Rural Education',
     },
     {
-      src: '/images/init_ashram.jpg',
-      title: 'Daily Nutrition at Naadha Ashram Sanctuary',
-      tag: 'Naadha Ashram',
+      src: '/images/education/anand-vidyalaya-school-anniversary-celebration.webp',
+      title: 'Anand Vidyalaya School 1st Anniversary Celebrations',
+      tag: 'Education & Values',
     },
     {
       src: '/images/init_healthcare.jpg',
@@ -60,7 +60,7 @@ export default function HomePage() {
               </h1>
 
               <p className="hero-subheading">
-                Anand Group Charitable Trust is committed to transformative grassroots social development across India &mdash; empowering children through education, leading Swachh Bharat and tree plantation drives, providing healthcare, and sheltering vulnerable residents at Naadha Ashram.
+                Anand Group Charitable Trust is committed to transformative grassroots social development across India &mdash; empowering children through education, leading Swachh Bharat and tree plantation drives, providing accessible healthcare, and honoring elderly citizens with dignity.
               </p>
 
               {/* Primary Call to Actions */}
@@ -177,7 +177,7 @@ export default function HomePage() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <i className="fa fa-check-circle" style={{ color: 'var(--color-yellow-deep)', fontSize: '1.1rem' }}></i>
-                  <span style={{ fontWeight: 600, color: 'var(--color-text)', fontSize: '0.95rem' }}>Naadha Ashram Adoption</span>
+                  <span style={{ fontWeight: 600, color: 'var(--color-text)', fontSize: '0.95rem' }}>Healthcare &amp; Medical Camps</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <i className="fa fa-check-circle" style={{ color: 'var(--color-yellow-deep)', fontSize: '1.1rem' }}></i>
@@ -272,7 +272,7 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-           5. FEATURED SPOTLIGHT: SWACHH BHARAT & NAADHA ASHRAM
+           5. FEATURED SPOTLIGHT: SWACHH BHARAT & EDUCATION INITIATIVES
            ========================================================================== */}
       <section className="ash-section-ivory" id="featured-activities">
         <div className="ash-container">
@@ -282,7 +282,7 @@ export default function HomePage() {
             </div>
             <h2 className="section-title">Featured Ground-Level Commitments</h2>
             <p className="section-subtitle">
-              Highlighting two of our most enduring community programs: civic sanitation and sanctuary care.
+              Highlighting two of our most enduring community programs: civic sanitation and student education.
             </p>
           </div>
 
@@ -335,13 +335,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Spotlight 2: Naadha Ashram Sanctuary */}
+            {/* Spotlight 2: Education & Youth Mentorship */}
             <div className="initiative-main-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ width: '100%', height: '260px', overflow: 'hidden', position: 'relative' }}>
                   <img
-                    src="/images/init_ashram.jpg"
-                    alt="Naadha Ashram Sanctuary Care"
+                    src="/images/school-awareness/school-awareness-youth-inspiration-assembly.webp"
+                    alt="Youth Inspiration School Assembly"
                     loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -358,26 +358,26 @@ export default function HomePage() {
                       borderRadius: '999px',
                     }}
                   >
-                    Sanctuary Support
+                    Education &amp; Youth
                   </span>
                 </div>
                 <div style={{ padding: '2rem' }}>
                   <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--color-text)', marginBottom: '0.75rem' }}>
-                    Naadha Ashram Sanctuary Adoption
+                    Education &amp; Youth Mentorship Drives
                   </h3>
                   <p style={{ color: 'var(--color-text-muted)', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '1.25rem' }}>
-                    Naadha Ashram shelters destitute seniors, special-needs individuals, and orphaned children. We provide continuous 365-day nutrition, doctor visits, hygiene upgrades, fresh bedding, and genuine family love.
+                    Empowering students across government schools and rural colleges through free study kits, digital literacy awareness, moral etiquette guidance, and inspiring interactive school assemblies.
                   </p>
                   <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
-                    <li><strong style={{ color: 'var(--color-text)' }}>&bull; 3 Daily Hot Meals</strong> and nutritional supplements</li>
-                    <li><strong style={{ color: 'var(--color-text)' }}>&bull; Full Healthcare</strong> and routine doctor screenings</li>
-                    <li><strong style={{ color: 'var(--color-text)' }}>&bull; Resident Child Schooling</strong> &amp; study support</li>
+                    <li><strong style={{ color: 'var(--color-text)' }}>&bull; 5,000+</strong> Students mentored across rural and urban schools</li>
+                    <li><strong style={{ color: 'var(--color-text)' }}>&bull; Free Learning Kits</strong> Notebooks, school bags, and stationery</li>
+                    <li><strong style={{ color: 'var(--color-text)' }}>&bull; Digital Discipline</strong> Mobile hygiene &amp; civic oath sessions</li>
                   </ul>
                 </div>
               </div>
               <div style={{ padding: '0 2rem 2rem 2rem' }}>
-                <Link href="/initiatives/naadha-ashram" className="ash-btn ash-btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                  <span>Explore Naadha Ashram Seva</span>
+                <Link href="/initiatives/education" className="ash-btn ash-btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                  <span>Explore Education Initiatives</span>
                   <i className="fa fa-arrow-right"></i>
                 </Link>
               </div>
@@ -494,7 +494,7 @@ export default function HomePage() {
                   Pledge Financial Support
                 </h3>
                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-                  Sponsor daily meals at Naadha Ashram, school kits for rural children, or tree saplings. Eligible for 80G tax exemptions.
+                  Sponsor rural health camps, school kits for rural children, or tree saplings. Eligible for 80G tax exemptions.
                 </p>
               </div>
               <Link href="/donate" className="ash-btn ash-btn-primary" style={{ justifyContent: 'center' }}>
@@ -571,7 +571,7 @@ export default function HomePage() {
                 Have Questions or Want to Visit Our Projects?
               </h2>
               <p style={{ color: 'var(--color-text-muted)', margin: 0, fontSize: '1rem', lineHeight: '1.6' }}>
-                Connect with our coordinators for donation receipts, CSR consultations, school awareness drive invitations, or visiting Naadha Ashram.
+                Connect with our coordinators for donation receipts, CSR consultations, school awareness drive invitations, or community seva partnerships.
               </p>
             </div>
 

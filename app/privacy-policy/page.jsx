@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
               <li>To issue official 80G tax deduction receipts and maintain statutory books of accounts.</li>
               <li>To report donor data to the Income Tax Department via Form 10BD as required by law.</li>
               <li>To coordinate field drives, volunteer participation, and disaster relief mobilizations.</li>
-              <li>To provide transparent progress reports on sponsored initiatives (such as Naadha Ashram meals or school kits).</li>
+              <li>To provide transparent progress reports on sponsored initiatives (such as rural medical camps or school kits).</li>
               <li>To respond to queries and CSR collaboration requests.</li>
             </ul>
 

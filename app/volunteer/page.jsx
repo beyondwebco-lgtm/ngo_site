@@ -25,7 +25,6 @@ export default function VolunteerPage() {
     'Temple Development & Annadanam Seva',
     'Healthcare & Medical Screening Camps',
     'Elderly Care & Senior Home Assistance',
-    'Naadha Ashram Sanctuary Support',
   ];
 
   const handleCheckboxChange = (option) => {

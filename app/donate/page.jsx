@@ -34,7 +34,7 @@ function DonateFormInner() {
 
   const presetTiers = [
     { amount: '1000', label: '₹1,000', benefit: 'Provides textbooks and stationery kits for 2 rural students' },
-    { amount: '2500', label: '₹2,500', benefit: 'Sponsors wholesome meals for Naadha Ashram residents for a day' },
+    { amount: '2500', label: '₹2,500', benefit: 'Sponsors nutritious meals and essential rations for elderly residents' },
     { amount: '5000', label: '₹5,000', benefit: 'Funds free diagnostic screening and medicines for 20 rural patients' },
     { amount: '10000', label: '₹10,000', benefit: 'Plants 100 roadside tree saplings and provides tree guards under Haritha Haram' },
   ];
@@ -138,7 +138,6 @@ function DonateFormInner() {
                 <option value="Temple Development & Cultural Activities">Temple Development &amp; Sacred Annadanam</option>
                 <option value="Healthcare & Medical Support">Healthcare &amp; Free Medical Screening Camps</option>
                 <option value="Elderly Care & Social Welfare">Elderly Care &amp; Senior Dignity</option>
-                <option value="Naadha Ashram Support">Naadha Ashram Sanctuary (Daily Meals &amp; Resident Care)</option>
               </select>
             </div>
 
@@ -371,7 +370,7 @@ export default function DonatePage() {
         badgeIcon="fa-certificate"
         title="Empower Grassroots Seva Through Your Generosity"
         highlightWord="Empower"
-        lead="Your contribution provides nutritious food at Naadha Ashram, school kits for rural children, medical screening for indigent families, and saplings for clean green villages. Every rupee creates direct social impact."
+        lead="Your contribution provides monthly rations for elderly citizens, school kits for rural children, medical screening for indigent families, and saplings for clean green villages. Every rupee creates direct social impact."
         breadcrumbs={[
           { label: 'Get Involved', href: '/get-involved' },
           { label: 'Donate / Pledge', href: '/donate' },

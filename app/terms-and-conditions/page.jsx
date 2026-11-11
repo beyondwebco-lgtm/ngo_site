@@ -42,7 +42,7 @@ export default function TermsAndConditionsPage() {
             <ul style={{ color: 'var(--color-text-muted)', lineHeight: '1.7', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
               <li><strong>Section 80G Eligibility:</strong> Contributions are eligible for tax deduction under Section 80G of the Income Tax Act, 1961, subject to prevailing limits and government rules.</li>
               <li><strong>PAN Requirement:</strong> Donors seeking 80G tax benefit certificates must furnish their valid Permanent Account Number (PAN) and postal address as per Central Board of Direct Taxes (CBDT) regulations.</li>
-              <li><strong>Non-Refundable Policy:</strong> Because charitable funds are promptly committed and deployed toward buying groceries for Naadha Ashram, school kits, or medical supplies, donations once cleared cannot be refunded or cancelled.</li>
+              <li><strong>Non-Refundable Policy:</strong> Because charitable funds are promptly committed and deployed toward buying educational school kits, organizing free medical camps, or supplying elder care essentials, donations once cleared cannot be refunded or cancelled.</li>
             </ul>
 
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', color: 'var(--color-text)', marginBottom: '1rem' }}>

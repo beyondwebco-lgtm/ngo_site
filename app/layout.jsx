@@ -12,7 +12,7 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL('https://www.anandgroupcharitabletrust.org.in'),
   title: 'Anand Group Charitable Trust | Together, We Build a Better Tomorrow',
-  description: 'Anand Group Charitable Trust is a dedicated Indian charitable trust empowering communities through education, social and environmental awareness, accessible healthcare, temple heritage, elderly care, Naadha Ashram support, and corporate CSR partnerships.',
+  description: 'Anand Group Charitable Trust is a dedicated Indian charitable trust empowering communities through education, social and environmental awareness, accessible healthcare, temple heritage, elderly care, and corporate CSR partnerships.',
   keywords: [
     'Anand Group Charitable Trust',
     'CSR Partnerships India',
@@ -23,7 +23,6 @@ export const metadata = {
     'Temple renovation and Annadanam',
     'Free medical and blood donation camps',
     'Elderly care and old age home support',
-    'Naadha Ashram support',
     'Charitable trust in India',
   ],
   icons: {

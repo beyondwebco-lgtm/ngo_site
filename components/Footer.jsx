@@ -84,11 +84,6 @@ export default function Footer() {
                   Elderly Care &amp; Dignity
                 </Link>
               </li>
-              <li>
-                <Link href="/initiatives/naadha-ashram">
-                  Naadha Ashram Sanctuary
-                </Link>
-              </li>
             </ul>
           </div>
 

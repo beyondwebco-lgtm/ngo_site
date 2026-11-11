@@ -33,8 +33,8 @@ export default function CsrPartnershipsPage() {
     },
     {
       clause: 'Clause (i) — Eradicating Hunger & Healthcare',
-      title: 'Naadha Ashram Nutrition & Rural Health Camps',
-      desc: '365-day nutrition, pure drinking water systems, and periodic specialized diagnostic medical check-ups in rural Telangana and Andhra Pradesh.',
+      title: 'Rural Healthcare Camps & Nutrition Support',
+      desc: 'Nutritional kits, pure drinking water systems, and periodic specialized diagnostic medical check-ups in rural Telangana and Andhra Pradesh.',
       icon: 'fa-heart-pulse',
     },
     {
@@ -293,7 +293,7 @@ export default function CsrPartnershipsPage() {
                     >
                       <option value="Environmental Sustainability (Swachh Bharat & Haritha Haram)">Environmental Sustainability (Swachh Bharat &amp; Haritha Haram)</option>
                       <option value="Government School Infrastructure & STEM Labs">Government School Infrastructure &amp; STEM Labs</option>
-                      <option value="Naadha Ashram Nutrition & Resident Care">Naadha Ashram Nutrition &amp; Resident Care</option>
+                      <option value="Rural Healthcare Camps & Nutrition Support">Rural Healthcare Camps &amp; Nutrition Support</option>
                       <option value="Rural Healthcare & Diagnostic Screening Camps">Rural Healthcare &amp; Diagnostic Screening Camps</option>
                       <option value="Senior Citizen Welfare & Mobility Aids">Senior Citizen Welfare &amp; Mobility Aids</option>
                     </select>
