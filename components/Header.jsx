@@ -3,6 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+  ORGANIZATION_INFO,
+} from '../data/siteConfig';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,10 +44,10 @@ export default function Header() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
     { href: '/initiatives', label: 'Initiatives' },
+    { href: '/awareness-programs', label: 'Awareness Programs' },
     { href: '/impact', label: 'Impact' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/get-involved', label: 'Get Involved' },
-    { href: '/csr-partnerships', label: 'CSR' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -59,18 +64,33 @@ export default function Header() {
       <div className="top-notice-bar">
         <div className="ash-container top-notice-content">
           <div className="top-contact-info">
-            <a href="mailto:contact@anandgroupcharitabletrust.org.in" aria-label="Email Anand Group Charitable Trust">
-              <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i>
-              <span>contact@anandgroupcharitabletrust.org.in</span>
-            </a>
-            <a href="tel:+919848123456" aria-label="Call Anand Group Charitable Trust helpline">
-              <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i>
-              <span>+91 98481 23456</span>
-            </a>
+            {SHOW_PUBLIC_UNVERIFIED_CONTACTS ? (
+              <>
+                <a href={`mailto:${PENDING_VERIFICATION_CONTACTS.generalEmail}`} aria-label="Email Anand Group Charitable Trust">
+                  <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                  <span>{PENDING_VERIFICATION_CONTACTS.generalEmail}</span>
+                </a>
+                <a href={PENDING_VERIFICATION_CONTACTS.phoneHref} aria-label="Call Anand Group Charitable Trust helpline">
+                  <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                  <span>{PENDING_VERIFICATION_CONTACTS.phone}</span>
+                </a>
+              </>
+            ) : (
+              <>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}>
+                  <i className="fa fa-map-marker-alt" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                  <span>{ORGANIZATION_INFO.operatingRegions}</span>
+                </span>
+                <Link href="/contact" aria-label="Official Online Inquiry Form">
+                  <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                  <span>Official Inquiry Desk</span>
+                </Link>
+              </>
+            )}
           </div>
           <div className="top-trust-badge">
             <i className="fa fa-certificate" style={{ color: 'var(--color-yellow-deep)' }}></i>
-            <span>Registered Indian Charitable Trust &bull; 80G Tax Exemption</span>
+            <span>{ORGANIZATION_INFO.statusLabel}</span>
           </div>
         </div>
       </div>
@@ -195,7 +215,7 @@ export default function Header() {
             </Link>
             <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--color-text-muted)', textAlign: 'center' }}>
               <p style={{ margin: 0 }}>Registered Indian Charitable Trust</p>
-              <p style={{ margin: '0.25rem 0 0 0', color: 'var(--color-yellow-dark)', fontWeight: 600 }}>80G Tax Exemption Eligible</p>
+              <p style={{ margin: '0.25rem 0 0 0', color: 'var(--color-yellow-dark)', fontWeight: 600 }}>Valid Section 80G Approval</p>
             </div>
           </div>
         </div>

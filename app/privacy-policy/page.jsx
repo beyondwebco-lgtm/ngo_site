@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import PageBanner from '../../components/PageBanner';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+} from '../../data/siteConfig';
 
 export const metadata = {
   title: 'Privacy Policy | Anand Group Charitable Trust',
@@ -83,8 +87,16 @@ export default function PrivacyPolicyPage() {
             <div style={{ background: 'var(--color-bg-cream)', border: '1px solid var(--color-border-amber)', borderRadius: 'var(--radius-sm)', padding: '1.25rem', marginBottom: '1.5rem' }}>
               <p style={{ margin: '0 0 0.35rem 0', fontWeight: 600, color: 'var(--color-text)' }}>Grievance Officer &amp; Compliance Secretary</p>
               <p style={{ margin: '0 0 0.25rem 0', color: 'var(--color-text-muted)' }}>Anand Group Charitable Trust</p>
-              <p style={{ margin: '0 0 0.25rem 0', color: 'var(--color-text-muted)' }}>Email: grievance@anandgroupcharitabletrust.org.in</p>
-              <p style={{ margin: 0, color: 'var(--color-text-muted)' }}>Phone: +91 98481 23456 (Mon &ndash; Sat, 10 AM &ndash; 5 PM IST)</p>
+              {SHOW_PUBLIC_UNVERIFIED_CONTACTS ? (
+                <>
+                  <p style={{ margin: '0 0 0.25rem 0', color: 'var(--color-text-muted)' }}>Email: {PENDING_VERIFICATION_CONTACTS.generalEmail}</p>
+                  <p style={{ margin: 0, color: 'var(--color-text-muted)' }}>Phone: {PENDING_VERIFICATION_CONTACTS.phone} ({PENDING_VERIFICATION_CONTACTS.officeHours})</p>
+                </>
+              ) : (
+                <p style={{ margin: 0, color: 'var(--color-text-muted)' }}>
+                  Submit privacy or data correction requests via our <Link href="/contact" style={{ color: 'var(--color-yellow-dark)', fontWeight: 600, textDecoration: 'underline' }}>official Contact page</Link>.
+                </p>
+              )}
             </div>
 
             <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>

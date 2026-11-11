@@ -3,6 +3,11 @@ import Link from 'next/link';
 import PageBanner from './PageBanner';
 import PhotoShowcase from './PhotoShowcase';
 import { INITIATIVES_LIST } from '../data/initiatives';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+  TAX_80G_DISCLOSURE,
+} from '../data/siteConfig';
 
 export default function InitiativeSubpageLayout({ initiative }) {
   const {
@@ -169,14 +174,14 @@ export default function InitiativeSubpageLayout({ initiative }) {
               <div className="sidebar-box highlight">
                 <h3 className="sidebar-box-title">
                   <i className="fa fa-certificate" style={{ color: 'var(--color-yellow-deep)' }}></i>
-                  80G Tax Benefit
+                  Section 80G Governance
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: '1.6', marginBottom: '1rem' }}>
-                  All financial contributions to Anand Group Charitable Trust are eligible for tax exemption under Section 80G of the Income Tax Act, 1961.
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: '1.6', marginBottom: '1rem' }}>
+                  {TAX_80G_DISCLOSURE}
                 </p>
                 <div style={{ padding: '0.75rem', background: 'var(--color-white)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border-amber)', fontSize: '0.82rem', color: 'var(--color-yellow-dark)' }}>
                   <i className="fa fa-shield-alt" style={{ marginRight: '0.35rem' }}></i>
-                  <strong>Zero-Risk Pledge:</strong> Verified directly by trust coordinators.
+                  <strong>Direct Pledge Model:</strong> Verified directly by trust coordinators.
                 </div>
                 <Link
                   href="/donate"
@@ -195,22 +200,24 @@ export default function InitiativeSubpageLayout({ initiative }) {
                   Have Questions?
                 </h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: '1.5', marginBottom: '1rem' }}>
-                  Connect with our program coordinators to sponsor a drive or arrange a field visit.
+                  Connect with our program coordinators to sponsor a drive or collaborate on outreach programmes.
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.88rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text)' }}>
-                    <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i>
-                    <span>+91 98481 23456</span>
+                {SHOW_PUBLIC_UNVERIFIED_CONTACTS && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.88rem', marginBottom: '1rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text)' }}>
+                      <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                      <span>{PENDING_VERIFICATION_CONTACTS.phone}</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text)' }}>
+                      <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                      <span>{PENDING_VERIFICATION_CONTACTS.generalEmail}</span>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text)' }}>
-                    <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)' }}></i>
-                    <span>contact@anandgroupcharitabletrust.org.in</span>
-                  </div>
-                </div>
+                )}
                 <Link
                   href="/contact"
                   className="ash-btn ash-btn-outline"
-                  style={{ width: '100%', justifyContent: 'center', marginTop: '1.25rem' }}
+                  style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem' }}
                 >
                   <span>Contact Coordinators</span>
                   <i className="fa fa-arrow-right"></i>

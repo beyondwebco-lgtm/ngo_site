@@ -13,7 +13,7 @@ export default function GetInvolvedPage() {
       title: 'Make a Financial Pledge / Donation',
       icon: 'fa-heart',
       badge: '80G Tax Exemption',
-      desc: 'Directly fund school kits for underprivileged children, rural medical camps, tree saplings, or elder care essentials. Receive immediate 80G tax clearance certificates.',
+      desc: 'Directly fund school kits for underprivileged children, educational awareness initiatives, rural medical camps, tree saplings, or elder care essentials. Eligible contributions qualify for Section 80G tax deductions subject to applicable conditions.',
       href: '/donate',
       btnLabel: 'Donate / Pledge Now',
       isPrimary: true,

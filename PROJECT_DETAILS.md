@@ -4,7 +4,7 @@
 > **Repository:** `ngo_site`  
 > **Organization:** Anand Group Charitable Trust  
 > **Tagline:** *Empowering Lives. Building Hope.*  
-> **Core Mission:** Grassroots social transformation across education, healthcare, environmental awareness, cultural heritage, and elder dignity in India.  
+> **Core Mission:** Educational awareness, teacher training, child development, digital wellness, mental wellness, social awareness, alongside charitable service in healthcare, elderly care, temple heritage, environmental conservation, and community welfare across Andhra Pradesh and Telangana, India.  
 > **Date Generated:** November 2026  
 > **Technical Stack:** Next.js (App Router v16+), React 19, Vanilla CSS3 (Premium Yellow & White Design System), Font Awesome 6.5, Google Fonts.
 
@@ -163,15 +163,27 @@ ngo_site/
 ├── app/
 │   ├── globals.css                       # Master CSS architecture (pure white & golden design system)
 │   ├── layout.jsx                        # RootLayout: Header, Footer, SEO metadata, Font Awesome
-│   ├── page.jsx                          # Clean, simplified Homepage (hero, about preview, 6 cards, impact, spotlight, CTA)
+│   ├── page.jsx                          # Structured Homepage (Educational Hero, Awareness, Book, Initiatives, Stats, Gallery, CTAs)
 │   ├── about/
 │   │   └── page.jsx                      # Dedicated About Us page
+│   ├── awareness-programs/
+│   │   └── page.jsx                      # Educational & Social Awareness Programmes Hub
 │   ├── initiatives/
-│   │   ├── page.jsx                      # All Initiatives overview & methodology
+│   │   ├── page.jsx                      # All Five Core Initiatives overview & methodology
 │   │   ├── social-environmental/
-│   │   │   └── page.jsx                  # Swachh Bharat & Haritha Haram dedicated page
+│   │   │   └── page.jsx                  # Social & Environmental Awareness (Traffic Awareness, Swachh Bharat, Save Water, Haritha Haram)
 │   │   ├── education/
-│   │   │   └── page.jsx                  # Education & Child Development dedicated page
+│   │   │   └── page.jsx                  # Education & Child Development overview + sub-programme links + Activity Book
+│   │   ├── mobile-phone-awareness/
+│   │   │   └── page.jsx                  # Mobile Phone Awareness & Published Digital Wellness Activity Book
+│   │   ├── school-awareness-programs/
+│   │   │   └── page.jsx                  # School Awareness Camps & Student Guidance
+│   │   ├── teacher-training/
+│   │   │   └── page.jsx                  # Teacher Training (Moral Values & Child Psychology)
+│   │   ├── child-development/
+│   │   │   └── page.jsx                  # Child Psychology & Individual Attention (qualified psychologists/counsellors)
+│   │   ├── mental-wellness/
+│   │   │   └── page.jsx                  # Mental Wellness & Emotional Well-Being Education
 │   │   ├── temple-development/
 │   │   │   └── page.jsx                  # Temple Development & Annadanam dedicated page
 │   │   ├── healthcare/
@@ -179,7 +191,7 @@ ngo_site/
 │   │   └── elderly-care/
 │   │       └── page.jsx                  # Elderly Care & Senior Welfare dedicated page
 │   ├── impact/
-│   │   └── page.jsx                      # Impact Statistics, Milestones Timeline & Stories
+│   │   └── page.jsx                      # Impact Statistics, Milestones Timeline & Documented Highlights
 │   ├── gallery/
 │   │   └── page.jsx                      # Standalone Photo Gallery (category filters, inline viewer, NO pop-ups)
 │   ├── get-involved/
@@ -187,28 +199,32 @@ ngo_site/
 │   ├── volunteer/
 │   │   └── page.jsx                      # Dedicated Volunteer Registration (inline form & validation)
 │   ├── donate/
-│   │   └── page.jsx                      # Dedicated Donation & Pledge Page (transparent 80G information, bank transfer)
+│   │   └── page.jsx                      # Dedicated Donation & Pledge Page (80G disclosure, preserved bank transfer details)
 │   ├── csr-partnerships/
 │   │   └── page.jsx                      # Corporate CSR (Schedule VII Section 135 compliance & enquiry form)
 │   ├── contact/
-│   │   └── page.jsx                      # Dedicated Contact Us page (inline form, headquarters info)
+│   │   └── page.jsx                      # Dedicated Contact Us page (inline form, gated unverified contact details)
 │   ├── privacy-policy/
 │   │   └── page.jsx                      # Dedicated Privacy Policy & Data Protection page
 │   └── terms-and-conditions/
 │       └── page.jsx                      # Dedicated Terms & Conditions page
 │
 ├── components/
-│   ├── Header.jsx                        # Shared Sticky Navbar with active tracking & auto-closing mobile drawer
-│   ├── Footer.jsx                        # Shared 4-Column Footer with quick links, initiatives, contact & legal
+│   ├── Header.jsx                        # Shared Sticky Navbar (8 primary links, responsive hamburger drawer)
+│   ├── Footer.jsx                        # Shared 4-Column Footer
 │   ├── PageBanner.jsx                    # Reusable Inner Page Hero Banner with Breadcrumbs & Headings
 │   ├── InitiativeCard.jsx                # Reusable Initiative Card navigating directly to /initiatives/<slug>
 │   ├── PhotoShowcase.jsx                 # Reusable Field Action Photo Showcase with Inline Preview (NO pop-ups)
-│   └── InitiativeSubpageLayout.jsx       # Standardized Layout for all 6 Initiative detail pages
+│   ├── ActivityBookShowcase.jsx          # Published Digital Wellness Activity Book Showcase Component
+│   ├── AwarenessSubpageLayout.jsx        # Reusable Layout for Specialized Educational Awareness Subpages
+│   └── InitiativeSubpageLayout.jsx       # Standardized Layout for the 5 Core Initiative detail pages
 │
 ├── data/
-│   ├── initiatives.js                    # Centralized initiatives data, programs, benefits & photo mappings
-│   ├── gallery.js                        # Curated 27+ authentic gallery items and categories
-│   └── impact.js                         # Verified metrics, historical timeline & beneficiary stories
+│   ├── siteConfig.js                     # Verification flags (PENDING_VERIFICATION contacts), 80G disclosure, Org identity
+│   ├── awarenessPrograms.js              # Educational awareness sub-programmes, Activity Book metadata, Social campaigns
+│   ├── initiatives.js                    # Centralized 5 core initiatives data, programs, benefits & photo mappings
+│   ├── gallery.js                        # Curated 28 authentic gallery items and categories
+│   └── impact.js                         # Confirmed metrics, milestones, documented highlights & PENDING_PERMISSION_REVIEW stories
 │
 └── public/
     ├── favicon-anand-trust.svg           # Branded SVG favicon (active)
@@ -407,29 +423,23 @@ Structured options for individuals and groups to contribute:
 3. **Make a Support Pledge:** Select from predetermined tiers (₹500, ₹1,500, ₹3,000, ₹5,000) or enter a custom amount.
 4. **Corporate CSR Alliance:** Co-create custom CSR community initiatives.
 
-### 5.10 Community Stories & Testimonials (`#stories`)
-Authentic case narratives illustrating real lives transformed:
-- **Sunita Devi (Mother & Community Leader):** On child education and digital awareness camps.
-- **Rameshwar Sharma (Senior Resident):** On dignified care and food support in the elder-care program.
-- **Dr. Arvind K. (Volunteer Physician):** On the preventive impact of regular rural medical and diabetes screening camps.
+### 5.10 Beneficiary Stories & Testimonials (`PENDING_PERMISSION_REVIEW`)
+- Historical named beneficiary stories (Lakshmamma, Suresh & Classmates, Venkateswarlu) are **preserved internally** in `data/impact.js` (`PENDING_REVIEW_STORIES`) and **hidden from public view** (`SHOW_PUBLIC_STORIES = false`) pending formal accuracy confirmation and written publication permission.
+- In their place, `/impact` presents verified programme photography and strictly factual descriptions (`DOCUMENTED_HIGHLIGHTS`).
 
-### 5.11 Contact & Field Support Section (`#contact`)
-- **Direct Interactive Form:** Name, Email, Phone, Subject dropdown (*General Inquiry, CSR Collaboration, Volunteer Opportunity, Healthcare Camps, Donation Question*), and Message.
-- **Office Location Information:**
-  - *Registered Office:* Anand Group Charitable Trust, 14 Institutional Area, Sector 5, New Delhi - 110001, India (Standard official placeholder).
-  - *Helpline:* `+91 98765 43210`
-  - *Inquiry Email:* `contact@anandgroupcharitabletrust.org.in`
-  - *Hours:* Monday – Saturday: 9:30 AM – 6:00 PM IST.
+### 5.11 Contact & Field Support Section (`PENDING_VERIFICATION`)
+- **Direct Interactive Form:** Name, Email, Phone, Subject dropdown (*General Inquiry, School Awareness & Mobile Wellness Request, Teacher Training & Child Psychology Session, Digital Wellness Activity Book Inquiry, Donation & 80G Tax Exemption, Volunteering Opportunities, CSR Collaboration Proposal, Healthcare Camp Inquiry*), and Message.
+- **Operating Regions:** Andhra Pradesh & Telangana, India (Confirmed).
+- **Contact Fields Marked `PENDING_VERIFICATION` (Suppressed publicly via `SHOW_PUBLIC_UNVERIFIED_CONTACTS = false` in `data/siteConfig.js`):**
+  - *Phone Number (`PENDING_VERIFICATION`):* `+91 98481 23456`
+  - *General Email (`PENDING_VERIFICATION`):* `contact@anandgroupcharitabletrust.org.in`
+  - *Programme Emails (`PENDING_VERIFICATION`):* `seva@anandgroupcharitabletrust.org.in`, `csr@anandgroupcharitabletrust.org.in`, `volunteer@anandgroupcharitabletrust.org.in`
+  - *Office Hours (`PENDING_VERIFICATION`):* `Monday – Saturday: 9:00 AM – 6:00 PM IST`
 
 ### 5.12 Footer & Legal Compliance (`.ash-footer`)
-- Branded logo with clear mission statement.
-- Social media links (Facebook, Instagram, LinkedIn, X/Twitter, YouTube).
-- Quick links and direct modal triggers for each initiative.
-- Inline Newsletter subscription with data privacy statement.
-- Legal navigation links opening modals for:
-  - **Privacy Policy** (data confidentiality guarantees)
-  - **Terms & Conditions** (intellectual property & informational purpose)
-  - **Governance & Trust Ethics** (charitable governance declaration)
+- Branded logo with updated mission statement emphasizing educational awareness, wellness, and charitable service.
+- Dedicated links to Quick Links, Programmes & Pillars, Privacy Policy (`/privacy-policy`), Terms & Conditions (`/terms-and-conditions`), and CSR Policy (`/csr-partnerships`).
+- No pop-up modals; all pages are dedicated App Router routes.
 
 ---
 

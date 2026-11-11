@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PageBanner from '../../components/PageBanner';
-import { IMPACT_METRICS, MILESTONES, STORIES } from '../../data/impact';
+import { IMPACT_METRICS, MILESTONES, DOCUMENTED_HIGHLIGHTS, SHOW_PUBLIC_STORIES, STORIES } from '../../data/impact';
 
 export const metadata = {
   title: 'Our Impact & Milestones | Anand Group Charitable Trust',
@@ -114,56 +114,105 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* Real Community Stories */}
+      {/* Verified Programme Action & Media Documentation */}
       <section className="subpage-section">
         <div className="ash-container">
           <div className="section-header text-center">
             <div className="section-eyebrow">
-              <i className="fa fa-quote-left"></i> Voices from the Field
+              <i className="fa fa-camera-retro"></i> Field Documentation
             </div>
-            <h2 className="section-title">Community Stories &amp; Testimonials</h2>
+            <h2 className="section-title">Documented Programme Action &amp; Media Coverage</h2>
             <p className="section-subtitle">
-              True accounts from individuals and communities transformed by Anand Group Charitable Trust’s initiatives.
+              Real field photographs and published press documentation reflecting Anand Group Charitable Trust’s active community programmes.
             </p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '2rem', marginTop: '3rem' }}>
-            {STORIES.map((s, idx) => (
+            {DOCUMENTED_HIGHLIGHTS.map((item, idx) => (
               <div
                 key={idx}
                 style={{
                   background: 'var(--color-white)',
                   border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius-md)',
-                  padding: '2.25rem',
+                  overflow: 'hidden',
                   boxShadow: 'var(--shadow-sm)',
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'space-between',
                 }}
               >
-                <div>
-                  <div style={{ color: 'var(--color-yellow-deep)', fontSize: '1.75rem', marginBottom: '1rem' }}>
-                    <i className="fa fa-quote-left"></i>
-                  </div>
-                  <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', color: 'var(--color-text)', marginBottom: '0.75rem' }}>
-                    {s.title}
-                  </h4>
-                  <p style={{ color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.65', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
-                    &ldquo;{s.quote}&rdquo;
-                  </p>
-                </div>
-                <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '1rem' }}>
-                  <strong style={{ color: 'var(--color-text)', display: 'block', fontSize: '0.95rem' }}>
-                    {s.beneficiary}
-                  </strong>
-                  <span style={{ color: 'var(--color-yellow-deep)', fontSize: '0.85rem' }}>
-                    {s.location} &bull; {s.category}
+                <div style={{ width: '100%', height: '220px', overflow: 'hidden', position: 'relative' }}>
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <span
+                    style={{
+                      position: 'absolute',
+                      top: '0.85rem',
+                      left: '0.85rem',
+                      background: 'rgba(255,255,255,0.95)',
+                      color: 'var(--color-yellow-dark)',
+                      fontWeight: 700,
+                      fontSize: '0.75rem',
+                      padding: '0.3rem 0.7rem',
+                      borderRadius: '999px',
+                    }}
+                  >
+                    {item.tag}
                   </span>
+                </div>
+                <div style={{ padding: '1.75rem' }}>
+                  <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', color: 'var(--color-text)', marginBottom: '0.65rem' }}>
+                    {item.title}
+                  </h4>
+                  <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.65', fontSize: '0.94rem', margin: 0 }}>
+                    {item.description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Testimonials (Hidden pending formal review & written permission) */}
+          {SHOW_PUBLIC_STORIES && STORIES.length > 0 && (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '2rem', marginTop: '3rem' }}>
+              {STORIES.map((s, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: 'var(--color-white)',
+                    border: '1px solid var(--color-border)',
+                    borderRadius: 'var(--radius-md)',
+                    padding: '2.25rem',
+                    boxShadow: 'var(--shadow-sm)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div>
+                    <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', color: 'var(--color-text)', marginBottom: '0.75rem' }}>
+                      {s.title}
+                    </h4>
+                    <p style={{ color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.65', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+                      &ldquo;{s.quote}&rdquo;
+                    </p>
+                  </div>
+                  <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '1rem' }}>
+                    <strong style={{ color: 'var(--color-text)', display: 'block', fontSize: '0.95rem' }}>
+                      {s.beneficiary}
+                    </strong>
+                    <span style={{ color: 'var(--color-yellow-deep)', fontSize: '0.85rem' }}>
+                      {s.location} &bull; {s.category}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* CTA Box */}
           <div style={{ marginTop: '4rem', textAlign: 'center', background: 'var(--color-bg-cream)', border: '2px solid var(--color-border-amber)', borderRadius: 'var(--radius-md)', padding: '3rem 2rem' }}>

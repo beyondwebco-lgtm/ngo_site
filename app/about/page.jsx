@@ -52,7 +52,7 @@ export default function AboutPage() {
                 Starting with local Swachh Bharat street sanitation drives, tree plantations, and student awareness programs across Andhra Pradesh and Telangana, the Trust quickly expanded its horizon. Over the years, we recognized that poverty, lack of educational resources, environmental pollution, and senior citizen abandonment are deeply interconnected issues that require sustained, hands-on attention.
               </p>
               <p className="about-text-p">
-                Today, our operations touch thousands of lives each year — mentoring children in government schools, planting green corridors through Haritha Haram, organizing free rural medical camps, providing care and dignity for senior citizens, and restoring sacred cultural heritage sites.
+                Today, our operations span educational awareness, teacher training, child psychology and individual attention programmes, digital wellness initiatives, mental wellness education, Haritha Haram green corridors, free rural medical camps, elderly care, and cultural heritage preservation across Andhra Pradesh and Telangana.
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem', color: 'var(--color-text-muted)', fontSize: '0.95rem' }}>
                 <li><strong style={{ color: 'var(--color-text)' }}>&bull; Unconditional Seva:</strong> Serving with humility, empathy, and devotion.</li>
-                <li><strong style={{ color: 'var(--color-text)' }}>&bull; 100% Transparency:</strong> Direct pledge model with strict 80G governance.</li>
+                <li><strong style={{ color: 'var(--color-text)' }}>&bull; Transparent Stewardship:</strong> Ethical direct pledge model with accountable governance.</li>
                 <li><strong style={{ color: 'var(--color-text)' }}>&bull; Youth Mobilization:</strong> Channeling student energy into civic nation building.</li>
                 <li><strong style={{ color: 'var(--color-text)' }}>&bull; Environmental Respect:</strong> Revering Mother Earth through green action.</li>
               </ul>
@@ -184,7 +184,7 @@ export default function AboutPage() {
                   Registered Indian Charitable Trust
                 </h3>
                 <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6', margin: 0, fontSize: '0.98rem' }}>
-                  Anand Group Charitable Trust is legally constituted and duly registered under the Indian Trusts Act, 1882. We operate with strict financial audit standards and are eligible for 80G tax deductions under Section 80G of the Income Tax Act, 1961.
+                  Anand Group Charitable Trust is a registered Indian charitable trust holding valid Section 80G approval. Eligible contributions may qualify for tax deduction under Section 80G of the Income Tax Act, 1961, subject to applicable statutory conditions, required donor documentation, and prevailing tax laws.
                 </p>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

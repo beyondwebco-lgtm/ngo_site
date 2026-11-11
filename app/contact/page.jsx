@@ -2,6 +2,11 @@
 
 import React, { useState } from 'react';
 import PageBanner from '../../components/PageBanner';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+  ORGANIZATION_INFO,
+} from '../../data/siteConfig';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -147,11 +152,13 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       >
                         <option value="General Inquiry">General Inquiry</option>
+                        <option value="School Awareness & Mobile Wellness Request">School Awareness &amp; Mobile Wellness Request</option>
+                        <option value="Teacher Training & Child Psychology Session">Teacher Training &amp; Child Psychology Session</option>
+                        <option value="Digital Wellness Activity Book Inquiry">Digital Wellness Activity Book Inquiry</option>
                         <option value="Donation & 80G Tax Exemption">Donation &amp; 80G Tax Exemption</option>
                         <option value="Volunteering Opportunities">Volunteering Opportunities</option>
                         <option value="CSR Collaboration Proposal">CSR Collaboration Proposal</option>
                         <option value="Healthcare Camp Inquiry">Healthcare Camp Inquiry</option>
-                        <option value="School Awareness Session Request">School Awareness Session Request</option>
                       </select>
                     </div>
                   </div>
@@ -202,64 +209,90 @@ export default function ContactPage() {
                   <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                     <i className="fa fa-map-location-dot" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
                     <div>
-                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Operational Address:</strong>
+                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Operating Regions:</strong>
                       <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)' }}>
-                        Anand Group Charitable Trust, Andhra Pradesh &amp; Telangana, India.
+                        {ORGANIZATION_INFO.name}, {ORGANIZATION_INFO.operatingRegions}.
                       </p>
                     </div>
                   </div>
 
-                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                    <div>
-                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Direct Helpline:</strong>
-                      <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)' }}>
-                        +91 98481 23456
-                      </p>
-                    </div>
-                  </div>
+                  {SHOW_PUBLIC_UNVERIFIED_CONTACTS ? (
+                    <>
+                      <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                        <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                        <div>
+                          <strong style={{ color: 'var(--color-text)', display: 'block' }}>Direct Helpline:</strong>
+                          <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)' }}>
+                            {PENDING_VERIFICATION_CONTACTS.phone}
+                          </p>
+                        </div>
+                      </div>
 
-                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                    <div>
-                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Official Email:</strong>
-                      <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)', wordBreak: 'break-all' }}>
-                        contact@anandgroupcharitabletrust.org.in
-                      </p>
-                    </div>
-                  </div>
+                      <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                        <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                        <div>
+                          <strong style={{ color: 'var(--color-text)', display: 'block' }}>Official Email:</strong>
+                          <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)', wordBreak: 'break-all' }}>
+                            {PENDING_VERIFICATION_CONTACTS.generalEmail}
+                          </p>
+                        </div>
+                      </div>
 
-                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <i className="fa fa-clock" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                    <div>
-                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Desk Timings:</strong>
-                      <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)' }}>
-                        Monday &ndash; Saturday: 9:00 AM &ndash; 6:00 PM IST
-                      </p>
+                      <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                        <i className="fa fa-clock" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                        <div>
+                          <strong style={{ color: 'var(--color-text)', display: 'block' }}>Desk Timings:</strong>
+                          <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)' }}>
+                            {PENDING_VERIFICATION_CONTACTS.officeHours}
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                      <i className="fa fa-envelope-open-text" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                      <div>
+                        <strong style={{ color: 'var(--color-text)', display: 'block' }}>Inquiry Channel:</strong>
+                        <p style={{ margin: '0.2rem 0 0 0', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>
+                          Please submit your message through the official online inquiry form on this page. Verified telephone and programme email directory details are being finalized by the Trust.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
-              <div className="sidebar-box">
-                <h3 className="sidebar-box-title">
-                  <i className="fa fa-users" style={{ color: 'var(--color-yellow-deep)' }}></i>
-                  Key Program Inquiries
-                </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>
-                  <div>
-                    <strong style={{ color: 'var(--color-text)', display: 'block' }}>Community Seva Inquiries:</strong>
-                    <span>seva@anandgroupcharitabletrust.org.in</span>
-                  </div>
-                  <div>
-                    <strong style={{ color: 'var(--color-text)', display: 'block' }}>CSR &amp; Institutional Grants:</strong>
-                    <span>csr@anandgroupcharitabletrust.org.in</span>
-                  </div>
-                  <div>
-                    <strong style={{ color: 'var(--color-text)', display: 'block' }}>Volunteer Coordination:</strong>
-                    <span>volunteer@anandgroupcharitabletrust.org.in</span>
+              {SHOW_PUBLIC_UNVERIFIED_CONTACTS && (
+                <div className="sidebar-box">
+                  <h3 className="sidebar-box-title">
+                    <i className="fa fa-users" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                    Key Program Inquiries
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>
+                    <div>
+                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Community Seva Inquiries:</strong>
+                      <span>{PENDING_VERIFICATION_CONTACTS.sevaEmail}</span>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>CSR &amp; Institutional Grants:</strong>
+                      <span>{PENDING_VERIFICATION_CONTACTS.csrEmail}</span>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--color-text)', display: 'block' }}>Volunteer Coordination:</strong>
+                      <span>{PENDING_VERIFICATION_CONTACTS.volunteerEmail}</span>
+                    </div>
                   </div>
                 </div>
+              )}
+
+              <div className="sidebar-box">
+                <h3 className="sidebar-box-title">
+                  <i className="fa fa-graduation-cap" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                  Programme Requests
+                </h3>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: '1.6', margin: 0 }}>
+                  Educators, schools, parent groups, and community organizers across Andhra Pradesh and Telangana can use this inquiry form to collaborate on school awareness camps, digital wellness book sessions, teacher training, and social drives.
+                </p>
               </div>
             </aside>
           </div>

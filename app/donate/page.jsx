@@ -1,8 +1,14 @@
 'use client';
 
 import React, { useState, useEffect, Suspense } from 'react';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import PageBanner from '../../components/PageBanner';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+  TAX_80G_DISCLOSURE,
+} from '../../data/siteConfig';
 
 function DonateFormInner() {
   const searchParams = useSearchParams();
@@ -75,7 +81,7 @@ function DonateFormInner() {
             Pledge Your Support for Seva
           </h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem' }}>
-            Select an impact tier or specify a custom donation. As per our transparent pledge model, our official trust financial desk will issue official 80G tax clearance documentation.
+            Select an impact tier or specify a custom contribution. Under our direct pledge model, official receipts are handled directly by Trust coordinators.
           </p>
         </div>
 
@@ -93,7 +99,7 @@ function DonateFormInner() {
               <div style={{ background: '#FFFFFF', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid #BBF7D0', fontSize: '0.88rem', color: '#14532D', lineHeight: '1.6' }}>
                 <strong>Next Steps:</strong>
                 <p style={{ margin: '0.35rem 0 0 0' }}>
-                  Our financial coordinator will email you at <strong>{donorData.email}</strong> with our verified bank account details and official 80G donation receipt confirmation.
+                  Our coordinator team will reach out to you at <strong>{donorData.email}</strong> with next steps and receipt documentation where eligible under applicable Section 80G rules.
                 </p>
               </div>
               <button
@@ -133,8 +139,8 @@ function DonateFormInner() {
                 onChange={(e) => setInitiativeTarget(e.target.value)}
               >
                 <option value="All Initiatives">General Seva Fund (Direct to Where Need is Greatest)</option>
-                <option value="Social & Environmental Awareness">Social &amp; Environmental Awareness (Swachh Bharat &amp; Haritha Haram)</option>
-                <option value="Education & Child Development">Education &amp; Child Development (School Kits &amp; Mentorship)</option>
+                <option value="Education & Child Development">Education &amp; Child Development (School Kits, Teacher Training &amp; Digital Wellness)</option>
+                <option value="Social & Environmental Awareness">Social &amp; Environmental Awareness (Traffic Safety, Swachh Bharat &amp; Save Water)</option>
                 <option value="Temple Development & Cultural Activities">Temple Development &amp; Sacred Annadanam</option>
                 <option value="Healthcare & Medical Support">Healthcare &amp; Free Medical Screening Camps</option>
                 <option value="Elderly Care & Social Welfare">Elderly Care &amp; Senior Dignity</option>
@@ -333,27 +339,38 @@ function DonateFormInner() {
           </div>
 
           <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', margin: '1rem 0 0 0', lineHeight: '1.5' }}>
-            * After direct transfer, please email your transaction UTR reference to <strong>contact@anandgroupcharitabletrust.org.in</strong> for immediate 80G receipt generation.
+            {SHOW_PUBLIC_UNVERIFIED_CONTACTS ? (
+              <>
+                * After direct transfer, please email your transaction UTR reference to <strong>{PENDING_VERIFICATION_CONTACTS.generalEmail}</strong> for receipt generation.
+              </>
+            ) : (
+              <>
+                * After direct transfer, please share your transaction UTR reference via our <Link href="/contact" style={{ color: 'var(--color-yellow-dark)', fontWeight: 600, textDecoration: 'underline' }}>official Contact page</Link> for receipt documentation.
+              </>
+            )}
           </p>
         </div>
 
         <div className="sidebar-box">
           <h3 className="sidebar-box-title">
             <i className="fa fa-shield-halved" style={{ color: 'var(--color-yellow-deep)' }}></i>
-            Ethical Giving Guarantee
+            Ethical Giving &amp; 80G Information
           </h3>
+          <p style={{ fontSize: '0.84rem', color: 'var(--color-text-muted)', lineHeight: '1.6', marginBottom: '0.85rem' }}>
+            {TAX_80G_DISCLOSURE}
+          </p>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem' }}>
               <i className="fa fa-check" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-              <span>Zero gateway deduction fees or hidden commissions.</span>
+              <span>Direct pledge model without online gateway commission deductions.</span>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem' }}>
               <i className="fa fa-check" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-              <span>Complete annual financial audits by independent CAs.</span>
+              <span>Bank particulars preserved verbatim for verified trust transfers.</span>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem' }}>
               <i className="fa fa-check" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-              <span>Official 80G exemption receipt issued promptly.</span>
+              <span>Receipts issued upon UTR verification and required PAN documentation.</span>
             </li>
           </ul>
         </div>

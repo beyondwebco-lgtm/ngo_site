@@ -1,7 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import PageBanner from '../../components/PageBanner';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+} from '../../data/siteConfig';
 
 export default function VolunteerPage() {
   const [formData, setFormData] = useState({
@@ -308,18 +313,32 @@ export default function VolunteerPage() {
 
               <div className="sidebar-box">
                 <h3 className="sidebar-box-title">
-                  <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)' }}></i>
-                  Volunteer Desk
+                  <i className="fa fa-headset" style={{ color: 'var(--color-yellow-deep)' }}></i>
+                  Volunteer Coordination
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: '1.5', marginBottom: '0.75rem' }}>
-                  Prefer to call directly? Speak with our volunteer coordinators:
-                </p>
-                <p style={{ color: 'var(--color-text)', fontWeight: 600, fontSize: '0.95rem', margin: '0 0 0.35rem 0' }}>
-                  +91 98481 23456
-                </p>
-                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', margin: 0 }}>
-                  volunteer@anandgroupcharitabletrust.org.in
-                </p>
+                {SHOW_PUBLIC_UNVERIFIED_CONTACTS ? (
+                  <>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: '1.5', marginBottom: '0.75rem' }}>
+                      Speak with our volunteer coordinators:
+                    </p>
+                    <p style={{ color: 'var(--color-text)', fontWeight: 600, fontSize: '0.95rem', margin: '0 0 0.35rem 0' }}>
+                      {PENDING_VERIFICATION_CONTACTS.phone}
+                    </p>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', margin: 0 }}>
+                      {PENDING_VERIFICATION_CONTACTS.volunteerEmail}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: '1.5', marginBottom: '1rem' }}>
+                      Submit this volunteer registration form or reach out through our online contact page for programme coordination.
+                    </p>
+                    <Link href="/contact" className="ash-btn ash-btn-outline" style={{ width: '100%', justifyContent: 'center' }}>
+                      <span>Contact Page</span>
+                      <i className="fa fa-arrow-right"></i>
+                    </Link>
+                  </>
+                )}
               </div>
             </aside>
           </div>

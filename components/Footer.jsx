@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import {
+  SHOW_PUBLIC_UNVERIFIED_CONTACTS,
+  PENDING_VERIFICATION_CONTACTS,
+  ORGANIZATION_INFO,
+} from '../data/siteConfig';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,7 +25,7 @@ export default function Footer() {
               />
             </Link>
             <p className="footer-mission-text">
-              Anand Group Charitable Trust is a registered Indian public charitable trust dedicated to compassionate grassroots service, sustainable environmental cleanliness, educational opportunities, and dignity for all.
+              Anand Group Charitable Trust is a registered Indian public charitable trust advancing educational awareness, teacher training, child development, digital and mental wellness, and compassionate social service.
             </p>
             <div className="footer-social-links">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook">
@@ -44,29 +49,50 @@ export default function Footer() {
             <ul className="footer-links-list">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/initiatives">All Initiatives</Link></li>
+              <li><Link href="/initiatives">Initiatives</Link></li>
+              <li><Link href="/awareness-programs">Awareness Programs</Link></li>
               <li><Link href="/impact">Impact &amp; Milestones</Link></li>
               <li><Link href="/gallery">Photo Gallery</Link></li>
               <li><Link href="/get-involved">Get Involved</Link></li>
               <li><Link href="/volunteer">Volunteer With Us</Link></li>
               <li><Link href="/donate">Donate / Pledge</Link></li>
               <li><Link href="/csr-partnerships">CSR Partnerships</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Core Initiatives Column */}
+          {/* Programmes & Pillars Column */}
           <div>
-            <h4 className="footer-col-title">Our Initiatives</h4>
+            <h4 className="footer-col-title">Programmes &amp; Pillars</h4>
             <ul className="footer-links-list">
               <li>
-                <Link href="/initiatives/social-environmental">
-                  Social &amp; Environmental
+                <Link href="/initiatives/education">
+                  Education &amp; Child Development
                 </Link>
               </li>
               <li>
-                <Link href="/initiatives/education">
-                  Education &amp; Children
+                <Link href="/initiatives/mobile-phone-awareness">
+                  Mobile Phone Awareness
+                </Link>
+              </li>
+              <li>
+                <Link href="/initiatives/teacher-training">
+                  Teacher Training
+                </Link>
+              </li>
+              <li>
+                <Link href="/initiatives/child-development">
+                  Child Psychology &amp; Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/initiatives/mental-wellness">
+                  Mental Wellness Awareness
+                </Link>
+              </li>
+              <li>
+                <Link href="/initiatives/social-environmental">
+                  Social &amp; Environmental
                 </Link>
               </li>
               <li>
@@ -81,31 +107,46 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/initiatives/elderly-care">
-                  Elderly Care &amp; Dignity
+                  Elderly Care &amp; Welfare
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Details Column */}
+          {/* Organization Information Column */}
           <div>
-            <h4 className="footer-col-title">Headquarters</h4>
+            <h4 className="footer-col-title">Trust Governance</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.9rem', color: 'var(--color-text)' }}>
               <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
                 <i className="fa fa-map-marker-alt" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                <span>Andhra Pradesh &amp; Telangana, India</span>
+                <span>{ORGANIZATION_INFO.operatingRegions}</span>
               </div>
-              <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
-                <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                <span style={{ wordBreak: 'break-all' }}>contact@anandgroupcharitabletrust.org.in</span>
-              </div>
-              <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
-                <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                <span>+91 98481 23456</span>
-              </div>
+
+              {SHOW_PUBLIC_UNVERIFIED_CONTACTS ? (
+                <>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <i className="fa fa-envelope" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                    <span style={{ wordBreak: 'break-all' }}>{PENDING_VERIFICATION_CONTACTS.generalEmail}</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <i className="fa fa-phone" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                    <span>{PENDING_VERIFICATION_CONTACTS.phone}</span>
+                  </div>
+                </>
+              ) : (
+                <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                  <i className="fa fa-envelope-open-text" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
+                  <span>
+                    <Link href="/contact" style={{ color: 'var(--color-text)', fontWeight: 600, textDecoration: 'underline' }}>
+                      Official Online Inquiry Form
+                    </Link>
+                  </span>
+                </div>
+              )}
+
               <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
                 <i className="fa fa-certificate" style={{ color: 'var(--color-yellow-deep)', marginTop: '0.2rem' }}></i>
-                <span style={{ color: 'var(--color-yellow-dark)', fontWeight: 600 }}>80G Tax Exemption Certified</span>
+                <span style={{ color: 'var(--color-yellow-dark)', fontWeight: 600 }}>Registered Trust &bull; Valid 80G Approval</span>
               </div>
             </div>
           </div>

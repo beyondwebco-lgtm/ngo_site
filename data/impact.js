@@ -1,4 +1,4 @@
-// Centralized impact metrics, milestones, and achievements for Anand Group Charitable Trust
+// Centralized impact metrics, milestones, and documented programme highlights for Anand Group Charitable Trust
 export const IMPACT_METRICS = [
   {
     number: '100+',
@@ -31,9 +31,9 @@ export const IMPACT_METRICS = [
     icon: 'fa-seedling',
   },
   {
-    number: '100%',
-    label: 'Transparent Governance',
-    sub: 'Ethical pledge model with verified 80G tax exemptions',
+    number: '80G',
+    label: 'Registered Trust Governance',
+    sub: 'Registered Indian charitable trust upholding ethical stewardship and applicable 80G compliance',
     icon: 'fa-shield-halved',
   },
 ];
@@ -48,13 +48,13 @@ export const MILESTONES = [
   {
     year: '2015',
     title: 'Swachh Bharat & Road Safety Movement',
-    desc: 'Formal launch of "Mana Bharat Swachh Bharat" campaigns with state dignitaries and celebrities, including a state-level road traffic safety initiative launched with the Hon’ble Chief Minister.',
+    desc: 'Formal launch of "Mana Bharat Swachh Bharat" campaigns with state dignitaries and celebrities, including a state-level road traffic safety initiative.',
     tag: 'State Recognition',
   },
   {
     year: '2016 - 2018',
     title: 'School Mentorship & Haritha Haram Greenery',
-    desc: 'Extensive outreach to Zilla Parishad schools and junior colleges, instilling civic values, anti-plastic consciousness, and planting thousands of roadside saplings under Haritha Haram.',
+    desc: 'Extensive outreach to Zilla Parishad schools and junior colleges, instilling civic values, anti-plastic consciousness, and planting roadside saplings under Haritha Haram.',
     tag: 'Education & Ecology',
   },
   {
@@ -65,33 +65,68 @@ export const MILESTONES = [
   },
   {
     year: '2022 - Present',
-    title: 'Integrated Community Seva & CSR Partnerships',
-    desc: 'Expanding holistic grassroots programs covering free diagnostic medical camps, rural temple restoration, educational aid for indigent students, and corporate CSR collaborations.',
-    tag: 'Sustainable Future',
+    title: 'Educational Awareness, Wellness & CSR Partnerships',
+    desc: 'Expanding holistic grassroots programmes covering educational awareness, digital wellness activity book distribution, teacher training, child psychology support, medical camps, and CSR collaborations.',
+    tag: 'Holistic Growth',
   },
 ];
 
-export const STORIES = [
+// Documented real field programme highlights with authentic photos (replaces unapproved beneficiary testimonials)
+export const DOCUMENTED_HIGHLIGHTS = [
   {
+    title: 'Student Educational & Civic Awareness Assemblies',
+    tag: 'School Awareness',
+    src: '/images/school-awareness/school-awareness-youth-inspiration-assembly.webp',
+    description:
+      'Interactive school awareness sessions guiding students in discipline, positive study habits, personal etiquette, and responsible digital citizenship.',
+  },
+  {
+    title: 'Emergency Medical Aid — Published Press Coverage',
+    tag: 'Healthcare Media Report',
+    src: '/images/healthcare/healthcare-press-ambati-srinu-patient-medical-aid.webp',
+    description:
+      'Published Andhra Jyothi news report documenting emergency medical financial assistance handed over by Ambati Srinivasa Rao to support patient treatment.',
+  },
+  {
+    title: 'Swachh Bharat Community Cleanliness Drives',
+    tag: 'Social Responsibility',
+    src: '/images/swachh-bharat/swachh-bharat-school-campus-cleanliness-drive.webp',
+    description:
+      'Volunteers, educators, and students participating together in campus sanitation, street cleaning, and community hygiene campaigns.',
+  },
+];
+
+// Preserved internally pending formal accuracy review & written publication permission
+export const SHOW_PUBLIC_STORIES = false;
+
+export const PENDING_REVIEW_STORIES = [
+  {
+    status: 'PENDING_PERMISSION_REVIEW',
     title: 'Dignity and Care in My Golden Years',
     beneficiary: 'Lakshmamma (Senior Citizen)',
     location: 'Rural Elderly Care Outreach',
-    quote: 'When I had no one to assist with my medical needs or basic daily rations, Anand Group Charitable Trust gave me monthly healthcare support, warm food, and deep respect.',
+    quote:
+      'When I had no one to assist with my medical needs or basic daily rations, Anand Group Charitable Trust gave me monthly healthcare support, warm food, and deep respect.',
     category: 'Elderly Care',
   },
   {
+    status: 'PENDING_PERMISSION_REVIEW',
     title: 'From School Assembly to Clean Village Champion',
     beneficiary: 'Suresh & Classmates (Class 9 Students)',
     location: 'Zilla Praja Parishad High School, Pedapullalanka',
-    quote: 'The trust team showed us that a clean village begins with our own classroom. We formed a student cleanliness team and took the pledge to keep our village plastic-free.',
+    quote:
+      'The trust team showed us that a clean village begins with our own classroom. We formed a student cleanliness team and took the pledge to keep our village plastic-free.',
     category: 'Education & Youth',
   },
   {
+    status: 'PENDING_PERMISSION_REVIEW',
     title: 'Emergency Medical Camp Saved My Health',
     beneficiary: 'Venkateswarlu (Rural Farmer)',
     location: 'Free Rural Health Camp',
-    quote: 'The doctor diagnosed my uncontrolled blood sugar in time and provided free medicines for 3 months. I could not have afforded the diagnosis in a distant city clinic.',
+    quote:
+      'The doctor diagnosed my uncontrolled blood sugar in time and provided free medicines for 3 months. I could not have afforded the diagnosis in a distant city clinic.',
     category: 'Healthcare',
   },
 ];
 
+export const STORIES = SHOW_PUBLIC_STORIES ? PENDING_REVIEW_STORIES : [];

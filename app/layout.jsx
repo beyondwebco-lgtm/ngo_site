@@ -11,19 +11,20 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL('https://www.anandgroupcharitabletrust.org.in'),
-  title: 'Anand Group Charitable Trust | Together, We Build a Better Tomorrow',
-  description: 'Anand Group Charitable Trust is a dedicated Indian charitable trust empowering communities through education, social and environmental awareness, accessible healthcare, temple heritage, elderly care, and corporate CSR partnerships.',
+  title: 'Anand Group Charitable Trust | Empowering Education. Creating Awareness.',
+  description:
+    'Anand Group Charitable Trust works across Andhra Pradesh and Telangana to advance educational awareness, teacher training, child psychology support, responsible mobile usage, mental wellness, social awareness, healthcare, elderly care, and community welfare.',
   keywords: [
     'Anand Group Charitable Trust',
+    'Educational awareness India',
+    'Mobile phone awareness programmes',
+    'Digital wellness activity book',
+    'Teacher training values child psychology',
+    'Child development and psychology sessions',
+    'Mental wellness awareness',
+    'Traffic awareness Swachh Bharat Save Water',
+    'Charitable trust Andhra Pradesh Telangana',
     'CSR Partnerships India',
-    'Swachh Bharat cleanliness drives',
-    'Haritha Haram tree plantation',
-    'Save water campaigns',
-    'Underprivileged child education',
-    'Temple renovation and Annadanam',
-    'Free medical and blood donation camps',
-    'Elderly care and old age home support',
-    'Charitable trust in India',
   ],
   icons: {
     icon: '/favicon-anand-trust.svg',
@@ -31,16 +32,17 @@ export const metadata = {
     apple: '/favicon-anand-trust.svg',
   },
   openGraph: {
-    title: 'Anand Group Charitable Trust | Together, We Build a Better Tomorrow',
-    description: 'Empowering communities through education, social awareness, healthcare, cultural preservation, and compassionate community service.',
+    title: 'Anand Group Charitable Trust | Empowering Education. Creating Awareness.',
+    description:
+      'Building a brighter future through educational awareness, teacher training, child psychology sessions, digital wellness, mental wellness, and social service.',
     url: 'https://www.anandgroupcharitabletrust.org.in/',
     siteName: 'Anand Group Charitable Trust',
     images: [
       {
-        url: '/images/hero_community_hope.jpg',
-        width: 1200,
-        height: 675,
-        alt: 'Anand Group Charitable Trust Community Initiatives',
+        url: '/images/school-awareness/school-awareness-youth-inspiration-assembly.webp',
+        width: 1040,
+        height: 780,
+        alt: 'Anand Group Charitable Trust Educational & School Awareness Assembly',
       },
     ],
     locale: 'en_IN',
@@ -48,9 +50,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Anand Group Charitable Trust | Together, We Build a Better Tomorrow',
-    description: 'Empowering communities through education, healthcare, environmental responsibility, and compassionate grassroots service.',
-    images: ['/images/hero_community_hope.jpg'],
+    title: 'Anand Group Charitable Trust | Empowering Education. Creating Awareness.',
+    description:
+      'Educational awareness, teacher training, child development, digital wellness, mental wellness, and charitable service across Andhra Pradesh & Telangana.',
+    images: ['/images/school-awareness/school-awareness-youth-inspiration-assembly.webp'],
   },
 };
 
