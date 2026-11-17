@@ -17,11 +17,11 @@ export default function Footer() {
           <div className="footer-brand-col">
             <Link href="/" className="footer-brand-logo" aria-label="Anand Group Charitable Trust Home">
               <img
-                src="/logo-anand-trust.svg"
+                src="/logo-anand-group-horizontal.png"
                 alt="Anand Group Charitable Trust"
                 width="220"
                 height="48"
-                style={{ height: '44px', width: 'auto', objectFit: 'contain' }}
+                style={{ height: '48px', width: 'auto', objectFit: 'contain' }}
               />
             </Link>
             <p className="footer-mission-text">

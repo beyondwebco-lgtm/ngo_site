@@ -101,9 +101,9 @@ export default function Header() {
           {/* Brand Logo */}
           <Link href="/" className="navbar-brand-link" aria-label="Anand Group Charitable Trust Home">
             <img
-              src="/logo-anand-trust.svg"
+              src="/logo-anand-group-horizontal.png"
               alt="Anand Group Charitable Trust"
-              width="210"
+              width="202"
               height="44"
               className="navbar-brand-logo"
             />
@@ -162,7 +162,7 @@ export default function Header() {
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.75rem', paddingBottom: '0.85rem', borderBottom: '1px solid var(--color-border)' }}>
               <img
-                src="/logo-anand-trust.svg"
+                src="/logo-anand-group-horizontal.png"
                 alt="Anand Group Charitable Trust"
                 style={{ height: '36px', width: 'auto' }}
               />

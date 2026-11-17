@@ -27,9 +27,12 @@ export const metadata = {
     'CSR Partnerships India',
   ],
   icons: {
-    icon: '/favicon-anand-trust.svg',
-    shortcut: '/favicon-anand-trust.svg',
-    apple: '/favicon-anand-trust.svg',
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-anand-trust.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon-32x32.png',
+    apple: '/favicon-192x192.png',
   },
   openGraph: {
     title: 'Anand Group Charitable Trust | Empowering Education. Creating Awareness.',

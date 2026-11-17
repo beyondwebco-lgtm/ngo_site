@@ -227,8 +227,16 @@ ngo_site/
 │   └── impact.js                         # Confirmed metrics, milestones, documented highlights & PENDING_PERMISSION_REVIEW stories
 │
 └── public/
+    ├── logo-anand-group.png              # Official full brand logo (transparent PNG)
+    ├── logo-anand-group.webp             # High-efficiency WebP full brand logo
+    ├── logo-anand-group-horizontal.png   # Horizontal brand lockup for sticky navigation & footer
+    ├── logo-anand-group-horizontal.webp  # WebP horizontal lockup
+    ├── emblem-anand-group.png            # Official emblem (stylized 'A' + smiling sun)
+    ├── favicon-32x32.png                 # Browser tab favicon (32x32)
+    ├── favicon-192x192.png               # Android & PWA app icon (192x192)
+    ├── favicon-512x512.png               # High-res PWA icon (512x512)
     ├── favicon-anand-trust.svg           # Branded SVG favicon (active)
-    ├── logo-anand-trust.svg              # Primary trust vector logo (active)
+    ├── logo-anand-trust.svg              # Fallback vector lockup with official artwork
     │
     └── images/                           # Curated photography for all focus areas
         ├── swachh-bharat/                # Real Swachh Bharat & Awareness Field Photo Archive (WebP)
@@ -472,9 +480,12 @@ All state is maintained in `app/page.jsx` with standard React primitives without
 
 ## 7. Assets & Media Inventory
 
-### 7.1 Vector Assets (`public/`)
-- `logo-anand-trust.svg`: Primary vector brand logo featuring the trust name and an emblem representing care, unity, and growth.
-- `favicon-anand-trust.svg`: Optimized 32x32/48x48 icon for browser tabs and mobile bookmarks.
+### 7.1 Brand Logo & Favicon Assets (`public/`)
+- `logo-anand-group.png` & `logo-anand-group.webp`: Official primary organization logo featuring the stylized 'A' emblem with smiling sun, 'Anand Group', and tag line '‘Ad’d Success to your Life'.
+- `logo-anand-group-horizontal.png` & `.webp`: Optimized horizontal navbar & footer lockup for crisp, balanced rendering across all desktop, tablet, and mobile breakpoints.
+- `emblem-anand-group.png`: Standalone brand emblem for circular badges and icons.
+- `favicon-32x32.png`, `favicon-192x192.png`, `favicon-512x512.png`: Multi-resolution favicons for browser tabs, mobile homescreen shortcuts, and PWAs.
+- `logo-anand-trust.svg` & `favicon-anand-trust.svg`: Fallback vector assets updated with official brand artwork.
 
 ### 7.2 High-Definition Image Assets (`public/images/`)
 All images are curated, compressed for fast web loading, and visually represent the authentic spirit of Indian charitable work:
