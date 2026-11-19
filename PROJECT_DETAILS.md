@@ -552,7 +552,7 @@ Authentic photography and media coverage documenting school assemblies, student 
 
 | Directory | Filename | Dimensions | WebP Size | Subject & Authentic Field Description |
 |---|---|---|---|---|
-| `public/images/leadership/` | `ambati-srinivasa-rao-managing-trustee.webp` | 433x433 | 15.2 KB | Managing Trustee Ambati Srinivasa Rao (cine actor & social activist) dedicated leadership portrait |
+| `public/images/leadership/` | `ambati-srinivasa-rao-managing-trustee.webp` | 433x433 | 15.2 KB | Managing Trustee Ambati Srinivasa Rao dedicated leadership portrait |
 | `public/images/healthcare/` | `healthcare-press-ambati-srinu-patient-medical-aid.webp` | 400x992 | 93.7 KB | Andhra Jyothi Telugu press clipping: Ambati Srinivasa Rao (Ambati Srinu) presenting Rs 10,000 emergency medical aid to lung disease patient at Muralinagar |
 | `public/images/education/` | `anand-vidyalaya-school-anniversary-celebration.webp` | 1024x683 | 123.1 KB | Anand Vidyalaya School 1st Anniversary Celebrations stage event with Ambati Srinivasa Rao presenting the sacred Lord Venkateswara portrait to dignitaries |
 

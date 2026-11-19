@@ -49,7 +49,7 @@ export const GALLERY_ITEMS = [
     src: '/images/healthcare/healthcare-press-ambati-srinu-patient-medical-aid.webp',
     title: 'Emergency Medical Treatment Financial Aid — Press Coverage',
     tag: 'Medical Support',
-    description: 'Andhra Jyothi media coverage of cine actor and managing trustee Ambati Srinivasa Rao handing over Rs 10,000 emergency medical assistance to a patient suffering from chronic lung disease at Muralinagar.',
+    description: 'Andhra Jyothi media coverage of Managing Trustee Ambati Srinivasa Rao handing over Rs 10,000 emergency medical assistance to a patient suffering from chronic lung disease at Muralinagar.',
   },
   {
     id: 6,
@@ -226,14 +226,6 @@ export const GALLERY_ITEMS = [
     title: 'Anand Vidyalaya School 1st Anniversary Celebrations',
     tag: 'Education & Heritage',
     description: 'Managing Trustee Ambati Srinivasa Rao presenting the sacred Lord Venkateswara portrait to dignitaries during the 1st Anniversary celebrations of Anand Vidyalaya.',
-  },
-  {
-    id: 29,
-    category: 'awareness',
-    src: '/images/leadership/ambati-srinivasa-rao-managing-trustee.webp',
-    title: 'Managing Trustee Ambati Srinivasa Rao — Leadership & Grassroots Dedication',
-    tag: 'Leadership',
-    description: 'Managing Trustee Ambati Srinivasa Rao (cine actor & social leader) directing community drives and youth empowerment programs across Andhra Pradesh and Telangana.',
   },
 ];
 
