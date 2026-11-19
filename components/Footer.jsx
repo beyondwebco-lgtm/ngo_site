@@ -19,7 +19,7 @@ export default function Footer() {
               <img
                 src="/logo-anand-group-horizontal.png"
                 alt="Anand Group Charitable Trust"
-                width="220"
+                width="168"
                 height="48"
                 style={{ height: '48px', width: 'auto', objectFit: 'contain' }}
               />

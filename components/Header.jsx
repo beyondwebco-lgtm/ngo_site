@@ -103,7 +103,7 @@ export default function Header() {
             <img
               src="/logo-anand-group-horizontal.png"
               alt="Anand Group Charitable Trust"
-              width="202"
+              width="154"
               height="44"
               className="navbar-brand-logo"
             />
