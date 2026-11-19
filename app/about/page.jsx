@@ -59,7 +59,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 2: Mission, Vision & Core Values */}
+      {/* Section 2: Our Founders */}
+      <section className="subpage-section" style={{ background: 'var(--color-bg-cream)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)', padding: '5rem 0' }}>
+        <div className="ash-container">
+          <div className="section-header text-center" style={{ maxWidth: '780px', margin: '0 auto' }}>
+            <div className="section-eyebrow">
+              <i className="fa fa-hands-holding-seedling"></i> Founding Vision
+            </div>
+            <h2 className="section-title">Our Founders</h2>
+            <p className="section-subtitle" style={{ fontSize: '1.05rem', lineHeight: '1.7', color: 'var(--color-text-muted)', marginTop: '1rem' }}>
+              Anand Group Charitable Trust was established and registered in 2014 by A. S. Rao and A. S. Devi, with a shared vision of promoting education, awareness, compassion, and meaningful community service.
+            </p>
+          </div>
+
+          {/* Clean, Elegant, Text-Only Founders Display */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem', maxWidth: '640px', margin: '2.5rem auto 1.75rem auto', textAlign: 'center' }}>
+            <div style={{ background: 'var(--color-white)', border: '1px solid var(--color-border-amber)', borderRadius: '16px', padding: '2.25rem 1.5rem', boxShadow: '0 4px 18px rgba(234, 179, 8, 0.08)' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', color: 'var(--color-text)', margin: 0, fontWeight: 700 }}>
+                A. S. Rao
+              </h3>
+            </div>
+            <div style={{ background: 'var(--color-white)', border: '1px solid var(--color-border-amber)', borderRadius: '16px', padding: '2.25rem 1.5rem', boxShadow: '0 4px 18px rgba(234, 179, 8, 0.08)' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', color: 'var(--color-text)', margin: 0, fontWeight: 700 }}>
+                A. S. Devi
+              </h3>
+            </div>
+          </div>
+
+          {/* Registration Badge */}
+          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', background: 'var(--color-yellow-tint)', border: '1px solid var(--color-border-gold)', color: 'var(--color-yellow-dark)', padding: '0.5rem 1.35rem', borderRadius: '999px', fontWeight: 700, fontSize: '0.92rem', letterSpacing: '0.3px', boxShadow: 'var(--shadow-sm)' }}>
+              <i className="fa fa-calendar-check" style={{ color: 'var(--color-yellow-deep)' }}></i>
+              <span>Established &amp; Registered in 2014</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Mission, Vision & Core Values */}
       <section className="ash-section-ivory" style={{ padding: '5rem 0' }}>
         <div className="ash-container">
           <div className="section-header text-center">
@@ -118,7 +155,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 3: Leadership & Governance */}
+      {/* Section 4: Leadership & Governance */}
       <section className="subpage-section">
         <div className="ash-container">
           <div className="section-header text-center">
@@ -171,7 +208,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 4: Legal Registration & Governance Box */}
+      {/* Section 5: Legal Registration & Governance Box */}
       <section className="ash-section-ivory" style={{ padding: '4rem 0' }}>
         <div className="ash-container">
           <div style={{ background: 'var(--color-white)', border: '2px solid var(--color-border-amber)', borderRadius: 'var(--radius-md)', padding: '2.5rem', boxShadow: 'var(--shadow-md)' }}>

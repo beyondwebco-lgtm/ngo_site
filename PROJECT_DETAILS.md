@@ -319,6 +319,7 @@ To eliminate all pop-ups, modals, accordions, and hidden panels, the website is 
 
 #### 1. About Us (`/about`)
 - In-depth founding story and evolution.
+- **Our Founders:** Established & registered in 2014 by A. S. Rao and A. S. Devi.
 - Mission, Vision, and 4 Core Pillars.
 - Leadership profiles of Ambati Srinivasa Rao and Ambati Tanuja.
 - Legal trust governance and audited compliance notes.
