@@ -155,60 +155,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 4: Leadership & Governance */}
-      <section className="subpage-section">
-        <div className="ash-container">
-          <div className="section-header text-center">
-            <div className="section-eyebrow">
-              <i className="fa fa-users"></i> Trust Leadership
-            </div>
-            <h2 className="section-title">Committed Leadership &amp; Trustees</h2>
-            <p className="section-subtitle">
-              Our trust is stewarded by dedicated social leaders who actively work in the field alongside our volunteers.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '2.5rem', marginTop: '3rem', maxWidth: '880px', margin: '3rem auto 0 auto' }}>
-            <div className="sidebar-box" style={{ textAlign: 'center', padding: '2.5rem 2rem' }}>
-              <div style={{ width: '100px', height: '100px', borderRadius: '50%', border: '3px solid var(--color-yellow-primary)', overflow: 'hidden', margin: '0 auto 1.25rem auto', boxShadow: '0 4px 14px rgba(234, 179, 8, 0.25)' }}>
-                <img
-                  src="/images/leadership/ambati-srinivasa-rao-managing-trustee.webp"
-                  alt="Ambati Srinivasa Rao — Managing Trustee & Civic Leader"
-                  width="100"
-                  height="100"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'var(--color-text)', marginBottom: '0.35rem' }}>
-                Ambati Srinivasa Rao
-              </h3>
-              <p style={{ color: 'var(--color-yellow-deep)', fontWeight: 600, fontSize: '0.92rem', marginBottom: '1rem' }}>
-                Managing Trustee &amp; Civic Leader
-              </p>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Leading on-the-ground Swachh Bharat cleanliness drives, youth mentorship sessions in colleges, rural school outreaches, and senior citizen welfare programs.
-              </p>
-            </div>
-
-            <div className="sidebar-box" style={{ textAlign: 'center', padding: '2.5rem 2rem' }}>
-              <div style={{ width: '90px', height: '90px', borderRadius: '50%', background: 'var(--color-yellow-tint)', border: '3px solid var(--color-yellow-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto', color: 'var(--color-yellow-deep)', fontSize: '2.25rem' }}>
-                <i className="fa fa-user-gear"></i>
-              </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'var(--color-text)', marginBottom: '0.35rem' }}>
-                Ambati Tanuja
-              </h3>
-              <p style={{ color: 'var(--color-yellow-deep)', fontWeight: 600, fontSize: '0.92rem', marginBottom: '1rem' }}>
-                Trustee &amp; Community Operations Director
-              </p>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Overseeing education assistance, child welfare tracking, nutrition programs, elder home coordination, and institutional partnerships.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: Legal Registration & Governance Box */}
+      {/* Section 4: Legal Registration & Governance Box */}
       <section className="ash-section-ivory" style={{ padding: '4rem 0' }}>
         <div className="ash-container">
           <div style={{ background: 'var(--color-white)', border: '2px solid var(--color-border-amber)', borderRadius: 'var(--radius-md)', padding: '2.5rem', boxShadow: 'var(--shadow-md)' }}>
