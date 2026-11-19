@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import HeroSlideshow from '../components/HeroSlideshow';
 import InitiativeCard from '../components/InitiativeCard';
 import ActivityBookShowcase from '../components/ActivityBookShowcase';
 import { INITIATIVES_LIST } from '../data/initiatives';
@@ -12,14 +13,6 @@ import {
 } from '../data/siteConfig';
 
 export default function HomePage() {
-  const heroHighlightTags = [
-    'Educational Awareness',
-    'Teacher Training',
-    'Child Development',
-    'Digital Wellness',
-    'Social Responsibility',
-  ];
-
   const featuredEducationalProgrammes = [
     {
       title: 'School Awareness Camps',
@@ -83,122 +76,9 @@ export default function HomePage() {
   return (
     <>
       {/* ==========================================================================
-           2. EDUCATIONAL AWARENESS HERO SECTION
+           2. PREMIUM FULL-WIDTH CINEMATIC HERO SLIDESHOW
            ========================================================================== */}
-      <section className="hero-section" id="hero">
-        <div className="ash-container">
-          <div className="hero-grid">
-            {/* Hero Left Content Column */}
-            <div className="hero-content">
-              <div className="hero-pill">
-                <span className="hero-pill-badge">Trust</span>
-                <span>{ORGANIZATION_INFO.statusLabel} &bull; AP &amp; Telangana</span>
-              </div>
-
-              <h1 className="hero-title">
-                Empowering Education.{' '}
-                <span className="hero-highlight">Creating Awareness.</span>{' '}
-                Transforming Communities.
-              </h1>
-
-              <p className="hero-subheading">
-                Anand Group Charitable Trust works to build a brighter future through educational awareness, teacher training, child psychology sessions, responsible mobile usage programmes, mental wellness initiatives, and meaningful social projects.
-              </p>
-
-              {/* Highlight Tags */}
-              <div
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '0.5rem',
-                  marginBottom: '1.75rem',
-                }}
-                aria-label="Core Focus Areas"
-              >
-                {heroHighlightTags.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      background: 'var(--color-white)',
-                      border: '1px solid var(--color-border-amber)',
-                      color: 'var(--color-yellow-dark)',
-                      fontSize: '0.8rem',
-                      fontWeight: 600,
-                      padding: '0.32rem 0.78rem',
-                      borderRadius: '999px',
-                      boxShadow: 'var(--shadow-sm)',
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              {/* Primary Call to Actions */}
-              <div className="hero-buttons">
-                <Link
-                  href="/initiatives"
-                  className="ash-btn ash-btn-primary"
-                  aria-label="Explore Our Initiatives"
-                >
-                  <span>Explore Our Initiatives</span>
-                  <i className="fa fa-arrow-right"></i>
-                </Link>
-
-                <Link
-                  href="/impact"
-                  className="ash-btn ash-btn-outline"
-                  aria-label="Our Social Impact"
-                >
-                  <i className="fa fa-chart-line"></i>
-                  <span>Our Social Impact</span>
-                </Link>
-              </div>
-
-              {/* Verified Trust Stats Ribbon */}
-              <div className="hero-glass-stats">
-                <div className="glass-stat-item">
-                  <div className="glass-stat-icon">
-                    <i className="fa fa-user-graduate"></i>
-                  </div>
-                  <div>
-                    <div className="glass-stat-label">Education</div>
-                    <div className="glass-stat-value">5,000+ Students</div>
-                  </div>
-                </div>
-                <div className="glass-stat-item">
-                  <div className="glass-stat-icon">
-                    <i className="fa fa-broom"></i>
-                  </div>
-                  <div>
-                    <div className="glass-stat-label">Cleanliness</div>
-                    <div className="glass-stat-value">100+ Drives</div>
-                  </div>
-                </div>
-                <div className="glass-stat-item">
-                  <div className="glass-stat-icon">
-                    <i className="fa fa-bowl-rice"></i>
-                  </div>
-                  <div>
-                    <div className="glass-stat-label">Annadanam</div>
-                    <div className="glass-stat-value">25,000+ Meals</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Hero Right Media Column — Authentic School Awareness Photograph */}
-            <div className="hero-image-card">
-              <img
-                src="/images/school-awareness/school-awareness-youth-inspiration-assembly.webp"
-                alt="Anand Group Charitable Trust School Educational Awareness Session"
-                fetchPriority="high"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSlideshow />
 
       {/* ==========================================================================
            3. ABOUT ANAND GROUP CHARITABLE TRUST

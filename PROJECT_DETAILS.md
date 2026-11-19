@@ -212,6 +212,7 @@ ngo_site/
 ├── components/
 │   ├── Header.jsx                        # Shared Sticky Navbar (8 primary links, responsive hamburger drawer)
 │   ├── Footer.jsx                        # Shared 4-Column Footer
+│   ├── HeroSlideshow.jsx                 # Full-width cinematic 5-slide background slideshow with Ken Burns zoom & stats
 │   ├── PageBanner.jsx                    # Reusable Inner Page Hero Banner with Breadcrumbs & Headings
 │   ├── InitiativeCard.jsx                # Reusable Initiative Card navigating directly to /initiatives/<slug>
 │   ├── PhotoShowcase.jsx                 # Reusable Field Action Photo Showcase with Inline Preview (NO pop-ups)
@@ -305,7 +306,7 @@ To eliminate all pop-ups, modals, accordions, and hidden panels, the website is 
 
 ### 5.1 Simplified Homepage (`/`)
 - **Header & Navigation:** Sticky white navbar with active indicator and accessible auto-closing mobile menu drawer.
-- **Hero Section:** Clean high-impact typography, impact stat badges, primary CTA to `/donate`, secondary CTA to `/initiatives`.
+- **Hero Section:** Premium full-width cinematic 5-image background slideshow with Ken Burns zoom, dark overlay, large Playfair typography, dual CTAs (`/initiatives` and `/impact`), and compact impact stats ribbon.
 - **Short About Us Introduction:** Concise 2-paragraph trust overview with 4 feature bullets and link to `/about`.
 - **Our Five Core Initiatives:** Simple cards linking directly to each initiative subpage (`/initiatives/<slug>`).
 - **Impact Statistics:** 4 prominent stat cards with link to `/impact`.
